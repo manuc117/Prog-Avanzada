@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['gestordearchivos',['GestorDeArchivos',['../class_gestor_de_archivos.html',1,'']]],
+  ['gestordearchivos_2ecpp',['gestordearchivos.cpp',['../gestordearchivos_8cpp.html',1,'']]],
+  ['gestordearchivos_2eh',['gestordearchivos.h',['../gestordearchivos_8h.html',1,'']]],
+  ['getblue',['getBlue',['../class_pixel.html#aadf154ed9d83216ef0cf77638d6d33b3',1,'Pixel']]],
+  ['getcolumnas',['getColumnas',['../class_imagen.html#a85f488958dd299a2c751efe5f390bf08',1,'Imagen']]],
+  ['getfilas',['getFilas',['../class_imagen.html#af1f4833ddf4987c3ab0ff9c65d224093',1,'Imagen']]],
+  ['getfilasycolumnas01',['getFilasYColumnas01',['../class_e_i___auto_test.html#a6573d2aaf1bfd8e2f1e8940804a5713b',1,'EI_AutoTest']]],
+  ['getgreen',['getGreen',['../class_pixel.html#a2a5c10be2340f382aa2045aebd50f8f1',1,'Pixel']]],
+  ['getidentificador',['getIdentificador',['../class_imagen.html#ab28b3e13c672139eada95427623a5828',1,'Imagen']]],
+  ['getintensidadesrgb01',['getIntensidadesRGB01',['../class_e_i___auto_test.html#acd38d02882f83222f06b25c436ae3376',1,'EI_AutoTest']]],
+  ['getintensidadesrgb02',['getIntensidadesRGB02',['../class_e_i___auto_test.html#a2f448dd2577c3f2b1c118591db580ea1',1,'EI_AutoTest']]],
+  ['getintensidadesrgb03',['getIntensidadesRGB03',['../class_e_i___auto_test.html#a1528990dcf6e9a6d5b058449b29a73ce',1,'EI_AutoTest']]],
+  ['getintensidadesrgb04',['getIntensidadesRGB04',['../class_e_i___auto_test.html#a809336407055025a74c3f6ee0a492e59',1,'EI_AutoTest']]],
+  ['getintensidadmediaylocalluegodesuavizado01',['getIntensidadMediaYLocalLuegoDeSuavizado01',['../class_e_i___auto_test.html#a9c5f92e8b2f42765076589a49ab3ea32',1,'EI_AutoTest']]],
+  ['getintensidadniveldegris01',['getIntensidadNivelDeGris01',['../class_e_i___auto_test.html#ac243c15dea30e3e6ef4753cf88b93252',1,'EI_AutoTest']]],
+  ['getintensidadniveldegris02',['getIntensidadNivelDeGris02',['../class_e_i___auto_test.html#a4e60de834dfee7adb75ed7a402afe852',1,'EI_AutoTest']]],
+  ['getpixel',['getPixel',['../class_imagen.html#abb42cdae2a0f78ce15d81a64e952cd69',1,'Imagen']]],
+  ['getpixelcolormasfrecuenteysucantidad01',['getPixelColorMasFrecuenteYSuCantidad01',['../class_e_i___auto_test.html#a667b504efbefcf74b116a92881f7c23a',1,'EI_AutoTest']]],
+  ['getpixelgrismasfrecuenteysucantidad01',['getPixelGrisMasFrecuenteYSuCantidad01',['../class_e_i___auto_test.html#ae30c56e99bbb16404f3956edb9a9111e',1,'EI_AutoTest']]],
+  ['getrango',['getRango',['../class_imagen.html#ab65e8f269da32338d3f2048407e63870',1,'Imagen']]],
+  ['getred',['getRed',['../class_pixel.html#a53bdc2ba88d1c3476c6e912efa70418f',1,'Pixel']]],
+  ['graficarimagen',['graficarImagen',['../class_ventana_de_graficacion.html#af92839b232d70a97b25112a6dc417ac6',1,'VentanaDeGraficacion']]],
+  ['green',['green',['../class_pixel.html#a729280ab013a63b569b063407239470f',1,'Pixel']]]
+];
