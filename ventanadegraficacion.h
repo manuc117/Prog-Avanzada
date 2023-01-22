@@ -5,7 +5,12 @@
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
 #include <iostream>
+#include <QKeyEvent>
 #include "imagen.h"
+#include "espaciodetrabajo.h"
+#include "gestordearchivos.h"
+#include "archivoaic.h"
+#include "archivopnm.h"
 
 using namespace std;
 
@@ -15,18 +20,24 @@ class VentanaDeGraficacion: public QOpenGLWidget, protected QOpenGLFunctions
 public:
 
     VentanaDeGraficacion();
-    void cargarImagen(Imagen &img);
+    void cargarImagen(Imagen img);
     void asociarApp(QApplication* app);
 
-    void initializeGL();
-    void paintGL();
-    void resizeGL(int ancho, int alto);
+    void initializeGL() override;
+    void paintGL() override;
+    void resizeGL(int ancho, int alto) override;
 
     void graficarImagen();
-    void ejecutar();
+
+    void setOpciones(int opCarpeta, int opArchi);
+    void cargarImagen();
+
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
-    Imagen *imagen;
+    Imagen imagen;
+    int opcionCarpeta, opcionArchivo;
+    GestorDeArchivos *gestorArchi;
 
     // Atributos gráficos del dibujo en el graficador
     float escala;  // Para matenener las proporciones para cualquier ventana.

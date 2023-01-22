@@ -14,10 +14,11 @@ public:
 
     Imagen leer(string ruta) override;
 
-
+    void guardar(Imagen *img) override;
 
 private:
 
+    string getExtension(string identificador);
 
 };
 

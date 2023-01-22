@@ -1,0 +1,10 @@
+debug/archivoaic.o
+debug/archivopnm.o
+debug/espaciodetrabajo.o
+debug/gestordearchivos.o
+debug/imagen.o
+debug/interfazdeusuario.o
+debug/main.o
+debug/pixel.o
+debug/ventanadegraficacion.o
+debug/moc_ventanadegraficacion.o

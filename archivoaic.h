@@ -11,6 +11,10 @@ class ArchivoAIC: public GestorDeArchivos
 {
 public:
     ArchivoAIC();
+
+    Imagen leer(string ruta) override;
+
+    void guardar(Imagen *img) override;
 };
 
 #endif // ARCHIVOAIC_H

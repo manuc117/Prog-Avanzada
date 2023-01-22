@@ -73,3 +73,8 @@ void Imagen::setComentario(string com)
 {
     comentario = com;
 }
+
+string Imagen::getComentario()
+{
+    return comentario;
+}

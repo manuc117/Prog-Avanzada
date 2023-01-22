@@ -38,6 +38,8 @@ public:
 
     void setComentario(string com);
 
+    string getComentario();
+
 private:
     vector<vector<Pixel>>imagen;
     int filas;

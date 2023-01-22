@@ -16,6 +16,7 @@ SOURCES += \
         espaciodetrabajo.cpp \
         gestordearchivos.cpp \
         imagen.cpp \
+        interfazdeusuario.cpp \
         main.cpp \
         pixel.cpp \
         ventanadegraficacion.cpp
@@ -31,5 +32,6 @@ HEADERS += \
     espaciodetrabajo.h \
     gestordearchivos.h \
     imagen.h \
+    interfazdeusuario.h \
     pixel.h \
     ventanadegraficacion.h
