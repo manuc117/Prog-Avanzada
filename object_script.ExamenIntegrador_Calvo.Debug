@@ -1,6 +1,7 @@
 debug/archivoaic.o
 debug/archivopnm.o
 debug/espaciodetrabajo.o
+debug/filtros.o
 debug/gestordearchivos.o
 debug/imagen.o
 debug/interfazdeusuario.o

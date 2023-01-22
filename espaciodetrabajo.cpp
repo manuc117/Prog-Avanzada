@@ -53,6 +53,76 @@ bool EspacioDeTrabajo::esAIC(string rutaArchi)
     return extension == ".aic";
 }
 
+void EspacioDeTrabajo::guardarImagen(Imagen *img)
+{
+    bool seGuarda = true;
+
+    char formatoGuardado;
+    cout<<"Seleccione el formato de guardado de la imagen"<<endl;
+    cout<<"\t-> [p] para pnm"<<endl;
+    cout<<"\t-> [a] para aic"<<endl;
+    cout<<"Formato: ";
+    cin>>formatoGuardado;
+
+    formatoGuardado = tolower(formatoGuardado);
+
+    while (formatoGuardado != 'p' and formatoGuardado != 'a')
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        cout<<"Seleccione un opcion valida: ";
+        cin>>formatoGuardado;
+        formatoGuardado = tolower(formatoGuardado);
+    }
+
+    char cambioFormato;
+
+    if(formatoGuardado == 'a' and img->getIdentificador() != "P2" and img->getIdentificador() != "P2C" and img->getIdentificador() != "P5")
+    {
+        cout<<"Esta imagen no puede ser guardada en formato AIC."<<endl;
+        cout<<"¿Desea almacenarla en fotmato PNM?"<<endl;
+        cout<<"\t-> [s] para SI"<<endl;
+        cout<<"\t-> [n] para NO"<<endl;
+        cin>>cambioFormato;
+        cambioFormato = tolower(cambioFormato);
+
+        while (cambioFormato != 's' and cambioFormato != 'n')
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            cout<<"Seleccione un opcion valida: ";
+            cin>>cambioFormato;
+            cambioFormato = tolower(cambioFormato);
+        }
+
+        if (cambioFormato == 's')
+            formatoGuardado = 'p';
+        else
+        {
+            cout<<"No se pudo guardar el archivo.";
+            seGuarda = false;
+            cout.flush();
+        }
+    }
+
+    if (seGuarda)
+    {
+        GestorDeArchivos *archivo;
+
+        if (formatoGuardado == 'p')
+        {
+            archivo = new ArchivoPNM;
+            archivo->guardar(img);
+        }
+        else
+        {
+            archivo = new ArchivoAIC;
+            archivo->guardar(img);
+        }
+    }
+}
 
 
 

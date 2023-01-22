@@ -7,21 +7,34 @@ InterfazDeUsuario::InterfazDeUsuario()
 
 void InterfazDeUsuario::ejecutar(QApplication *app)
 {
-    int opcionCarpeta = getOpcionCarpeta();
+    bool seEstaEjecutando = true;
 
-    system("cls");
+    while(seEstaEjecutando)
+    {
+        system("cls");
 
-    int opcionArchivo = getOpcionArchivo(opcionCarpeta);
+        int opcionCarpeta = getOpcionCarpeta();
 
-    string rutaArchi = espTrabajo.getRutaArchivo(opcionCarpeta-1, opcionArchivo-1);
+        if (opcionCarpeta != espTrabajo.getCarpetas().size()+1)
+        {
+            system("cls");
 
-    cargarImagen(rutaArchi, opcionCarpeta-1, opcionArchivo-1);
+            int opcionArchivo = getOpcionArchivo(opcionCarpeta);
 
-    graficador.asociarApp(app);
+            string rutaArchi = espTrabajo.getRutaArchivo(opcionCarpeta-1, opcionArchivo-1);
 
-    graficador.show();
+            cargarImagen(rutaArchi, opcionCarpeta-1, opcionArchivo-1);
 
-    app->exec();
+            graficador.asociarApp(app);
+
+            graficador.show();
+
+            app->exec();
+        }
+        else
+           break;
+    }
+
 }
 
 int InterfazDeUsuario::getOpcionCarpeta()
@@ -30,11 +43,13 @@ int InterfazDeUsuario::getOpcionCarpeta()
     for(int carpeta=0; carpeta<carpetas.size(); carpeta++)
         cout<<carpeta+1<<"- "<<carpetas[carpeta]<<endl;
 
+    cout<<carpetas.size()+1<<"- Cerrar programa";
+
     int opcion;
     cout<<endl<<"Seleccione una carpeta: ";
     cin>>opcion;
 
-    while(opcion<1 or opcion>carpetas.size() or !cin.good())
+    while(opcion<1 or opcion>carpetas.size()+1 or !cin.good())
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');

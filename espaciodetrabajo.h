@@ -1,10 +1,16 @@
 #ifndef ESPACIODETRABAJO_H
 #define ESPACIODETRABAJO_H
 
+#include "imagen.h"
+#include "gestordearchivos.h"
+#include "archivopnm.h"
+#include "archivoaic.h"
+
 #include <vector>
 #include <string>
 #include <dirent.h>
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
@@ -23,7 +29,7 @@ public:
 
     bool esAIC(string rutaArchi);
 
-
+    void guardarImagen(Imagen *img);
 
 private:
 

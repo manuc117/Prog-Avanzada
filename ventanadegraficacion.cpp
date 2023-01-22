@@ -67,21 +67,21 @@ void VentanaDeGraficacion::graficarImagen()
 
     glBegin(GL_QUADS);
 
-        for (int fila=0; fila<imagen.getFilas(); fila++)
+    for (int fila=0; fila<imagen.getFilas(); fila++)
+    {
+        for (int columna=0; columna<imagen.getColumnas(); columna++)
         {
-            for (int columna=0; columna<imagen.getColumnas(); columna++)
-            {
-                pixAux = imagen.getPixel(fila,columna);
+            pixAux = imagen.getPixel(fila,columna);
 
-                glColor3f((float)pixAux.getRed()/imagen.getRango(), (float)pixAux.getGreen()/imagen.getRango(), (float)pixAux.getBlue()/imagen.getRango());
+            glColor3f((float)pixAux.getRed()/imagen.getRango(), (float)pixAux.getGreen()/imagen.getRango(), (float)pixAux.getBlue()/imagen.getRango());
 
-                glVertex3i(columna, imagen.getFilas()-fila, 0);
-                glVertex3i(columna, imagen.getFilas()-(fila+1), 0);
-                glVertex3i(columna+1, imagen.getFilas()-(fila+1), 0);
-                glVertex3i(columna+1, imagen.getFilas()-fila, 0);
+            glVertex3i(columna, imagen.getFilas()-fila, 0);
+            glVertex3i(columna, imagen.getFilas()-(fila+1), 0);
+            glVertex3i(columna+1, imagen.getFilas()-(fila+1), 0);
+            glVertex3i(columna+1, imagen.getFilas()-fila, 0);
 
-            }
         }
+    }
 
     glEnd();
 
@@ -151,11 +151,13 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         repaint();
     }
 
-//    if (guardar and ctrl)
-//    {
-//        EspacioDeTrabajo espTrabajo;
-
-//    }
+    if (guardar and ctrl)
+    {
+        EspacioDeTrabajo espTrabajo;
+        string ruta = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);
+        aplicacion->closeAllWindows();
+        espTrabajo.guardarImagen(&imagen);
+    }
 
 }
 

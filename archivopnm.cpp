@@ -22,23 +22,24 @@ Imagen ArchivoPNM::leer(string ruta)
         img.setIdentificador(linea);
 
         //Leer comentarios que empiezan con # y terminan con \n o \n\r
-        int posicion = archi.tellg();
+        int posicion;
 
         while(true)
         {
-            posicion = archi.tellg();
             getline(archi, linea);
 
             if (linea[0] == '#')
                 img.setComentario(linea);
             else
+            {
+                posicion = linea.find_first_of(' ');
+                ncolumnas = stoi(linea.substr(0,posicion));
+                nfilas = stoi(linea.substr(posicion));
                 break;
+            }
         }
 
         //Lectura columnas y filas
-        archi.seekg(posicion);
-
-        archi>>ncolumnas>>nfilas;
         img.setColumnas(ncolumnas);
         img.setFilas(nfilas);
         img.setTamanio();
@@ -194,8 +195,8 @@ void ArchivoPNM::guardar(Imagen *img)
     {
         archi<<img->getIdentificador()<<"\n";
         archi<<img->getComentario()<<"\n";
-        archi<<img->getColumnas()<<" "<<img->getFilas();
-        archi<<img->getRango()<<endl;
+        archi<<img->getColumnas()<<" "<<img->getFilas()<<"\n";
+        archi<<img->getRango()<<"\n";
 
         Pixel pixelAux;
         unsigned char nivelIntens;
