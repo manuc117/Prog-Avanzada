@@ -26,68 +26,68 @@ Imagen FiltroPasaBajos::aplicarFiltro(Imagen &img)
             if(imagen.estaEnLaImagen(fila-1,columna-1))
             {
                 pixAux = imagen.getPixel(fila-1, columna-1);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila-1,columna))
             {
                 pixAux = imagen.getPixel(fila-1, columna);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila-1,columna+1))
             {
                 pixAux = imagen.getPixel(fila-1, columna+1);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila,columna-1))
             {
                 pixAux = imagen.getPixel(fila, columna-1);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila,columna+1))
             {
                 pixAux = imagen.getPixel(fila, columna+1);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila+1,columna-1))
             {
                 pixAux = imagen.getPixel(fila+1, columna-1);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila+1,columna))
             {
                 pixAux = imagen.getPixel(fila+1, columna);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
             if(imagen.estaEnLaImagen(fila+1,columna+1))
             {
-                pixAux = imagen.getPixel(fila-1, columna-1);
-                auxRed += (float)pixAux.getRed()/9;
-                auxGreen += (float)pixAux.getGreen()/9;
-                auxBlue += (float)pixAux.getBlue()/9;
+                pixAux = imagen.getPixel(fila+1, columna+1);
+                auxRed += (float)pixAux.getRed();
+                auxGreen += (float)pixAux.getGreen();
+                auxBlue += (float)pixAux.getBlue();
             }
 
-            pixAux.setPixelRGB(auxRed, auxGreen, auxBlue);
+            pixAux.setPixelRGB(auxRed/9, auxGreen/9, auxBlue/9);
             imagen.setPixel(pixAux, fila, columna);
         }
     }

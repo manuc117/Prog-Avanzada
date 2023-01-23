@@ -1,6 +1,8 @@
 debug/archivoaic.o
 debug/archivopnm.o
 debug/espaciodetrabajo.o
+debug/filtromediana.o
+debug/filtropasaaltos.o
 debug/filtropasabajos.o
 debug/filtros.o
 debug/gestordearchivos.o

@@ -47,7 +47,7 @@ void Imagen::setPixel(Pixel pix, int fila, int columna)
 
 bool Imagen::estaEnLaImagen(int fila, int columna)
 {
-    return fila<=filas and columna<=columnas and fila>0 and columna>0;
+    return fila<filas and columna<columnas and fila>=0 and columna>=0;
 }
 
 string Imagen::getIdentificador()

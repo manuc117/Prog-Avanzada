@@ -14,6 +14,8 @@ SOURCES += \
         archivoaic.cpp \
         archivopnm.cpp \
         espaciodetrabajo.cpp \
+        filtromediana.cpp \
+        filtropasaaltos.cpp \
         filtropasabajos.cpp \
         filtros.cpp \
         gestordearchivos.cpp \
@@ -32,6 +34,8 @@ HEADERS += \
     archivoaic.h \
     archivopnm.h \
     espaciodetrabajo.h \
+    filtromediana.h \
+    filtropasaaltos.h \
     filtropasabajos.h \
     filtros.h \
     gestordearchivos.h \

@@ -119,6 +119,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     bool derecha= event->key() == Qt::Key_Right;
     bool guardar= event->key() == Qt::Key_G;
     bool suavizado= event->key() == Qt::Key_S;
+    bool altos= event->key() == Qt::Key_A;
 
     if (izquierda and ctrl)
     {
@@ -173,7 +174,19 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         Filtros *filtro;
         filtro = new FiltroPasaBajos;
 
-        cout<<"Ctrl + s: aplicar suavizado.";
+        cout<<"Ctrl + s: aplicar suavizado.\n";
+        cout.flush();
+
+        imagen = filtro->aplicarFiltro(imagen);
+        repaint();
+    }
+
+    if (altos and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new FiltroPasaAltos;
+
+        cout<<"Ctrl + a: aplicar realce de bordes.\n";
         cout.flush();
 
         imagen = filtro->aplicarFiltro(imagen);

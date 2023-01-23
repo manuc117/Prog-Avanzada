@@ -4,7 +4,6 @@
 #include "filtros.h"
 #include "imagen.h"
 
-
 class FiltroPasaBajos: public Filtros
 {
 public:

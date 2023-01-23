@@ -13,6 +13,7 @@
 #include "archivopnm.h"
 #include "filtros.h"
 #include "filtropasabajos.h"
+#include "filtropasaaltos.h"
 
 using namespace std;
 
