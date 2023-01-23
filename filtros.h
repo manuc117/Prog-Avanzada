@@ -8,7 +8,7 @@ class Filtros
 public:
     Filtros();
 
-    virtual void aplicarFiltro(Imagen &img);
+    virtual Imagen aplicarFiltro(Imagen &img) = 0;
 };
 
 #endif // FILTROS_H

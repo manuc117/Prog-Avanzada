@@ -11,6 +11,8 @@
 #include "gestordearchivos.h"
 #include "archivoaic.h"
 #include "archivopnm.h"
+#include "filtros.h"
+#include "filtropasabajos.h"
 
 using namespace std;
 

@@ -118,6 +118,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     bool izquierda= event->key() == Qt::Key_Left;
     bool derecha= event->key() == Qt::Key_Right;
     bool guardar= event->key() == Qt::Key_G;
+    bool suavizado= event->key() == Qt::Key_S;
 
     if (izquierda and ctrl)
     {
@@ -130,6 +131,9 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         {
              --opcionArchivo;
         }
+
+        cout<<"Ctrl + flecha izquierda: mostrar imagen anterior.\n";
+        cout.flush();
 
         cargarImagen();
         repaint();
@@ -147,6 +151,9 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
             ++opcionArchivo;
         }
 
+        cout<<"Ctrl + flecha derecha: mostrar imagen siguiente.\n";
+        cout.flush();
+
         cargarImagen();
         repaint();
     }
@@ -154,9 +161,23 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     if (guardar and ctrl)
     {
         EspacioDeTrabajo espTrabajo;
+        cout<<"Ctrl + g: guardar imagen.";
+        cout.flush();
         string ruta = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);
         aplicacion->closeAllWindows();
         espTrabajo.guardarImagen(&imagen);
+    }
+
+    if (suavizado and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new FiltroPasaBajos;
+
+        cout<<"Ctrl + s: aplicar suavizado.";
+        cout.flush();
+
+        imagen = filtro->aplicarFiltro(imagen);
+        repaint();
     }
 
 }

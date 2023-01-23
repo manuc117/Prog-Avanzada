@@ -80,10 +80,11 @@ void EspacioDeTrabajo::guardarImagen(Imagen *img)
 
     if(formatoGuardado == 'a' and img->getIdentificador() != "P2" and img->getIdentificador() != "P2C" and img->getIdentificador() != "P5")
     {
-        cout<<"Esta imagen no puede ser guardada en formato AIC."<<endl;
+        cout<<"\nEsta imagen no puede ser guardada en formato AIC."<<endl;
         cout<<"¿Desea almacenarla en fotmato PNM?"<<endl;
         cout<<"\t-> [s] para SI"<<endl;
-        cout<<"\t-> [n] para NO"<<endl;
+        cout<<"\t-> [n] para NO"<<endl<<endl;
+        cout<<"Cambiar formato: ";
         cin>>cambioFormato;
         cambioFormato = tolower(cambioFormato);
 

@@ -1,6 +1,7 @@
 release/archivoaic.o
 release/archivopnm.o
 release/espaciodetrabajo.o
+release/filtropasabajos.o
 release/filtros.o
 release/gestordearchivos.o
 release/imagen.o
