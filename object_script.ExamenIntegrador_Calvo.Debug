@@ -1,5 +1,7 @@
 debug/archivoaic.o
 debug/archivopnm.o
+debug/brillo.o
+debug/contraste.o
 debug/espaciodetrabajo.o
 debug/filtromediana.o
 debug/filtropasaaltos.o
@@ -9,6 +11,8 @@ debug/gestordearchivos.o
 debug/imagen.o
 debug/interfazdeusuario.o
 debug/main.o
+debug/negativo.o
 debug/pixel.o
+debug/procesadorestadistico.o
 debug/ventanadegraficacion.o
 debug/moc_ventanadegraficacion.o

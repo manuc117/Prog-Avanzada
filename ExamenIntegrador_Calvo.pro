@@ -13,6 +13,8 @@ CONFIG -= app_bundle
 SOURCES += \
         archivoaic.cpp \
         archivopnm.cpp \
+        brillo.cpp \
+        contraste.cpp \
         espaciodetrabajo.cpp \
         filtromediana.cpp \
         filtropasaaltos.cpp \
@@ -22,7 +24,9 @@ SOURCES += \
         imagen.cpp \
         interfazdeusuario.cpp \
         main.cpp \
+        negativo.cpp \
         pixel.cpp \
+        procesadorestadistico.cpp \
         ventanadegraficacion.cpp
 
 # Default rules for deployment.
@@ -33,6 +37,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     archivoaic.h \
     archivopnm.h \
+    brillo.h \
+    contraste.h \
     espaciodetrabajo.h \
     filtromediana.h \
     filtropasaaltos.h \
@@ -41,5 +47,7 @@ HEADERS += \
     gestordearchivos.h \
     imagen.h \
     interfazdeusuario.h \
+    negativo.h \
     pixel.h \
+    procesadorestadistico.h \
     ventanadegraficacion.h

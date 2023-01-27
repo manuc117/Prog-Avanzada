@@ -6,6 +6,7 @@
 #include <QOpenGLFunctions>
 #include <iostream>
 #include <QKeyEvent>
+
 #include "imagen.h"
 #include "espaciodetrabajo.h"
 #include "gestordearchivos.h"
@@ -14,6 +15,10 @@
 #include "filtros.h"
 #include "filtropasabajos.h"
 #include "filtropasaaltos.h"
+#include "filtromediana.h"
+#include "negativo.h"
+#include "contraste.h"
+#include "brillo.h"
 
 using namespace std;
 

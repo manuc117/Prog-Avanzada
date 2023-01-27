@@ -1,5 +1,7 @@
 release/archivoaic.o
 release/archivopnm.o
+release/brillo.o
+release/contraste.o
 release/espaciodetrabajo.o
 release/filtromediana.o
 release/filtropasaaltos.o
@@ -9,6 +11,8 @@ release/gestordearchivos.o
 release/imagen.o
 release/interfazdeusuario.o
 release/main.o
+release/negativo.o
 release/pixel.o
+release/procesadorestadistico.o
 release/ventanadegraficacion.o
 release/moc_ventanadegraficacion.o

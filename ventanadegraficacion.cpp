@@ -120,6 +120,11 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     bool guardar= event->key() == Qt::Key_G;
     bool suavizado= event->key() == Qt::Key_S;
     bool altos= event->key() == Qt::Key_A;
+    bool mediana= event->key() == Qt::Key_M;
+    bool mas= event->key() == Qt::Key_Plus;
+    bool menos= event->key() == Qt::Key_Minus;
+    bool negativo= event->key() == Qt::Key_N;
+    bool contraste= event->key() == Qt::Key_C;
 
     if (izquierda and ctrl)
     {
@@ -162,7 +167,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     if (guardar and ctrl)
     {
         EspacioDeTrabajo espTrabajo;
-        cout<<"Ctrl + g: guardar imagen.";
+        cout<<"Ctrl + G: guardar imagen.";
         cout.flush();
         string ruta = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);
         aplicacion->closeAllWindows();
@@ -174,7 +179,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         Filtros *filtro;
         filtro = new FiltroPasaBajos;
 
-        cout<<"Ctrl + s: aplicar suavizado.\n";
+        cout<<"Ctrl + S: aplicar filtro pasa bajos (suavizado).\n";
         cout.flush();
 
         imagen = filtro->aplicarFiltro(imagen);
@@ -186,7 +191,71 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         Filtros *filtro;
         filtro = new FiltroPasaAltos;
 
-        cout<<"Ctrl + a: aplicar realce de bordes.\n";
+        cout<<"Ctrl + A: aplicar filtro pasa altos (realce de bordes).\n";
+        cout.flush();
+
+        imagen = filtro->aplicarFiltro(imagen);
+        repaint();
+    }
+
+    if (mediana and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new FiltroMediana;
+
+        cout<<"Ctrl + M: aplicar filtro mediana.\n";
+        cout.flush();
+
+        imagen = filtro->aplicarFiltro(imagen);
+        repaint();
+    }
+
+    if (mas and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new Brillo(1);
+
+        cout<<"Ctrl + '+': aumentar brillo.\n";
+        cout.flush();
+
+        aplicacion->closeAllWindows();
+        imagen = filtro->aplicarFiltro(imagen);
+        show();
+        repaint();
+    }
+
+    if (menos and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new Brillo(0);
+
+        cout<<"Ctrl + '-': reducir brillo.\n";
+        cout.flush();
+
+        aplicacion->closeAllWindows();
+        imagen = filtro->aplicarFiltro(imagen);
+        show();
+        repaint();
+    }
+
+    if (negativo and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new Negativo;
+
+        cout<<"Ctrl + N: aplicar negativo.\n";
+        cout.flush();
+
+        imagen = filtro->aplicarFiltro(imagen);
+        repaint();
+    }
+
+    if(contraste and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new Contraste;
+
+        cout<<"Ctrl + C: ajustar contraste.\n";
         cout.flush();
 
         imagen = filtro->aplicarFiltro(imagen);

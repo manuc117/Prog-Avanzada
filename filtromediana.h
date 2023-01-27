@@ -3,7 +3,9 @@
 
 #include "filtros.h"
 #include "imagen.h"
+
 #include <vector>
+#include <algorithm>
 
 class FiltroMediana: public Filtros
 {
