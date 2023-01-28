@@ -13,6 +13,7 @@ CONFIG -= app_bundle
 SOURCES += \
         archivoaic.cpp \
         archivopnm.cpp \
+        binarizado.cpp \
         brillo.cpp \
         contraste.cpp \
         espaciodetrabajo.cpp \
@@ -37,6 +38,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     archivoaic.h \
     archivopnm.h \
+    binarizado.h \
     brillo.h \
     contraste.h \
     espaciodetrabajo.h \

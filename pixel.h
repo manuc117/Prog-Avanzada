@@ -26,11 +26,12 @@ public:
 
     void setPixelMono(int valor);
 
+    int getIntensidad();
+
 private:
 
-    int red;
-    int green;
-    int blue;
+    int red, green, blue;
+
 };
 
 #endif // PIXEL_H

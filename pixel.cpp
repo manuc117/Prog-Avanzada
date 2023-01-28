@@ -74,3 +74,8 @@ void Pixel::setPixelMono(int valor)
     }
 }
 
+int Pixel::getIntensidad()
+{
+    return ((red+green+blue)/3);
+}
+

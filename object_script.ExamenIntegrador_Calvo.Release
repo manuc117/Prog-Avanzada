@@ -1,5 +1,6 @@
 release/archivoaic.o
 release/archivopnm.o
+release/binarizado.o
 release/brillo.o
 release/contraste.o
 release/espaciodetrabajo.o

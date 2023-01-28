@@ -4,7 +4,7 @@ Brillo::Brillo(int opcion)
 {
     if (opcion == 1)
         operacion = 'a';
-    else if (opcion == 0)
+    else if (opcion == 2)
         operacion = 'r';
 }
 
@@ -68,7 +68,7 @@ void Brillo::reducirBrillo(Imagen &img)
 
             auxRed = pixelAux.getRed() - valor;
             if(auxRed < 0)
-                auxRed = rango;
+                auxRed = 0;
 
             auxGreen = pixelAux.getGreen() - valor;
             if(auxGreen < 0)
@@ -99,6 +99,7 @@ void Brillo::getValor(Imagen &img)
     cout<<"Ingrese una opcion: ";
     cin>>elegir;
     elegir = tolower(elegir);
+    cout<<endl;
 
     while (elegir != 'e' and elegir != 'd')
     {
@@ -117,18 +118,16 @@ void Brillo::getValor(Imagen &img)
     else if(elegir == 'e')
     {
         valor = -1;
-        while(valor <= 0 or valor>=img.getRango())
+        while(valor <= 0 or valor>=img.getRango() or !cin.good())
         {
             cin.clear();
-            cout<<"Ingrese un valor entre [0,"<<img.getRango()<<"]";
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            cout<<"Ingrese un valor entre [0,"<<img.getRango()<<"]: ";
             cout.flush();
             cin>>valor;
+            cout<<endl;
         }
     }
-}
-
-void Brillo::cambiarOpcion(Imagen &img)
-{
-
 }
 

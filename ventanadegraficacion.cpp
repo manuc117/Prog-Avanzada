@@ -122,9 +122,11 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     bool altos= event->key() == Qt::Key_A;
     bool mediana= event->key() == Qt::Key_M;
     bool mas= event->key() == Qt::Key_Plus;
-    bool menos= event->key() == Qt::Key_Minus;
+    bool menos= event->key() == Qt::Key_Comma; /*La tecla ctrl + la tecla menos no funcionan en mi dispositivo,
+    por lo que tuve que cambiar el menos por otra tecla.*/
     bool negativo= event->key() == Qt::Key_N;
     bool contraste= event->key() == Qt::Key_C;
+    bool binarizar= event->key() == Qt::Key_B;
 
     if (izquierda and ctrl)
     {
@@ -227,9 +229,9 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     if (menos and ctrl)
     {
         Filtros *filtro;
-        filtro = new Brillo(0);
+        filtro = new Brillo(2);
 
-        cout<<"Ctrl + '-': reducir brillo.\n";
+        cout<<"Ctrl + coma ',': reducir brillo.\n";
         cout.flush();
 
         aplicacion->closeAllWindows();
@@ -259,6 +261,20 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         cout.flush();
 
         imagen = filtro->aplicarFiltro(imagen);
+        repaint();
+    }
+
+    if(binarizar and ctrl)
+    {
+        Filtros *filtro;
+        filtro = new Binarizado;
+
+        cout<<"Ctrl + C: binarizar imagen.\n";
+        cout.flush();
+
+        aplicacion->closeAllWindows();
+        imagen = filtro->aplicarFiltro(imagen);
+        show();
         repaint();
     }
 

@@ -19,6 +19,7 @@
 #include "negativo.h"
 #include "contraste.h"
 #include "brillo.h"
+#include "binarizado.h"
 
 using namespace std;
 

@@ -1,5 +1,6 @@
 debug/archivoaic.o
 debug/archivopnm.o
+debug/binarizado.o
 debug/brillo.o
 debug/contraste.o
 debug/espaciodetrabajo.o

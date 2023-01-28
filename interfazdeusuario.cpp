@@ -43,10 +43,10 @@ int InterfazDeUsuario::getOpcionCarpeta()
     for(int carpeta=0; carpeta<carpetas.size(); carpeta++)
         cout<<carpeta+1<<"- "<<carpetas[carpeta]<<endl;
 
-    cout<<carpetas.size()+1<<"- Cerrar programa";
+    cout<<carpetas.size()+1<<"- Cerrar programa\n";
 
     int opcion;
-    cout<<endl<<"Seleccione una carpeta: ";
+    cout<<endl<<"Seleccione una opcion: ";
     cin>>opcion;
 
     while(opcion<1 or opcion>carpetas.size()+1 or !cin.good())
@@ -69,6 +69,8 @@ int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
     vector<string> listaDeArchivos = espTrabajo.getNombreArchivos(opcionCarpeta-1);
     for(int archivo=0; archivo<listaDeArchivos.size(); archivo++)
         cout<<"\t"<<archivo+1<<"- "<<listaDeArchivos[archivo]<<endl;
+
+    //cout<<"\t"<<listaDeArchivos.size()+1<<"- Volver a la seleccion de carpetas\n";
 
     int opcion;
     cout<<endl<<"\tSeleccione un archivo: ";

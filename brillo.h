@@ -21,8 +21,6 @@ public:
 
     void getValor(Imagen &img);
 
-    void cambiarOpcion (Imagen &img);
-
 private:
     int valor;
 
