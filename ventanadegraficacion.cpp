@@ -280,3 +280,26 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
 }
 
+void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
+{
+    bool clickIzq = event->button() == Qt::LeftButton;
+    bool ctrl = event->modifiers() == Qt::ControlModifier;
+
+    if(clickIzq and ctrl)
+    {
+        AlgoritmoDelPintor Pintor(imagen);
+
+        cout<<"Ctrl + click izquierdo: aplicar algortimo del pintor.\n";
+        cout.flush();
+
+        int f, c;
+
+        aplicacion->closeAllWindows();
+        imagen = Pintor.aplicarAlgoritmo(f, c);
+        show();
+        repaint();
+
+    }
+}
+
+

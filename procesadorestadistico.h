@@ -19,6 +19,18 @@ public:
     int getMinimoB(Imagen &img);
 
     int getMaximoB(Imagen &img);
+
+    vector<int> getFrecuenciaR(Imagen &img);
+
+    vector<int> getFrecuenciaG(Imagen &img);
+
+    vector<int> getFrecuenciaB(Imagen &img);
+
+    int getMaxFrecuenciaR(Imagen &img);
+
+    int getMaxFrecuenciaG(Imagen &img);
+
+    int getMaxFrecuenciaB(Imagen &img);
 };
 
 #endif // PROCESADORESTADISTICO_H

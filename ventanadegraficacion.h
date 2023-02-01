@@ -20,6 +20,7 @@
 #include "contraste.h"
 #include "brillo.h"
 #include "binarizado.h"
+#include "algoritmodelpintor.h"
 
 using namespace std;
 
@@ -42,6 +43,7 @@ public:
     void cargarImagen();
 
     void keyPressEvent(QKeyEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
 
 private:
     Imagen imagen;
