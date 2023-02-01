@@ -49,7 +49,10 @@ void VentanaDeGraficacion::paintGL()
 
 void VentanaDeGraficacion::resizeGL(int ancho, int alto)
 {
-    glViewport(0, 0, ancho, alto);
+    anchoVentana = ancho;
+    altoVentana = alto;
+
+    glViewport(0, 0, anchoVentana, altoVentana);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0, width(), 0, height(), -1, 1);
@@ -292,7 +295,15 @@ void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
         cout<<"Ctrl + click izquierdo: aplicar algortimo del pintor.\n";
         cout.flush();
 
-        int f, c;
+        int f = altoVentana - (QCursor::pos().y() - this->pos().y());
+        int c = QCursor::pos().x() - this->pos().x();
+
+        f -= desply;
+        f = f/escala;
+        c -= desplx;
+        c = c/escala;
+
+        f = imagen.getFilas()-1-f;
 
         aplicacion->closeAllWindows();
         imagen = Pintor.aplicarAlgoritmo(f, c);

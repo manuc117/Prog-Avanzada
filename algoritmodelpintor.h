@@ -37,6 +37,8 @@ private:
 
     vector<int> vecinosC = {0,1,1,1,0,-1,-1,-1};
 
+    int profundidad;
+
 };
 
 #endif // ALGORITMODELPINTOR_H

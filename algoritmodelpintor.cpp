@@ -13,6 +13,8 @@ Imagen AlgoritmoDelPintor::aplicarAlgoritmo(int fInicial, int cInicial)
 
     unsigned int rangoTolerancia = getRangoDeTolerancia(imagen.getRango());
 
+    profundidad = 0;
+
     pintarVecinos(fInicial, cInicial, pixelInicial, rangoTolerancia);
 
     return imagen;
@@ -27,7 +29,9 @@ void AlgoritmoDelPintor::inicializarMatriz(int fila, int columna)
 
 void AlgoritmoDelPintor::pintarVecinos(int fila, int columna, Pixel pixReferencia, unsigned int tolerancia)
 {
-    if(imagen.estaEnLaImagen(fila,columna))
+    ++profundidad;
+
+    if(imagen.estaEnLaImagen(fila,columna) and profundidad < 10000)
     {
         if(esVecino(pixReferencia, imagen.getPixel(fila, columna), tolerancia))
         {
@@ -44,25 +48,27 @@ void AlgoritmoDelPintor::pintarVecinos(int fila, int columna, Pixel pixReferenci
             }
         }
     }
+
+    --profundidad;
 }
 
 bool AlgoritmoDelPintor::esVecino(Pixel pixReferencia, Pixel pixAnalisis, unsigned int tolerancia)
 {
-    return(pixAnalisis.getRed()<=pixReferencia.getRed()+tolerancia/2 and pixAnalisis.getRed()>=pixReferencia.getRed()-tolerancia/2 and pixAnalisis.getGreen()<=pixReferencia.getGreen()+tolerancia/2 and pixAnalisis.getGreen()>=pixReferencia.getGreen()-tolerancia/2 and pixAnalisis.getBlue()<=pixReferencia.getBlue()+tolerancia/2 and pixAnalisis.getBlue()>=pixReferencia.getBlue()-tolerancia/2);
+    return(pixAnalisis.getRed()<=pixReferencia.getRed()+tolerancia and pixAnalisis.getRed()>=pixReferencia.getRed()-tolerancia and pixAnalisis.getGreen()<=pixReferencia.getGreen()+tolerancia and pixAnalisis.getGreen()>=pixReferencia.getGreen()-tolerancia and pixAnalisis.getBlue()<=pixReferencia.getBlue()+tolerancia and pixAnalisis.getBlue()>=pixReferencia.getBlue()-tolerancia);
 }
 
 unsigned int AlgoritmoDelPintor::getRangoDeTolerancia(int maxRango)
 {
     int tolerancia;
 
-    cout<<"Ingrese el rango de tolerancia a considerar entre [0,"<<maxRango<<"]: ";
+    cout<<"\tIngrese el rango de tolerancia a considerar entre [0,"<<maxRango<<"]: ";
     cin>>tolerancia;
 
     while(tolerancia < 0 or tolerancia > maxRango or !cin.good())
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout<<"Ingrese un rango de tolerancia valido entre [0,"<<maxRango<<"]";
+        cout<<"\n\tIngrese un rango de tolerancia valido entre [0,"<<maxRango<<"]";
         cin>>tolerancia;
     }
 

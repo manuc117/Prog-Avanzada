@@ -49,6 +49,7 @@ private:
     Imagen imagen;
     int opcionCarpeta, opcionArchivo;
     GestorDeArchivos *gestorArchi;
+    int anchoVentana, altoVentana;
 
     // Atributos gráficos del dibujo en el graficador
     float escala;  // Para matenener las proporciones para cualquier ventana.
