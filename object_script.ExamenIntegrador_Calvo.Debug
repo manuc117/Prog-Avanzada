@@ -12,6 +12,7 @@ debug/filtros.o
 debug/gestordearchivos.o
 debug/imagen.o
 debug/interfazdeusuario.o
+debug/lut.o
 debug/main.o
 debug/negativo.o
 debug/pixel.o

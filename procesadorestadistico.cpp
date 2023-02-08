@@ -258,3 +258,5 @@ int ProcesadorEstadistico::getMaxFrecuenciaB(Imagen &img)
 }
 
 
+
+

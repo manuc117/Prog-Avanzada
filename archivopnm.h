@@ -2,6 +2,8 @@
 #define ARCHIVOPNM_H
 
 #include "gestordearchivos.h"
+#include "ExcepcionArchivoCorrupto.h"
+
 #include <fstream>
 #include <iostream>
 

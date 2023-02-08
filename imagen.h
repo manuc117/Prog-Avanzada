@@ -42,10 +42,15 @@ public:
 
 private:
     vector<vector<Pixel>>imagen;
+
     int filas;
+
     int columnas;
+
     int rango;
+
     string identificador; //código de identificación
+
     string comentario;
 };
 

@@ -21,6 +21,8 @@
 #include "brillo.h"
 #include "binarizado.h"
 #include "algoritmodelpintor.h"
+#include "lut.h"
+#include "ExcepcionArchivoCorrupto.h"
 
 using namespace std;
 
@@ -30,7 +32,7 @@ class VentanaDeGraficacion: public QOpenGLWidget, protected QOpenGLFunctions
 public:
 
     VentanaDeGraficacion();
-    void cargarImagen(Imagen img);
+    void setImagen(Imagen img);
     void asociarApp(QApplication* app);
 
     void initializeGL() override;
@@ -38,6 +40,7 @@ public:
     void resizeGL(int ancho, int alto) override;
 
     void graficarImagen();
+    void graficarImagenPseudocoloreada(int lut);
 
     void setOpciones(int opCarpeta, int opArchi);
     void cargarImagen();
@@ -50,6 +53,8 @@ private:
     int opcionCarpeta, opcionArchivo;
     GestorDeArchivos *gestorArchi;
     int anchoVentana, altoVentana;
+    bool seGraficaPseudocoloreada = false;
+    int lut;
 
     // Atributos gráficos del dibujo en el graficador
     float escala;  // Para matenener las proporciones para cualquier ventana.

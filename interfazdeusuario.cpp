@@ -95,12 +95,12 @@ void InterfazDeUsuario::cargarImagen(string rutaArchi, int opcionCarpeta, int op
     if (espTrabajo.esPNM(rutaArchi))
     {
         gestorArchi = new ArchivoPNM;
-        graficador.cargarImagen(gestorArchi ->leer(rutaArchi));
+        graficador.setImagen(gestorArchi ->leer(rutaArchi));
     }
     else if(espTrabajo.esAIC(rutaArchi))
     {
         gestorArchi = new ArchivoAIC;
-        graficador.cargarImagen(gestorArchi->leer(rutaArchi));
+        graficador.setImagen(gestorArchi->leer(rutaArchi));
     }
 }
 

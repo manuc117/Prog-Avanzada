@@ -25,6 +25,7 @@ SOURCES += \
         gestordearchivos.cpp \
         imagen.cpp \
         interfazdeusuario.cpp \
+        lut.cpp \
         main.cpp \
         negativo.cpp \
         pixel.cpp \
@@ -37,6 +38,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    ExcepcionArchivoCorrupto.h \
+    ExcepcionArchivoNoSoportado.h \
     algoritmodelpintor.h \
     archivoaic.h \
     archivopnm.h \
@@ -51,6 +54,7 @@ HEADERS += \
     gestordearchivos.h \
     imagen.h \
     interfazdeusuario.h \
+    lut.h \
     negativo.h \
     pixel.h \
     procesadorestadistico.h \

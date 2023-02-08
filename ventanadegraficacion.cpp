@@ -5,8 +5,9 @@ VentanaDeGraficacion::VentanaDeGraficacion()
 
 }
 
-void VentanaDeGraficacion::cargarImagen(Imagen img)
+void VentanaDeGraficacion::setImagen(Imagen img)
 {
+    seGraficaPseudocoloreada = false;
     imagen = img;
 }
 
@@ -44,7 +45,10 @@ void VentanaDeGraficacion::paintGL()
         desplx = (width() - imagen.getColumnas()*escala)*0.5f;
     }
 
-    graficarImagen();
+    if(!seGraficaPseudocoloreada)
+        graficarImagen();
+    else if(seGraficaPseudocoloreada)
+        graficarImagenPseudocoloreada(lut);
 }
 
 void VentanaDeGraficacion::resizeGL(int ancho, int alto)
@@ -89,6 +93,40 @@ void VentanaDeGraficacion::graficarImagen()
     glEnd();
 
     glPopMatrix();
+}
+
+void VentanaDeGraficacion::graficarImagenPseudocoloreada(int lut)
+{
+    LUT tablaLUT(lut);
+    Pixel pixAux;
+
+    glPushMatrix();
+    glTranslatef(desplx, desply, 0.0f);
+    glScalef(escala, escala, 1.0f);
+
+    glBegin(GL_QUADS);
+
+
+    for (int fila=0; fila<imagen.getFilas(); fila++)
+    {
+        for (int columna=0; columna<imagen.getColumnas(); columna++)
+        {
+            pixAux = imagen.getPixel(fila,columna);
+            pixAux = tablaLUT.pseudocolorear(pixAux.getIntensidad());
+
+            glColor3f((float)pixAux.getRed()/imagen.getRango(), (float)pixAux.getGreen()/imagen.getRango(), (float)pixAux.getBlue()/imagen.getRango());
+
+            glVertex3i(columna, imagen.getFilas()-fila, 0);
+            glVertex3i(columna, imagen.getFilas()-(fila+1), 0);
+            glVertex3i(columna+1, imagen.getFilas()-(fila+1), 0);
+            glVertex3i(columna+1, imagen.getFilas()-fila, 0);
+
+        }
+    }
+
+    glEnd();
+
+    glPopMatrix();
 
 }
 
@@ -106,12 +144,12 @@ void VentanaDeGraficacion::cargarImagen()
     if (espTrabajo.esPNM(rutaArchi))
     {
         gestorArchi = new ArchivoPNM;
-        cargarImagen(gestorArchi ->leer(rutaArchi));
+        setImagen(gestorArchi ->leer(rutaArchi));
     }
     else if(espTrabajo.esAIC(rutaArchi))
     {
         gestorArchi = new ArchivoAIC;
-        cargarImagen(gestorArchi->leer(rutaArchi));
+        setImagen(gestorArchi->leer(rutaArchi));
     }
 }
 
@@ -125,11 +163,17 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     bool altos= event->key() == Qt::Key_A;
     bool mediana= event->key() == Qt::Key_M;
     bool mas= event->key() == Qt::Key_Plus;
-    bool menos= event->key() == Qt::Key_Comma; /*La tecla ctrl + la tecla menos no funcionan en mi dispositivo,
+    bool menos= event->key() == Qt::Key_Comma;
+    /*El atajo ctrl + la tecla menos no funcionan en mi dispositivo,
     por lo que tuve que cambiar el menos por otra tecla.*/
+
     bool negativo= event->key() == Qt::Key_N;
     bool contraste= event->key() == Qt::Key_C;
     bool binarizar= event->key() == Qt::Key_B;
+    bool uno= event->key() == Qt::Key_1;
+    bool dos= event->key() == Qt::Key_2;
+
+    cout<<endl;
 
     if (izquierda and ctrl)
     {
@@ -172,7 +216,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     if (guardar and ctrl)
     {
         EspacioDeTrabajo espTrabajo;
-        cout<<"Ctrl + G: guardar imagen.";
+        cout<<"Ctrl + G: guardar imagen.\n";
         cout.flush();
         string ruta = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);
         aplicacion->closeAllWindows();
@@ -281,6 +325,28 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         repaint();
     }
 
+    if(uno and ctrl)
+    {
+        cout<<"Ctrl + 1: pseudocolorear la imagen con glow.lut.\n";
+        cout.flush();
+
+        seGraficaPseudocoloreada = true;
+        lut = 1;
+        show();
+        repaint();
+    }
+
+    if(dos and ctrl)
+    {
+        cout<<"Ctrl + 1: pseudocolorear la imagen con Turbo.lut.\n";
+        cout.flush();
+
+        seGraficaPseudocoloreada = true;
+        lut = 2;
+        show();
+        repaint();
+    }
+
 }
 
 void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
@@ -292,7 +358,7 @@ void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
     {
         AlgoritmoDelPintor Pintor(imagen);
 
-        cout<<"Ctrl + click izquierdo: aplicar algortimo del pintor.\n";
+        cout<<"\nCtrl + click izquierdo: aplicar algortimo del pintor.\n";
         cout.flush();
 
         int f = altoVentana - (QCursor::pos().y() - this->pos().y());

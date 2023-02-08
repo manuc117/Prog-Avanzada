@@ -10,7 +10,7 @@ Imagen ArchivoPNM::leer(string ruta)
     ifstream archi;
     Imagen img;
 
-    archi.open(ruta);
+    archi.open(ruta, ios::in);
 
     if (archi.is_open())
     {
@@ -38,6 +38,9 @@ Imagen ArchivoPNM::leer(string ruta)
                 break;
             }
         }
+
+        if(ncolumnas == 0 or nfilas == 0)
+            throw ExcepcionArchivoCorrupto();
 
         //Lectura columnas y filas
         img.setColumnas(ncolumnas);
@@ -67,6 +70,9 @@ Imagen ArchivoPNM::leer(string ruta)
                     for (int columna=0; columna<ncolumnas; columna++)
                     {
                         archi>>intensidad;
+                        if(intensidad > img.getRango())
+                            throw ExcepcionArchivoCorrupto();
+
                         pixelAux.setPixelMono((int)intensidad);
                         img.setPixel(pixelAux, fila, columna);
                     }
@@ -80,6 +86,9 @@ Imagen ArchivoPNM::leer(string ruta)
                     for (int columna=0; columna<ncolumnas; columna++)
                     {
                         archi>>intensidad;
+                        if(intensidad > img.getRango())
+                            throw ExcepcionArchivoCorrupto();
+
                         pixelAux.setPixelRGB((int)intensidad);
                         img.setPixel(pixelAux, fila, columna);
                     }
@@ -95,6 +104,9 @@ Imagen ArchivoPNM::leer(string ruta)
                     for(int columna=0; columna<ncolumnas; columna++)
                     {
                         archi>>R>>G>>B;
+                        if(R>img.getRango() or G>img.getRango() or B>img.getRango())
+                            throw ExcepcionArchivoCorrupto();
+
                         pixelAux.setPixelRGB(R, G, B);
                         img.setPixel(pixelAux, fila, columna);
                     }
@@ -116,9 +128,11 @@ Imagen ArchivoPNM::leer(string ruta)
                     {
                         archi.read((char*)&r, sizeof(r));
                         intensidad = (int)r;
+                        if(intensidad > img.getRango())
+                            throw ExcepcionArchivoCorrupto();
+
                         pixelAux.setPixelMono((int)intensidad);
                         img.setPixel(pixelAux, fila, columna);
-
                     }
                 }
                 archi.close();
@@ -138,9 +152,11 @@ Imagen ArchivoPNM::leer(string ruta)
                     {
                         archi.read((char*)&r, sizeof(r));
                         intensidad = (int)r;
+                        if(intensidad > img.getRango())
+                            throw ExcepcionArchivoCorrupto();
+
                         pixelAux.setPixelRGB(intensidad);
                         img.setPixel(pixelAux, fila, columna);
-
                     }
                 }
                 archi.close();
@@ -161,6 +177,9 @@ Imagen ArchivoPNM::leer(string ruta)
                         archi.read((char*)&r, sizeof(r));
                         archi.read((char*)&g, sizeof(g));
                         archi.read((char*)&b, sizeof(b));
+
+                        if(r>img.getRango() or g>img.getRango() or b>img.getRango())
+                            throw ExcepcionArchivoCorrupto();
 
                         pixelAux.setPixelRGB((int) r, (int) g, (int) b); //casteo xq tengo que recibir un int y lei un unsigned char.
                         img.setPixel(pixelAux, fila, columna);

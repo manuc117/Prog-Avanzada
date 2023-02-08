@@ -39,6 +39,8 @@ private:
 
     int profundidad;
 
+    int contadorPixeles;
+
 };
 
 #endif // ALGORITMODELPINTOR_H
