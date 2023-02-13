@@ -11,25 +11,46 @@ void InterfazDeUsuario::ejecutar(QApplication *app)
 
     while(seEstaEjecutando)
     {
-        system("cls");
 
         int opcionCarpeta = getOpcionCarpeta();
 
-        if (opcionCarpeta != espTrabajo.getCarpetas().size()+1)
+        if (opcionCarpeta != espTrabajo.getCarpetas().size()+1 and opcionCarpeta != espTrabajo.getCarpetas().size()+2)
         {
             system("cls");
 
             int opcionArchivo = getOpcionArchivo(opcionCarpeta);
 
-            string rutaArchi = espTrabajo.getRutaArchivo(opcionCarpeta-1, opcionArchivo-1);
+            if(opcionArchivo != -1)
+            {
+                string rutaArchi = espTrabajo.getRutaArchivo(opcionCarpeta-1, opcionArchivo-1);
 
-            cargarImagen(rutaArchi, opcionCarpeta-1, opcionArchivo-1);
+                mostrarAtajos();
 
-            graficador.asociarApp(app);
+                try
+                {
+                    cargarImagen(rutaArchi, opcionCarpeta-1, opcionArchivo-1);
 
-            graficador.show();
+                    graficador.asociarApp(app);
 
-            app->exec();
+                    graficador.show();
+
+                    app->exec();
+
+                    system("cls");
+                }
+                catch(ExcepcionArchivoCorrupto &excepcion)
+                {
+                    system("cls");
+                    app->closeAllWindows();
+                    cout<<excepcion.what()<<endl;
+                }
+                catch(ExcepcionArchivoNoSoportado &excepcion)
+                {
+                    system("cls");
+                    app->closeAllWindows();
+                    cout<<excepcion.what()<<endl;
+                }
+            }
         }
         else
            break;
@@ -43,13 +64,14 @@ int InterfazDeUsuario::getOpcionCarpeta()
     for(int carpeta=0; carpeta<carpetas.size(); carpeta++)
         cout<<carpeta+1<<"- "<<carpetas[carpeta]<<endl;
 
-    cout<<carpetas.size()+1<<"- Cerrar programa\n";
+    cout<<carpetas.size()+1<<"- Recuperar la ultima ejecucion\n";
+    cout<<carpetas.size()+2<<"- Cerrar programa\n";
 
     int opcion;
     cout<<endl<<"Seleccione una opcion: ";
     cin>>opcion;
 
-    while(opcion<1 or opcion>carpetas.size()+1 or !cin.good())
+    while(opcion<1 or opcion>carpetas.size()+2 or !cin.good())
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -70,19 +92,25 @@ int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
     for(int archivo=0; archivo<listaDeArchivos.size(); archivo++)
         cout<<"\t"<<archivo+1<<"- "<<listaDeArchivos[archivo]<<endl;
 
-    //cout<<"\t"<<listaDeArchivos.size()+1<<"- Volver a la seleccion de carpetas\n";
+    cout<<"\t"<<listaDeArchivos.size()+1<<"- Volver a la seleccion de carpetas\n";
 
     int opcion;
     cout<<endl<<"\tSeleccione un archivo: ";
     cin>>opcion;
 
-    while(opcion<1 or opcion>listaDeArchivos.size() or !cin.good())
+    while(opcion<1 or opcion>listaDeArchivos.size()+1 or !cin.good())
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         cout<<"\tSeleccione una opcion valida: ";
         cin>>opcion;
+    }
+
+    if (opcion == listaDeArchivos.size()+1)
+    {
+        system("cls");
+        return -1;
     }
 
     return opcion;
@@ -94,16 +122,35 @@ void InterfazDeUsuario::cargarImagen(string rutaArchi, int opcionCarpeta, int op
 
     if (espTrabajo.esPNM(rutaArchi))
     {
-        gestorArchi = new ArchivoPNM;
-        graficador.setImagen(gestorArchi ->leer(rutaArchi));
+            gestorArchi = new ArchivoPNM;
+            graficador.setImagen(gestorArchi ->leer(rutaArchi));
     }
     else if(espTrabajo.esAIC(rutaArchi))
     {
-        gestorArchi = new ArchivoAIC;
-        graficador.setImagen(gestorArchi->leer(rutaArchi));
+            gestorArchi = new ArchivoAIC;
+            graficador.setImagen(gestorArchi->leer(rutaArchi));
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
 }
 
-
-
+void InterfazDeUsuario::mostrarAtajos()
+{
+    cout<<"\n\t----Lista de atajos----\n";
+    cout<<"\t- Mostrar imagen siguiente: Ctrl + flecha derecha\n";
+    cout<<"\t- Mostrar imagen anterior: Ctrl + flecha izquierda\n";
+    cout<<"\t- Mostrar imagen siguiente: Ctrl + flecha derecha\n";
+    cout<<"\t- Guardar imagen: Ctrl + G\n";
+    cout<<"\t- Mostrar histograma: Ctrl + H\n";
+    cout<<"\t- Ajustar contraste: Ctrl + C\n";
+    cout<<"\t- Aumentar brillo: Ctrl + '+'\n";
+    cout<<"\t- Reducir  brillo: Ctrl + ','\n";
+    cout<<"\t- Detectar area con el color o intensidad del pixel debajo del cursor: Ctrl + click izquierdo\n";
+    cout<<"\t- Aplicar pseudocoloreado: Ctrl + nro de LUT.\n\t\t1) glow.lut\n\t\t2) Turbo.lut\n";
+    cout<<"\t- Aplicar filtro pasa bajos (suavizado): Ctrl + S\n";
+    cout<<"\t- Aplicar filtro pasa altos: Ctrl + A\n";
+    cout<<"\t- Aplicar filtro de mediana: Ctrl + M\n";
+    cout<<"\t- Aplicar negativo: Ctrl + N\n";
+    cout<<"\t- Binarizar imagen: Ctrl + B\n";
+}
 

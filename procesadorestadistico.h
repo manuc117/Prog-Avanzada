@@ -3,6 +3,12 @@
 
 #include "imagen.h"
 
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+
 class ProcesadorEstadistico
 {
 public:
@@ -26,11 +32,19 @@ public:
 
     vector<int> getFrecuenciaB(Imagen &img);
 
-    int getMaxFrecuenciaR(Imagen &img);
+    vector<int> getFrecuenciaPromedio(Imagen &img);
 
-    int getMaxFrecuenciaG(Imagen &img);
+    int getRMasFrecuente(Imagen &img);
 
-    int getMaxFrecuenciaB(Imagen &img);
+    int getGMasFrecuente(Imagen &img);
+
+    int getBMasFrecuente(Imagen &img);
+
+    vector<float> getPromedioRGB(Imagen &img);
+
+    vector<float> getDesviacionEstandarRGB(Imagen &img);
+
+    void informarDatosEstadisticos(Imagen &img);
 };
 
 #endif // PROCESADORESTADISTICO_H

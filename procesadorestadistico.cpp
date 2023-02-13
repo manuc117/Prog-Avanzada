@@ -10,11 +10,11 @@ int ProcesadorEstadistico::getMinimoR(Imagen &img)
     Pixel pixelAux;
     int minimo = img.getPixel(0,0).getRed();
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for(int f=0; f<nfilas; f++)
+    for(int f=0; f<nFilas; f++)
     {
-        for(int c=0; c<ncolumnas; c++)
+        for(int c=0; c<nColumnas; c++)
         {
             pixelAux = img.getPixel(f,c);
 
@@ -32,11 +32,11 @@ int ProcesadorEstadistico::getMaximoR(Imagen &img)
     int maximo = 0;
     Pixel pixelAux;
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for(int f=0; f<nfilas; f++)
+    for(int f=0; f<nFilas; f++)
     {
-        for(int c=0; c<ncolumnas; c++)
+        for(int c=0; c<nColumnas; c++)
         {
             pixelAux = img.getPixel(f,c);
 
@@ -54,11 +54,11 @@ int ProcesadorEstadistico::getMinimoG(Imagen &img)
     Pixel pixelAux;
     int minimo = img.getPixel(0,0).getGreen();
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for(int f=0; f<nfilas; f++)
+    for(int f=0; f<nFilas; f++)
     {
-        for(int c=0; c<ncolumnas; c++)
+        for(int c=0; c<nColumnas; c++)
         {
             pixelAux = img.getPixel(f,c);
 
@@ -76,11 +76,11 @@ int ProcesadorEstadistico::getMaximoG(Imagen &img)
     int maximo = 0;
     Pixel pixelAux;
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for(int f=0; f<nfilas; f++)
+    for(int f=0; f<nFilas; f++)
     {
-        for(int c=0; c<ncolumnas; c++)
+        for(int c=0; c<nColumnas; c++)
         {
             pixelAux = img.getPixel(f,c);
 
@@ -98,11 +98,11 @@ int ProcesadorEstadistico::getMinimoB(Imagen &img)
     Pixel pixelAux;
     int minimo = img.getPixel(0,0).getBlue();
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for(int f=0; f<nfilas; f++)
+    for(int f=0; f<nFilas; f++)
     {
-        for(int c=0; c<ncolumnas; c++)
+        for(int c=0; c<nColumnas; c++)
         {
             pixelAux = img.getPixel(f,c);
 
@@ -120,11 +120,11 @@ int ProcesadorEstadistico::getMaximoB(Imagen &img)
     int maximo = 0;
     Pixel pixelAux;
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for(int f=0; f<nfilas; f++)
+    for(int f=0; f<nFilas; f++)
     {
-        for(int c=0; c<ncolumnas; c++)
+        for(int c=0; c<nColumnas; c++)
         {
             pixelAux = img.getPixel(f,c);
 
@@ -144,11 +144,11 @@ vector<int> ProcesadorEstadistico::getFrecuenciaR(Imagen &img)
 
     frecuenciaRed.resize(img.getRango()+1, 0);
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for (int f=0; f<nfilas; f++)
+    for (int f=0; f<nFilas; f++)
     {
-        for (int c=0; c<ncolumnas; c++)
+        for (int c=0; c<nColumnas; c++)
         {
             auxRed = img.getPixel(f,c).getRed();
 
@@ -166,11 +166,11 @@ vector<int> ProcesadorEstadistico::getFrecuenciaG(Imagen &img)
 
     frecuenciaGreen.resize(img.getRango()+1, 0);
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for (int f=0; f<nfilas; f++)
+    for (int f=0; f<nFilas; f++)
     {
-        for (int c=0; c<ncolumnas; c++)
+        for (int c=0; c<nColumnas; c++)
         {
             auxGreen = img.getPixel(f,c).getGreen();
 
@@ -188,11 +188,11 @@ vector<int> ProcesadorEstadistico::getFrecuenciaB(Imagen &img)
 
     frecuenciaBlue.resize(img.getRango()+1, 0);
 
-    int nfilas = img.getFilas(), ncolumnas = img.getColumnas();
+    int nFilas = img.getFilas(), nColumnas = img.getColumnas();
 
-    for (int f=0; f<nfilas; f++)
+    for (int f=0; f<nFilas; f++)
     {
-        for (int c=0; c<ncolumnas; c++)
+        for (int c=0; c<nColumnas; c++)
         {
             auxBlue = img.getPixel(f,c).getBlue();
 
@@ -203,59 +203,109 @@ vector<int> ProcesadorEstadistico::getFrecuenciaB(Imagen &img)
     return frecuenciaBlue;
 }
 
-int ProcesadorEstadistico::getMaxFrecuenciaR(Imagen &img)
+vector<int> ProcesadorEstadistico::getFrecuenciaPromedio(Imagen &img)
+{
+    vector<int> frecuenciasR = getFrecuenciaR(img);
+    vector<int> frecuenciasG = getFrecuenciaG(img);
+    vector<int> frecuenciasB = getFrecuenciaB(img);
+
+    vector<int> promedios;
+
+    for(int nivel=0; nivel<frecuenciasR.size(); nivel++)
+    {
+        promedios.push_back(float(frecuenciasR[nivel]+frecuenciasG[nivel]+frecuenciasB[nivel])/3);
+    }
+
+    return promedios;
+}
+
+int ProcesadorEstadistico::getRMasFrecuente(Imagen &img)
 {
     vector<int> frecuencias = getFrecuenciaR(img);
 
-    int mayor = 0, rMasFrec = 0;
-
-    for(int i=0; i<frecuencias.size(); i++)
-    {
-        if(frecuencias[i] > mayor)
-        {
-            rMasFrec = i;
-            mayor = frecuencias[i];
-        }
-    }
-
-    return rMasFrec;
+    return *max_element(frecuencias.begin(), frecuencias.end()); // .begin() y .end() son iteradores.
 }
 
-int ProcesadorEstadistico::getMaxFrecuenciaG(Imagen &img)
+int ProcesadorEstadistico::getGMasFrecuente(Imagen &img)
 {
     vector<int> frecuencias = getFrecuenciaG(img);
 
-    int mayor = 0, gMasFrec = 0;
-
-    for(int i=0; i<frecuencias.size(); i++)
-    {
-        if(frecuencias[i] > mayor)
-        {
-            gMasFrec = i;
-            mayor = frecuencias[i];
-        }
-    }
-
-    return gMasFrec;
+    return *max_element(frecuencias.begin(), frecuencias.end());
 }
 
-int ProcesadorEstadistico::getMaxFrecuenciaB(Imagen &img)
+int ProcesadorEstadistico::getBMasFrecuente(Imagen &img)
 {
     vector<int> frecuencias = getFrecuenciaB(img);
 
-    int mayor = 0, bMasFrec = 0;
+    return *max_element(frecuencias.begin(), frecuencias.end());
+}
 
-    for(int i=0; i<frecuencias.size(); i++)
+vector<float> ProcesadorEstadistico::getPromedioRGB(Imagen &img)
+{
+    vector<float> promedios(3);
+
+    int nPixeles = img.getFilas()*img.getColumnas();
+
+    vector<int> frecuenciasR = getFrecuenciaR(img);
+    vector<int> frecuenciasG = getFrecuenciaG(img);
+    vector<int> frecuenciasB = getFrecuenciaB(img);
+
+    int sumaR = 0, sumaG = 0, sumaB = 0;
+
+    for(int i=0; i<frecuenciasR.size(); i++) //i=nivel
     {
-        if(frecuencias[i] > mayor)
-        {
-            bMasFrec = i;
-            mayor = frecuencias[i];
-        }
+        sumaR += frecuenciasR[i]*i;
+        sumaG += frecuenciasG[i]*i;
+        sumaB += frecuenciasB[i]*i;
     }
 
-    return bMasFrec;
+    promedios[0] = float(sumaR/nPixeles);
+    promedios[1] = float(sumaG/nPixeles);
+    promedios[2] = float(sumaB/nPixeles);
+
+    return promedios;
 }
+
+vector<float> ProcesadorEstadistico::getDesviacionEstandarRGB(Imagen &img)
+{
+    vector<float> desviaciones(3);
+
+    vector<float> medias = getPromedioRGB(img);
+
+    vector<int> frecuenciasR = getFrecuenciaR(img);
+    vector<int> frecuenciasG = getFrecuenciaG(img);
+    vector<int> frecuenciasB = getFrecuenciaB(img);
+
+    int nPixeles = img.getFilas()*img.getColumnas();
+
+    int sumaR = 0, sumaG = 0, sumaB = 0;
+
+
+    for(int i=0; i<frecuenciasR.size(); i++)
+    {
+        sumaR += pow((i-medias[0]), 2)*frecuenciasR[i];
+        sumaG += pow((i-medias[1]), 2)*frecuenciasG[i];
+        sumaB += pow((i-medias[2]), 2)*frecuenciasB[i];
+    }
+
+    desviaciones[0] = sqrt(sumaR/nPixeles);
+    desviaciones[1] = sqrt(sumaG/nPixeles);
+    desviaciones[2] = sqrt(sumaB/nPixeles);
+
+    return desviaciones;
+}
+
+void ProcesadorEstadistico::informarDatosEstadisticos(Imagen &img)
+{
+    cout<<"\t----Datos estadisticos----\n";
+    cout<<"\tMinimo:\n\t\t-R:"<<getMinimoR(img)<<"\n\t\t-G:"<<getMinimoG(img)<<"\n\t\t-B:"<<getMinimoB(img);
+    cout<<"\n\tMaximo:\n\t\t-R:"<<getMaximoR(img)<<"\n\t\t-G:"<<getMaximoG(img)<<"\n\t\t-B:"<<getMaximoB(img);
+    cout<<"\n\tPromedio:\n\t\t-R:"<<getPromedioRGB(img).at(0)<<"\n\t\t-G:"<<getPromedioRGB(img).at(1)<<"\n\t\t-B:"<<getPromedioRGB(img).at(2);
+    cout<<"\n\tDesviacion estandar:\n\t\t-R:"<<getDesviacionEstandarRGB(img).at(0)<<"\n\t\t-G:"<<getDesviacionEstandarRGB(img).at(1)<<"\n\t\t-B:"<<getDesviacionEstandarRGB(img).at(2);
+    cout<<"\n\tModa o Maxima frecuencia:\n\t\t-R:"<<getRMasFrecuente(img)<<"\n\t\t-G:"<<getGMasFrecuente(img)<<"\n\t\t-B:"<<getBMasFrecuente(img)<<"\n";
+}
+
+
 
 
 

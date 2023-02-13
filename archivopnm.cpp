@@ -15,7 +15,7 @@ Imagen ArchivoPNM::leer(string ruta)
     if (archi.is_open())
     {
         string linea;
-        int ncolumnas, nfilas;
+        int nColumnas, nFilas;
 
         //Lectura codigo de identificación
         getline(archi, linea);
@@ -28,23 +28,23 @@ Imagen ArchivoPNM::leer(string ruta)
         {
             getline(archi, linea);
 
-            if (linea[0] == '#')
+            if (linea[0] == '#' or linea == "")
                 img.setComentario(linea);
             else
             {
                 posicion = linea.find_first_of(' ');
-                ncolumnas = stoi(linea.substr(0,posicion));
-                nfilas = stoi(linea.substr(posicion));
+                nColumnas = stoi(linea.substr(0,posicion));
+                nFilas = stoi(linea.substr(posicion));
                 break;
             }
         }
 
-        if(ncolumnas == 0 or nfilas == 0)
+        if(nColumnas == 0 or nFilas == 0)
             throw ExcepcionArchivoCorrupto();
 
         //Lectura columnas y filas
-        img.setColumnas(ncolumnas);
-        img.setFilas(nfilas);
+        img.setColumnas(nColumnas);
+        img.setFilas(nFilas);
         img.setTamanio();
 
         //Lectura del rango
@@ -65,9 +65,9 @@ Imagen ArchivoPNM::leer(string ruta)
             case '1':
                 img.setRango(1);
 
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         archi>>intensidad;
                         if(intensidad > img.getRango())
@@ -81,9 +81,9 @@ Imagen ArchivoPNM::leer(string ruta)
                 break;
 
             case '2':
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         archi>>intensidad;
                         if(intensidad > img.getRango())
@@ -99,9 +99,9 @@ Imagen ArchivoPNM::leer(string ruta)
             case '3':
                 int R, G, B;
 
-                for(int fila=0; fila<nfilas; fila++)
+                for(int fila=0; fila<nFilas; fila++)
                 {
-                    for(int columna=0; columna<ncolumnas; columna++)
+                    for(int columna=0; columna<nColumnas; columna++)
                     {
                         archi>>R>>G>>B;
                         if(R>img.getRango() or G>img.getRango() or B>img.getRango())
@@ -122,9 +122,9 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.open(ruta, ios::binary | ios::in);
                 archi.seekg(posicion);
 
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         archi.read((char*)&r, sizeof(r));
                         intensidad = (int)r;
@@ -146,9 +146,9 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.open(ruta, ios::binary | ios::in);
                 archi.seekg(posicion);
 
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         archi.read((char*)&r, sizeof(r));
                         intensidad = (int)r;
@@ -170,9 +170,9 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.open(ruta, ios::binary | ios::in);
                 archi.seekg(posicion);
 
-                for(int fila=0; fila<nfilas; fila++)
+                for(int fila=0; fila<nFilas; fila++)
                 {
-                    for(int columna=0; columna<ncolumnas; columna++)
+                    for(int columna=0; columna<nColumnas; columna++)
                     {
                         archi.read((char*)&r, sizeof(r));
                         archi.read((char*)&g, sizeof(g));
@@ -220,14 +220,14 @@ void ArchivoPNM::guardar(Imagen *img)
         Pixel pixelAux;
         unsigned char nivelIntens;
         int intensidad;
-        int nfilas=img->getFilas(), ncolumnas=img->getColumnas();
+        int nFilas=img->getFilas(), nColumnas=img->getColumnas();
 
         switch(img->getIdentificador()[1])
         {
             case '1':
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         pixelAux = img->getPixel(fila,columna);
                         intensidad = pixelAux.getRed();
@@ -243,9 +243,9 @@ void ArchivoPNM::guardar(Imagen *img)
                 break;
 
             case '2':
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         pixelAux = img->getPixel(fila,columna);
                         intensidad = pixelAux.getRed();
@@ -259,9 +259,9 @@ void ArchivoPNM::guardar(Imagen *img)
             case '3':
                 int R, G, B;
 
-                for(int fila=0; fila<nfilas; fila++)
+                for(int fila=0; fila<nFilas; fila++)
                 {
-                    for(int columna=0; columna<ncolumnas; columna++)
+                    for(int columna=0; columna<nColumnas; columna++)
                     {
                         pixelAux = img->getPixel(fila,columna);
                         R = pixelAux.getRed();
@@ -278,9 +278,9 @@ void ArchivoPNM::guardar(Imagen *img)
                 archi.close();
                 archi.open(rutaNueva, ios::binary | ios::out | ios::app);
 
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         pixelAux = img->getPixel(fila,columna);
                         nivelIntens = (unsigned char)pixelAux.getRed();
@@ -294,9 +294,9 @@ void ArchivoPNM::guardar(Imagen *img)
                 archi.close();
                 archi.open(rutaNueva, ios::binary | ios::out | ios::app);
 
-                for (int fila=0; fila<nfilas; fila++)
+                for (int fila=0; fila<nFilas; fila++)
                 {
-                    for (int columna=0; columna<ncolumnas; columna++)
+                    for (int columna=0; columna<nColumnas; columna++)
                     {
                         pixelAux = img->getPixel(fila,columna);
                         nivelIntens = (unsigned char)pixelAux.getRed();
@@ -312,9 +312,9 @@ void ArchivoPNM::guardar(Imagen *img)
 
                 unsigned char r, g, b;
 
-                for(int fila=0; fila<nfilas; fila++)
+                for(int fila=0; fila<nFilas; fila++)
                 {
-                    for(int columna=0; columna<ncolumnas; columna++)
+                    for(int columna=0; columna<nColumnas; columna++)
                     {
                         pixelAux = img->getPixel(fila, columna);
 

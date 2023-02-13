@@ -86,7 +86,6 @@ void VentanaDeGraficacion::graficarImagen()
             glVertex3i(columna, imagen.getFilas()-(fila+1), 0);
             glVertex3i(columna+1, imagen.getFilas()-(fila+1), 0);
             glVertex3i(columna+1, imagen.getFilas()-fila, 0);
-
         }
     }
 
@@ -143,13 +142,13 @@ void VentanaDeGraficacion::cargarImagen()
 
     if (espTrabajo.esPNM(rutaArchi))
     {
-        gestorArchi = new ArchivoPNM;
-        setImagen(gestorArchi ->leer(rutaArchi));
+            gestorArchi = new ArchivoPNM;
+            setImagen(gestorArchi ->leer(rutaArchi));
     }
     else if(espTrabajo.esAIC(rutaArchi))
     {
-        gestorArchi = new ArchivoAIC;
-        setImagen(gestorArchi->leer(rutaArchi));
+            gestorArchi = new ArchivoAIC;
+            setImagen(gestorArchi->leer(rutaArchi));
     }
 }
 
@@ -172,8 +171,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     bool binarizar= event->key() == Qt::Key_B;
     bool uno= event->key() == Qt::Key_1;
     bool dos= event->key() == Qt::Key_2;
-
-    cout<<endl;
+    bool histograma= event->key() == Qt::Key_H;
 
     if (izquierda and ctrl)
     {
@@ -252,7 +250,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         Filtros *filtro;
         filtro = new FiltroMediana;
 
-        cout<<"Ctrl + M: aplicar filtro mediana.\n";
+        cout<<"Ctrl + M: aplicar filtro de mediana.\n";
         cout.flush();
 
         imagen = filtro->aplicarFiltro(imagen);
@@ -338,13 +336,27 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
     if(dos and ctrl)
     {
-        cout<<"Ctrl + 1: pseudocolorear la imagen con Turbo.lut.\n";
+        cout<<"Ctrl + 2: pseudocolorear la imagen con Turbo.lut.\n";
         cout.flush();
 
         seGraficaPseudocoloreada = true;
         lut = 2;
         show();
         repaint();
+    }
+
+    if(histograma and ctrl)
+    {
+        ProcesadorEstadistico proce;
+        GraficadorHistograma* graficador;
+        graficador = new GraficadorHistograma(imagen);
+
+        cout<<"Ctrl + H: graficar histograma e informar datos estadisticos.\n";
+        cout.flush();
+
+        proce.informarDatosEstadisticos(imagen);
+        graficador->graficarHistograma();
+        graficador->show();
     }
 
 }

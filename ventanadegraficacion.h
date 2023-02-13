@@ -22,7 +22,7 @@
 #include "binarizado.h"
 #include "algoritmodelpintor.h"
 #include "lut.h"
-#include "ExcepcionArchivoCorrupto.h"
+#include "graficadorhistograma.h"
 
 using namespace std;
 
@@ -50,10 +50,15 @@ public:
 
 private:
     Imagen imagen;
+
     int opcionCarpeta, opcionArchivo;
+
     GestorDeArchivos *gestorArchi;
+
     int anchoVentana, altoVentana;
+
     bool seGraficaPseudocoloreada = false;
+
     int lut;
 
     // Atributos gráficos del dibujo en el graficador

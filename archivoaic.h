@@ -2,6 +2,8 @@
 #define ARCHIVOAIC_H
 
 #include "gestordearchivos.h"
+#include "ExcepcionArchivoCorrupto.h"
+
 #include <fstream>
 #include <iostream>
 
@@ -15,6 +17,9 @@ public:
     Imagen leer(string ruta) override;
 
     void guardar(Imagen *img) override;
+
+    vector<int> lineaAVector(string linea);
+
 };
 
 #endif // ARCHIVOAIC_H

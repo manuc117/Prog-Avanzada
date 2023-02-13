@@ -7,6 +7,7 @@
 #include "imagen.h"
 #include "archivopnm.h"
 #include "archivoaic.h"
+#include "ExcepcionArchivoNoSoportado.h"
 
 class InterfazDeUsuario
 {
@@ -20,6 +21,8 @@ public:
     int getOpcionArchivo(int opcion);
 
     void cargarImagen(string rutaArchi, int opcionCarpeta, int opcionArchivo);
+
+    void mostrarAtajos();
 
 private:
 

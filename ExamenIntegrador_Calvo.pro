@@ -23,6 +23,7 @@ SOURCES += \
         filtropasabajos.cpp \
         filtros.cpp \
         gestordearchivos.cpp \
+        graficadorhistograma.cpp \
         imagen.cpp \
         interfazdeusuario.cpp \
         lut.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     filtropasabajos.h \
     filtros.h \
     gestordearchivos.h \
+    graficadorhistograma.h \
     imagen.h \
     interfazdeusuario.h \
     lut.h \

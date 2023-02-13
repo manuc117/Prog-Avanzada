@@ -10,6 +10,7 @@ release/filtropasaaltos.o
 release/filtropasabajos.o
 release/filtros.o
 release/gestordearchivos.o
+release/graficadorhistograma.o
 release/imagen.o
 release/interfazdeusuario.o
 release/lut.o

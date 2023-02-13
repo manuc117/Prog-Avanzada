@@ -5,11 +5,11 @@
 
 using namespace std;
 
-class ExcepcionArchivoCorrupto: public runtime_error
+class ExcepcionArchivoNoSoportado: public runtime_error
 {
 public:
 
-    ExcepcionArchivoCorrupto():
+    ExcepcionArchivoNoSoportado():
         runtime_error("Archivo no soportado. Por favor seleccione otra opcion.\n"){}
 };
 

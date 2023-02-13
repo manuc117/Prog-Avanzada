@@ -10,6 +10,7 @@ debug/filtropasaaltos.o
 debug/filtropasabajos.o
 debug/filtros.o
 debug/gestordearchivos.o
+debug/graficadorhistograma.o
 debug/imagen.o
 debug/interfazdeusuario.o
 debug/lut.o

@@ -128,3 +128,6 @@ void EspacioDeTrabajo::guardarImagen(Imagen *img)
 
 
 
+
+
+

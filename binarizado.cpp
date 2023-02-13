@@ -10,11 +10,11 @@ Imagen Binarizado::aplicarFiltro(Imagen &img)
     if(sePuedeBinarizar(img))
     {
         int nivel = getNivelBinarizacion(img);
-        int nfilas = img.getFilas(), ncolumnas = img.getColumnas(), rango = img.getRango();
+        int nFilas = img.getFilas(), nColumnas = img.getColumnas(), rango = img.getRango();
 
-        for (int f=0; f<nfilas; f++)
+        for (int f=0; f<nFilas; f++)
         {
-            for(int c=0; c<ncolumnas; c++)
+            for(int c=0; c<nColumnas; c++)
             {
                 if(img.getPixel(f,c).getIntensidad() >= nivel)
                     img.setPixel(Pixel(rango,rango,rango), f, c);
