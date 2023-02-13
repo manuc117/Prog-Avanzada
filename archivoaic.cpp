@@ -83,6 +83,8 @@ Imagen ArchivoAIC::leer(string ruta)
                 repeticiones = 0;
             }
         }
+
+        almacenarUltimaRuta(ruta);
     }
     else
     {
@@ -149,6 +151,15 @@ void ArchivoAIC::guardar(Imagen *img)
     }
 
     archi.close();
+}
+
+void ArchivoAIC::almacenarUltimaRuta(string ruta)
+{
+    ofstream registro;
+
+    registro.open("registro.txt");
+
+    registro<<ruta;
 }
 
 vector<int> ArchivoAIC::lineaAVector(string linea)

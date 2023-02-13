@@ -18,6 +18,8 @@ public:
 
     void guardar(Imagen *img) override;
 
+    void almacenarUltimaRuta(string ruta) override;
+
 private:
 
     string getExtension(string identificador);

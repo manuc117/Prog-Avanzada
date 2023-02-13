@@ -188,6 +188,8 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.close();
                 break;
         }
+
+        almacenarUltimaRuta(ruta);
     }
     else
     {
@@ -336,6 +338,15 @@ void ArchivoPNM::guardar(Imagen *img)
         cout<<"Error al abrir el archivo "<<rutaNueva<<".";
         cout.flush();
     }
+}
+
+void ArchivoPNM::almacenarUltimaRuta(string ruta)
+{
+    ofstream registro;
+
+    registro.open("registro.txt");
+
+    registro<<ruta;
 }
 
 string ArchivoPNM::getExtension(string identificador)

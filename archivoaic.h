@@ -18,6 +18,8 @@ public:
 
     void guardar(Imagen *img) override;
 
+    void almacenarUltimaRuta(string ruta) override;
+
     vector<int> lineaAVector(string linea);
 
 };

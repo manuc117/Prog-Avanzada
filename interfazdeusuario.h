@@ -20,9 +20,11 @@ public:
 
     int getOpcionArchivo(int opcion);
 
-    void cargarImagen(string rutaArchi, int opcionCarpeta, int opcionArchivo);
+    void cargarImagen(string rutaArchi);
 
     void mostrarAtajos();
+
+    string recuperarUltimaEjecucion();
 
 private:
 

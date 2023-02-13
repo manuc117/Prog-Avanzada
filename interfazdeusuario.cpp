@@ -8,6 +8,7 @@ InterfazDeUsuario::InterfazDeUsuario()
 void InterfazDeUsuario::ejecutar(QApplication *app)
 {
     bool seEstaEjecutando = true;
+    bool seGraficoImagen = false;
 
     while(seEstaEjecutando)
     {
@@ -28,7 +29,9 @@ void InterfazDeUsuario::ejecutar(QApplication *app)
 
                 try
                 {
-                    cargarImagen(rutaArchi, opcionCarpeta-1, opcionArchivo-1);
+                    graficador.setOpciones(opcionCarpeta-1, opcionArchivo-1);
+
+                    cargarImagen(rutaArchi);
 
                     graficador.asociarApp(app);
 
@@ -37,6 +40,8 @@ void InterfazDeUsuario::ejecutar(QApplication *app)
                     app->exec();
 
                     system("cls");
+
+                    seGraficoImagen = true;
                 }
                 catch(ExcepcionArchivoCorrupto &excepcion)
                 {
@@ -52,8 +57,37 @@ void InterfazDeUsuario::ejecutar(QApplication *app)
                 }
             }
         }
+        else if(opcionCarpeta == espTrabajo.getCarpetas().size()+1)
+        {
+            if(seGraficoImagen)
+            {
+                system("cls");
+
+                mostrarAtajos();
+
+                cargarImagen(recuperarUltimaEjecucion());
+
+                graficador.asociarApp(app);
+
+                graficador.show();
+
+                app->exec();
+
+                system("cls");
+
+                seGraficoImagen = true;
+            }
+            else if(!seGraficoImagen)
+            {
+                system("cls");
+                cout<<"No se pudo recuperar la ultima ejecucion dado que anteriormente no se grafico una imagen.\nPor favor seleccione otra opcion.\n\n";
+                cout.flush();
+            }
+        }
         else
-           break;
+        {
+            break;
+        }
     }
 
 }
@@ -95,7 +129,7 @@ int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
     cout<<"\t"<<listaDeArchivos.size()+1<<"- Volver a la seleccion de carpetas\n";
 
     int opcion;
-    cout<<endl<<"\tSeleccione un archivo: ";
+    cout<<endl<<"\tSeleccione una opcion: ";
     cin>>opcion;
 
     while(opcion<1 or opcion>listaDeArchivos.size()+1 or !cin.good())
@@ -116,10 +150,8 @@ int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
     return opcion;
 }
 
-void InterfazDeUsuario::cargarImagen(string rutaArchi, int opcionCarpeta, int opcionArchivo)
+void InterfazDeUsuario::cargarImagen(string rutaArchi)
 {
-    graficador.setOpciones(opcionCarpeta, opcionArchivo);
-
     if (espTrabajo.esPNM(rutaArchi))
     {
             gestorArchi = new ArchivoPNM;
@@ -152,5 +184,18 @@ void InterfazDeUsuario::mostrarAtajos()
     cout<<"\t- Aplicar filtro de mediana: Ctrl + M\n";
     cout<<"\t- Aplicar negativo: Ctrl + N\n";
     cout<<"\t- Binarizar imagen: Ctrl + B\n";
+}
+
+string InterfazDeUsuario::recuperarUltimaEjecucion()
+{
+    string ultimaRuta;
+    ifstream archi;
+
+    archi.open("registro.txt");
+    archi>>ultimaRuta;
+
+    archi.close();
+
+    return ultimaRuta;
 }
 

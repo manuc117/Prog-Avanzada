@@ -12,6 +12,7 @@ public:
 
     virtual void guardar(Imagen *img) = 0;
 
+    virtual void almacenarUltimaRuta(string ruta) = 0;
 };
 
 #endif // GESTORDEARCHIVOS_H
