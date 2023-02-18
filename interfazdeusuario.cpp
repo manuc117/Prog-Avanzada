@@ -48,12 +48,16 @@ void InterfazDeUsuario::ejecutar(QApplication *app)
                     system("cls");
                     app->closeAllWindows();
                     cout<<excepcion.what()<<endl;
+
+                    seGraficoImagen = false;
                 }
                 catch(ExcepcionArchivoNoSoportado &excepcion)
                 {
                     system("cls");
                     app->closeAllWindows();
                     cout<<excepcion.what()<<endl;
+
+                    seGraficoImagen = false;
                 }
             }
         }
@@ -169,7 +173,6 @@ void InterfazDeUsuario::cargarImagen(string rutaArchi)
 void InterfazDeUsuario::mostrarAtajos()
 {
     cout<<"\n\t----Lista de atajos----\n";
-    cout<<"\t- Mostrar imagen siguiente: Ctrl + flecha derecha\n";
     cout<<"\t- Mostrar imagen anterior: Ctrl + flecha izquierda\n";
     cout<<"\t- Mostrar imagen siguiente: Ctrl + flecha derecha\n";
     cout<<"\t- Guardar imagen: Ctrl + G\n";
@@ -183,7 +186,7 @@ void InterfazDeUsuario::mostrarAtajos()
     cout<<"\t- Aplicar filtro pasa altos: Ctrl + A\n";
     cout<<"\t- Aplicar filtro de mediana: Ctrl + M\n";
     cout<<"\t- Aplicar negativo: Ctrl + N\n";
-    cout<<"\t- Binarizar imagen: Ctrl + B\n";
+    cout<<"\t- Binarizar imagen: Ctrl + B\n\n";
 }
 
 string InterfazDeUsuario::recuperarUltimaEjecucion()

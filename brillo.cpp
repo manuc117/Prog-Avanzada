@@ -118,7 +118,7 @@ void Brillo::getValor(Imagen &img)
     else if(elegir == 'e')
     {
         valor = -1;
-        while(valor <= 0 or valor>=img.getRango() or !cin.good())
+        while(valor < 0 or valor > img.getRango() or !cin.good())
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');

@@ -1,3 +1,16 @@
+/*!
+ *  \class      VentanaDeGraficacion
+ *  \brief      Clase capaz de graficar una imagen, mostrarla en pantalla y responder a eventos.
+ *  \details    Posee una imagen, que puede cargar. Conoce el ancho y alto de la ventana, y la
+ *              escala utilizada para mantener sus proporciones. También es capaz
+ *              de responder a eventos de teclado y mouse. Conoce la carpeta y el archivo
+ *              seleccionados por el usuario. Posee un puntero gestor de archivos.
+ *  \author     Manuela Calvo
+ *  \date       Fecha de última modificación: 15-02-2022
+ *  \pre
+ *  \bug
+ *  \warning
+*/
 #ifndef VENTANADEGRAFICACION_H
 #define VENTANADEGRAFICACION_H
 
@@ -61,9 +74,10 @@ private:
 
     int lut;
 
-    // Atributos gráficos del dibujo en el graficador
-    float escala;  // Para matenener las proporciones para cualquier ventana.
-    float desplx, desply; // Para desplazar la imagen al centro de la ventana.
+    float escala;
+
+    float desplx, desply;
+
     QApplication* aplicacion;
 };
 

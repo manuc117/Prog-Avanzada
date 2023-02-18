@@ -1,4 +1,17 @@
-﻿#ifndef PIXEL_H
+﻿/*!
+ *  \class      Pixel
+ *  \brief      Clase que forma un pixel de una imagen.
+ *  \details    Representa el pixel de cualquier tipo de imagen (RGB, de intensidades
+ *              o monocromática). Posee valores enteros de rojo, verde y azul, los cuales
+ *              puede devolver. Además puede calcular la intensidad del pixel a partir
+ *              de estos tres valores.
+ *  \author     Manuela Calvo
+ *  \date       Fecha de última modificación: 15-02-2022
+ *  \pre
+ *  \bug
+ *  \warning
+*/
+#ifndef PIXEL_H
 #define PIXEL_H
 
 

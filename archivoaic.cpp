@@ -49,12 +49,13 @@ Imagen ArchivoAIC::leer(string ruta)
         img.setRango(rangoAux);
 
         string espacio;
-        getline(archi, linea);
-        espacio = linea;
+        getline(archi, espacio);
 
         int nivelGris, repeticiones, contadorCol;
 
         Pixel pixelAux;
+
+        int contadorPixeles = 0;
 
         for(int f=0; f<img.getFilas(); f++)
         {
@@ -77,12 +78,16 @@ Imagen ArchivoAIC::leer(string ruta)
                 for(int c=0; c<repeticiones; c++)
                 {
                     img.setPixel(pixelAux, f, c+contadorCol);
+                    contadorPixeles++;
                 }
 
                 contadorCol += repeticiones;
                 repeticiones = 0;
             }
         }
+
+        if (contadorPixeles != img.getColumnas()*img.getFilas())
+            throw ExcepcionArchivoCorrupto();
 
         almacenarUltimaRuta(ruta);
     }

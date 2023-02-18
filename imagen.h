@@ -1,3 +1,15 @@
+/*!
+ *  \class      Imagen
+ *  \brief      Clase capaz de representar una imagen a partir de un arreglo de pixeles.
+ *  \details    Conoce su cantidad de filas, columnas, sus pixeles, el rango de sus pixeles y
+ *              su tamaño. Puede devolver dichos datos y modificar el tamaño y sus pixeles.
+ *  \author     Manuela Calvo
+ *  \date       Fecha de última modificación: 15-02-2022
+ *  \pre
+ *  \bug
+ *  \warning
+*/
+
 #ifndef IMAGEN_H
 #define IMAGEN_H
 

@@ -1,3 +1,16 @@
+/*!
+ *  \class      ProcesadorEstadistico
+ *  \brief      Clase capaz de realizar cálculos estadísticos varios.
+ *  \details    Puede hacer diversos cálculos estadísticos como obtener la frecuencia
+ *              de R, G o B, devolver el valor más frecuente de cada uno, hallar los
+ *              valores máximo y mínimo, entre otros. Además permite informar los datos
+ *              estadísticos de una imagen a partir de los cálculos realizados.
+ *  \author     Manuela Calvo
+ *  \date       Fecha de última modificación: 15-02-2022
+ *  \pre
+ *  \bug
+ *  \warning
+*/
 #ifndef PROCESADORESTADISTICO_H
 #define PROCESADORESTADISTICO_H
 
