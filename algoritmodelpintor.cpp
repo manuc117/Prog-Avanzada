@@ -24,9 +24,9 @@ Imagen AlgoritmoDelPintor::aplicarAlgoritmo(int fInicial, int cInicial)
     return imagen;
 }
 
-void AlgoritmoDelPintor::inicializarMatriz(int fila, int columna)
+void AlgoritmoDelPintor::inicializarMatriz(int filas, int columnas)
 {
-    vector<vector<bool>> matriz(fila, vector<bool> (columna, false));
+    vector<vector<bool>> matriz(filas, vector<bool> (columnas, false));
 
     matrizAnalisis = matriz;
 }

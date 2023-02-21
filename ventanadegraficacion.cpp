@@ -137,7 +137,6 @@ void VentanaDeGraficacion::setOpciones(int opCarpeta, int opArchi)
 
 void VentanaDeGraficacion::cargarImagen()
 {
-    EspacioDeTrabajo espTrabajo;
     string rutaArchi = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);
 
     if (espTrabajo.esPNM(rutaArchi))
@@ -177,7 +176,6 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     {
         if (opcionArchivo == 0)
         {
-            EspacioDeTrabajo espTrabajo;
             opcionArchivo = espTrabajo.getNombreArchivos(opcionCarpeta).size()-1;
         }
         else
@@ -194,7 +192,6 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
     if (derecha and ctrl)
     {
-        EspacioDeTrabajo espTrabajo;
         if (opcionArchivo == espTrabajo.getNombreArchivos(opcionCarpeta).size()-1)
         {
             opcionArchivo = 0;
@@ -213,7 +210,6 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
     if (guardar and ctrl)
     {
-        EspacioDeTrabajo espTrabajo;
         cout<<"Ctrl + G: guardar imagen.\n";
         cout.flush();
         string ruta = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);

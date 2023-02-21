@@ -25,7 +25,7 @@ public:
 
     /*!
      * \brief aplicarFiltro Método heredado de la clase Filtros, redefinido
-     *        para aplicar el filtro de suavizado a una imagen
+     *        para aplicar el filtro de suavizado a una imagen.
      * \param img Imagen a la que se le aplica el filtro.
      * \return Imagen con el filtro aplicado.
      */

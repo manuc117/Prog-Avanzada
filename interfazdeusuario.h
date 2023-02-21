@@ -27,35 +27,63 @@ public:
     InterfazDeUsuario();
 
     /*!
-     * \brief ejecutar
-     * \param[in] app
-     * \param[out] app
+     * \brief ejecutar Método que permite ejecutar el sistema.
+     * \param[in] app QApplication que se ejecuta.
+     * \param[out] app QApplication que muestra información como salida.
      */
     void ejecutar(QApplication *app);
 
+    /*!
+     * \brief getOpcionCarpeta Método que permite al usuario seleccionar la opción de
+     *        la carpeta en la que se encuentra la Imagen que desea procesar.
+     * \return Opción elegida por el usuario (puede ser una carpeta o no).
+     */
     int getOpcionCarpeta();
 
+    /*!
+     * \brief getOpcionArchivo Método que permite al usuario seleccionar la opción del
+     *        archivo que desea procesar.
+     * \param[in] opcion Opcion de la carpeta elegida por el usuario.
+     * \return Opción del archivo elegida por el usuario.
+     */
     int getOpcionArchivo(int opcion);
 
     /*!
-     * \brief cargarImagen
-     * \param[in] rutaArchi
+     * \brief cargarImagen Método que permite cargar la Imagen que se va a graficar
+     *        en el graficador.
+     * \param[in] rutaArchi Ruta del archivo que corresponde a la Imagen que se
+     *            va a graficar.
      */
     void cargarImagen(string rutaArchi);
 
+    /*!
+     * \brief mostrarAtajos Método que permite mostrar en pantalla los atajos de
+     *        teclado y mouse que puede utilizar el usuario.
+     */
     void mostrarAtajos();
 
+    /*!
+     * \brief recuperarUltimaEjecucion Método que permite recuperar la última Imagen Graficada.
+     * \return Ruta de la última Imagen graficada.
+     */
     string recuperarUltimaEjecucion();
 
 private:
     /*!
-     * \brief espTrabajo
+     * \param espTrabajo Espacio de trabajo con el que trabaja el sistema.
      */
     EspacioDeTrabajo espTrabajo;
 
+    /*!
+     * \param graficador Ventana de graficación que utiliza el sistema para graficar
+     *        una imagen.
+     */
     VentanaDeGraficacion graficador;
 
-    GestorDeArchivos *gestorArchi; //con puntero porque es abstracta
+    /*!
+     * \param gestorArchi Gestor de archivos asociado con el que trabaja el sistema.
+     */
+    GestorDeArchivos *gestorArchi; //con puntero porque es abstracta.
 
 };
 

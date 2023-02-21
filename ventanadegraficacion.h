@@ -43,42 +43,137 @@ class VentanaDeGraficacion: public QOpenGLWidget, protected QOpenGLFunctions
 {
     Q_OBJECT
 public:
-
+    /*!
+     * \brief VentanaDeGraficacion Constructor del objeto VentanaDeGraficacion.
+     */
     VentanaDeGraficacion();
+
+    /*!
+     * \brief setImagen Método que permite establecer la Imagen que se va a graficar.
+     * \param[in] img Imagen que se desea graficar.
+     */
     void setImagen(Imagen img);
+
+    /*!
+     * \brief asociarApp Método que permite asociar una QApplication.
+     * \param[in] app Puntero a la QApplication que se asocia.
+     */
     void asociarApp(QApplication* app);
 
+    /*!
+     * \brief initializeGL Método que inicializa los recursos necesarios para poder
+     *        utilizar OpenGL.
+     */
     void initializeGL() override;
+
+    /*!
+     * \brief paintGL Método que permite graficar.
+     */
     void paintGL() override;
+
+    /*!
+     * \brief resizeGL Método que permite modificar el tamaño de la Imagen cuando se
+     *        modifica el tamaño de la ventana.
+     * \param[in] ancho Nuevo ancho de la ventana.
+     * \param[in] alto  Nuevo alto de la ventana.
+     */
     void resizeGL(int ancho, int alto) override;
 
+    /*!
+     * \brief graficarImagen Método que permite representar una Imagen de forma gráfica,
+     *        utilizando la librería OpenGL.
+     */
     void graficarImagen();
+
+    /*!
+     * \brief graficarImagenPseudocoloreada Método que permite representar una Imagen de forma gráfica,
+     *        utilizando la librería OpenGL, pseudocoloreandola con una tabla de conversión o LUT.
+     * \param[in] lut Tabla de conversión que se desea utilizar.
+     */
     void graficarImagenPseudocoloreada(int lut);
 
+    /*!
+     * \brief setOpciones Método que permite establecer las opciones de carpeta y archivo seleccionadas
+     *        por el usuario.
+     * \param[in] opCarpeta Opción de carpeta elegida por el usuario.
+     * \param[in] opArchi Opción de archivo elegida por el usuario.
+     */
     void setOpciones(int opCarpeta, int opArchi);
+
+    /*!
+     * \brief cargarImagen Método que permite cargar una Imagen al graficador.
+     */
     void cargarImagen();
 
+    /*!
+     * \brief keyPressEvent Método heredado que permite recibir y responder a un evento de teclado.
+     * \param[in] event Evento recibido.
+     */
     void keyPressEvent(QKeyEvent *event) override;
+
+    /*!
+     * \brief mousePressEvent Método heredado que permite recibir y responder a un evento de mouse.
+     * \param[in] event Evento recibido.
+     */
     void mousePressEvent(QMouseEvent *event) override;
 
 private:
+    /*!
+     * \param imagen Imagen que se grafica.
+     */
     Imagen imagen;
 
+    /*!
+     * \param opcionCarpeta Opción de carpeta seleccionada por el usuario.
+     * \param opcionArchivo Opción de archivo seleccionada por el usuario.
+     */
     int opcionCarpeta, opcionArchivo;
 
+    /*!
+     * \param gestorArchi Gestor de archivos asociado.
+     */
     GestorDeArchivos *gestorArchi;
 
+    /*!
+     * \param anchoVentana Ancho de la ventana.
+     * \param altoVentana Alto de la ventana.
+     */
     int anchoVentana, altoVentana;
 
+    /*!
+     * \param seGraficaPseudocoloreada Bool que indica si la Imagen se grafica
+     *        pseudocoloreada o no.
+     */
     bool seGraficaPseudocoloreada = false;
 
+    /*!
+     * \param lut Tabla de conversión que se utiliza para pseudocolorear una Imagen.
+     */
     int lut;
 
+    /*!
+     * \param escala Atributo que representa cuanto debe escalarse la Imagen para ser
+     *        representada en la ventana, y para que ésta mantenga sus proporciones.
+     */
     float escala;
 
+    /*!
+     * \param desplx Atributo que representa cuanto se desplaza en el eje 'x' la Imagen
+     *        en la ventana.
+     * \param desply Atributo que representa cuanto se desplaza en el eje 'y' la Imagen
+     *        en la ventana.
+     */
     float desplx, desply;
 
+    /*!
+     * \brief aplicacion QApplication asociada.
+     */
     QApplication* aplicacion;
+
+    /*!
+     * \brief espTrabajo Espacio de trabajo asociado.
+     */
+    EspacioDeTrabajo espTrabajo;
 };
 
 #endif // VENTANADEGRAFICACION_H

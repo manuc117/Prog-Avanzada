@@ -20,11 +20,25 @@
 class GestorDeArchivos //clase abstracta, metodos virtuales puros, no se puede instanciar
 {
 public:
-
+    /*!
+     * \brief leer Método virtual que al ser redefinido permite leer un archivo de una
+     *        Imagen.
+     * \param[in] ruta Ruta del archivo que se quiere leer.
+     * \return Objeto del tipo Imagen que estaba almacenada en la ruta.
+     */
     virtual Imagen leer(string ruta) = 0;
 
+    /*!
+     * \brief guardar Método virtual que al ser redefinido permite guardar una Imagen.
+     * \param[in] img Puntero a un objeto Imagen, que es la imagen a guardar.
+     */
     virtual void guardar(Imagen *img) = 0;
 
+    /*!
+     * \brief almacenarUltimaRuta Método virtual que al ser redefinido permite almacenar
+     *        la ruta del último archivo leído.
+     * \param ruta Ruta del último archivo leído que se quiere almacenar.
+     */
     virtual void almacenarUltimaRuta(string ruta) = 0;
 };
 
