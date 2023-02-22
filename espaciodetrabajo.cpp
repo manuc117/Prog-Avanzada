@@ -10,13 +10,11 @@ vector<string> EspacioDeTrabajo::getCarpetas()
     return carpetas;
 }
 
-vector<string> EspacioDeTrabajo::getNombreArchivos(int carpetaSeleccionada)
+vector<string> EspacioDeTrabajo::getNombreArchivos(string rutaDir)
 {
     vector<string> lista_de_archivos;
 
-    string pRutaDirectorio = "./Imagenes/"+carpetas[carpetaSeleccionada]+"/";
-
-    DIR *dir = opendir(pRutaDirectorio.c_str());
+    DIR *dir = opendir(rutaDir.c_str());
     if (dir != NULL)
     {
         string pto("."), ptopto("..");
@@ -34,9 +32,14 @@ vector<string> EspacioDeTrabajo::getNombreArchivos(int carpetaSeleccionada)
     return lista_de_archivos;
 }
 
+string EspacioDeTrabajo::getRutaCarpeta(int carpetaSeleccionada)
+{
+    return "./Imagenes/"+carpetas[carpetaSeleccionada]+"/";
+}
+
 string EspacioDeTrabajo::getRutaArchivo(int carpetaSeleccionada, int archivoSeleccionado)
 {
-    return "./Imagenes/"+carpetas[carpetaSeleccionada]+"/"+getNombreArchivos(carpetaSeleccionada)[archivoSeleccionado];
+    return "./Imagenes/"+carpetas[carpetaSeleccionada]+"/"+getNombreArchivos(getRutaCarpeta(carpetaSeleccionada))[archivoSeleccionado];
 }
 
 bool EspacioDeTrabajo::esPNM(string rutaArchi)

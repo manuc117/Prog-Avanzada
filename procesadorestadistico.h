@@ -6,7 +6,7 @@
  *              valores máximo y mínimo, entre otros. Además permite informar los datos
  *              estadísticos de una imagen a partir de los cálculos realizados.
  *  \author     Manuela Calvo
- *  \date       Fecha de última modificación: 15-02-2022
+ *  \date       Fecha de última modificación: 21-02-2022
  *  \pre
  *  \bug
  *  \warning
@@ -106,6 +106,15 @@ public:
     vector<int> getFrecuenciaB(Imagen &img);
 
     /*!
+     * \brief getFrecuenciaIntensidad Método que permite obtener la frecuencias de los distintos
+     *        niveles de intensidad.
+     * \param[in] img Imagen de la que se desea conocer la frecuencia de intensidad.
+     * \return Vector de enteros donde cada posición equivale a una intensidad y el entero
+     *         contenido la frecuencia de dicha intensidad.
+     */
+    vector<int> getFrecuenciaIntensidad(Imagen &img);
+
+    /*!
      * \brief getFrecuenciaPromedio Método que permite obtener el promedio de la frecuencia de
      *        RGB para cada nivel de intensidad.
      * \param[in] img Imagen de la que se desea conocer la frecuencia promedio.
@@ -137,6 +146,22 @@ public:
      * \return Nivel de azul que más se repite.
      */
     int getBMasFrecuente(Imagen &img);
+
+    /*!
+     * \brief getIntensidadMasFrecuente Método que permite obtener el nivel de intensidad más
+     *        frecuente en una Imagen.
+     * \param[in] img Imagen de la cual se desea conocer el nivel de intensidad más frecuente.
+     * \return Intensidad que más se repite.
+     */
+    int getIntensidadMasFrecuente(Imagen &img);
+
+    /*!
+     * \brief getIntensidadMedia Método que permite obtener el valor medio de intensidad de
+     *        una Imagen.
+     * \param[in] img Imagen de la cual se desea conocer la intensidad media.
+     * \return Intensidad media de una la Imagen.
+     */
+    int getIntensidadMedia(Imagen &img);
 
     /*!
      * \brief getPromedioRGB Método que permite obtener el promedio de los niveles de R, G y B

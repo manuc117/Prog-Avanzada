@@ -126,7 +126,7 @@ int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
     vector<string> carpetas = espTrabajo.getCarpetas();
     cout<<carpetas[opcionCarpeta-1]<<": "<<endl;
 
-    vector<string> listaDeArchivos = espTrabajo.getNombreArchivos(opcionCarpeta-1);
+    vector<string> listaDeArchivos = espTrabajo.getNombreArchivos(espTrabajo.getRutaCarpeta(opcionCarpeta-1));
     for(int archivo=0; archivo<listaDeArchivos.size(); archivo++)
         cout<<"\t"<<archivo+1<<"- "<<listaDeArchivos[archivo]<<endl;
 

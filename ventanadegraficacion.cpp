@@ -176,7 +176,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
     {
         if (opcionArchivo == 0)
         {
-            opcionArchivo = espTrabajo.getNombreArchivos(opcionCarpeta).size()-1;
+            opcionArchivo = espTrabajo.getNombreArchivos(espTrabajo.getRutaCarpeta(opcionCarpeta)).size()-1;
         }
         else
         {
@@ -192,7 +192,7 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
     if (derecha and ctrl)
     {
-        if (opcionArchivo == espTrabajo.getNombreArchivos(opcionCarpeta).size()-1)
+        if (opcionArchivo == espTrabajo.getNombreArchivos(espTrabajo.getRutaCarpeta(opcionCarpeta)).size()-1)
         {
             opcionArchivo = 0;
         }

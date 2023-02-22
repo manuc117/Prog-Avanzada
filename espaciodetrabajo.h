@@ -7,7 +7,7 @@
  *              del archivo y de la carpeta en la que se encuentra este. Gestiona el guardado
  *              de imagenes.
  *  \author     Manuela Calvo
- *  \date       Fecha de última modificación: 15-02-2022
+ *  \date       Fecha de última modificación: 21-02-2022
  *  \pre
  *  \bug
  *  \warning
@@ -47,10 +47,18 @@ public:
     /*!
      * \brief getNombreArchivos Método que permite obtener la lista de archivos presentes
      *        en una carpeta.
-     * \param[in] carpetaSeleccionada Opción de carpeta seleccionada por el usuario.
+     * \param[in] rutaDir Ruta de la carpeta seleccionada por el usuario.
      * \return Vector de strings, la lista de archivos presentes en una carpeta.
      */
-    vector<string> getNombreArchivos(int carpetaSeleccionada);
+    vector<string> getNombreArchivos(string rutaDir);
+
+    /*!
+     * \brief getRutaCarpeta Método que permite delvolver la ruta de una carpeta a partir de
+     *        una opción de carpeta.
+     * \param[in] carpetaSeleccionada Opción de la carpeta seleccionada por el usuario.
+     * \return Ruta correspondiente a un directorio/carpeta.
+     */
+    string getRutaCarpeta(int carpetaSeleccionada);
 
     /*!
      * \brief getRutaArchivo Método que permite devolver la ruta de un archivo a partir de

@@ -203,6 +203,11 @@ vector<int> ProcesadorEstadistico::getFrecuenciaB(Imagen &img)
     return frecuenciaBlue;
 }
 
+vector<int> ProcesadorEstadistico::getFrecuenciaIntensidad(Imagen &img)
+{
+    return getFrecuenciaR(img);
+}
+
 vector<int> ProcesadorEstadistico::getFrecuenciaPromedio(Imagen &img)
 {
     vector<int> frecuenciasR = getFrecuenciaR(img);
@@ -223,21 +228,80 @@ int ProcesadorEstadistico::getRMasFrecuente(Imagen &img)
 {
     vector<int> frecuencias = getFrecuenciaR(img);
 
-    return *max_element(frecuencias.begin(), frecuencias.end()); // .begin() y .end() son iteradores.
+    int mayor = 0, red = 0;
+
+    for(int i = 0; i < frecuencias.size(); i++)
+        if (frecuencias[i] > mayor)
+        {
+            red = i;
+            mayor = frecuencias[i];
+        }
+
+    return red;
 }
 
 int ProcesadorEstadistico::getGMasFrecuente(Imagen &img)
 {
     vector<int> frecuencias = getFrecuenciaG(img);
 
-    return *max_element(frecuencias.begin(), frecuencias.end());
+    int mayor = 0, green = 0;
+
+    for(int i = 0; i < frecuencias.size(); i++)
+        if (frecuencias[i] > mayor)
+        {
+            green = i;
+            mayor = frecuencias[i];
+        }
+
+    return green;
 }
 
 int ProcesadorEstadistico::getBMasFrecuente(Imagen &img)
 {
     vector<int> frecuencias = getFrecuenciaB(img);
 
-    return *max_element(frecuencias.begin(), frecuencias.end());
+    int mayor = 0, blue = 0;
+
+    for(int i = 0; i < frecuencias.size(); i++)
+        if (frecuencias[i] > mayor)
+        {
+            blue = i;
+            mayor = frecuencias[i];
+        }
+
+    return blue;
+}
+
+int ProcesadorEstadistico::getIntensidadMasFrecuente(Imagen &img)
+{
+    vector<int> frecuencias = getFrecuenciaIntensidad(img);
+
+    int mayor = 0, intensidad = 0;
+
+    for(int i = 0; i < frecuencias.size(); i++)
+        if (frecuencias[i] > mayor)
+        {
+            intensidad = i;
+            mayor = frecuencias[i];
+        }
+
+    return intensidad;
+}
+
+int ProcesadorEstadistico::getIntensidadMedia(Imagen &img)
+{
+    int sumaIntensidades = 0, contadorPixeles = 0;
+
+    for(int f=0; f<img.getFilas(); f++)
+    {
+        for(int c=0; c<img.getColumnas(); c++)
+        {
+            sumaIntensidades += img.getPixel(f,c).getIntensidad();
+            contadorPixeles++;
+        }
+    }
+
+    return sumaIntensidades/contadorPixeles;
 }
 
 vector<float> ProcesadorEstadistico::getPromedioRGB(Imagen &img)
@@ -304,6 +368,8 @@ void ProcesadorEstadistico::informarDatosEstadisticos(Imagen &img)
     cout<<"\n\tDesviacion estandar:\n\t\t-R:"<<getDesviacionEstandarRGB(img).at(0)<<"\n\t\t-G:"<<getDesviacionEstandarRGB(img).at(1)<<"\n\t\t-B:"<<getDesviacionEstandarRGB(img).at(2);
     cout<<"\n\tModa o Maxima frecuencia:\n\t\t-R:"<<getRMasFrecuente(img)<<"\n\t\t-G:"<<getGMasFrecuente(img)<<"\n\t\t-B:"<<getBMasFrecuente(img)<<"\n";
 }
+
+
 
 
 

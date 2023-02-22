@@ -70,7 +70,7 @@ public:
      * \param[in] columna Columna del pixel que se quiere conocer.
      * \return Objeto del tipo Pixel.
      */
-    Pixel getPixel(int fila, int columna); // Obtiene la posición del pixel
+    Pixel getPixel(int fila, int columna);
 
     /*!
      * \brief setPixel Método que permite modificar un Pixel de una Imagen.
@@ -88,7 +88,7 @@ public:
      * \return Booleano que indica que la coordenada está en la Imagen si su valor es true
      *         o que no está si su valor es false.
      */
-    bool estaEnLaImagen(int fila, int columna); // Control
+    bool estaEnLaImagen(int fila, int columna);
 
     /*!
      * \brief getIdentificador Método que permite conocer el código de identificación de una
