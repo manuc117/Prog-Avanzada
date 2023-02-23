@@ -4,6 +4,8 @@ var NAVTREE =
     [ "Nombre-de-sección-SIN-espacios", "index.html#Nombre-de-sección-SIN-espacios", null ],
     [ "Título-para-la-segunda-sección", "index.html#Título-para-la-segunda-sección", null ],
     [ "PEI-2021-2022", "md_pei-2021-2022-entrega_autotest_01__r_e_a_d_m_e.html", null ],
+    [ "Prog-Avanzada", "md__r_e_a_d_m_e.html", null ],
+    [ "Lista de bugs", "bug.html", null ],
     [ "Estructuras de Datos", "annotated.html", [
       [ "Estructura de datos", "annotated.html", "annotated_dup" ],
       [ "Índice de estructura de datos", "classes.html", null ],
@@ -29,9 +31,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"moc__predefs_8h.html#a4b2be09502f3fe1cd13838c6761803b3",
-"moc__predefs_8h.html#aeacc238625932b11e6cda685357dd678"
+"_excepcion_archivo_corrupto_8h.html",
+"contraste_8cpp.html",
+"debug_2moc__predefs_8h.html#a95b91b7560e936fdc4ce441d38b94b3e",
+"pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a0a3bd26d0b040f0781a238e4aedd3dbe",
+"pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a9eb6044e34be0d38146a2dadec14ecb2"
 ];
 
 var SYNCONMSG = 'click en deshabilitar sincronización';

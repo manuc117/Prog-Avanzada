@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['imagen',['Imagen',['../class_imagen.html#ab2e649aa7a105155c7bfdb846abf0528',1,'Imagen']]],
-  ['initializegl',['initializeGL',['../class_ventana_de_graficacion.html#ac206af6a2bc5d7a4dd4b56c4fcf90568',1,'VentanaDeGraficacion']]]
+  ['filtromediana',['FiltroMediana',['../class_filtro_mediana.html#aee242c22d3f05be85f85ebab2737d256',1,'FiltroMediana']]],
+  ['filtropasaaltos',['FiltroPasaAltos',['../class_filtro_pasa_altos.html#a4858f94102cae7d5ec35c9d9a86e8735',1,'FiltroPasaAltos']]],
+  ['filtropasabajos',['FiltroPasaBajos',['../class_filtro_pasa_bajos.html#afc656698fc72c1ec398356a27f3fa931',1,'FiltroPasaBajos']]]
 ];

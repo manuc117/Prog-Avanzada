@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ventanadegraficacion',['VentanaDeGraficacion',['../class_ventana_de_graficacion.html',1,'']]]
+  ['imagen',['Imagen',['../class_imagen.html',1,'']]],
+  ['interfazdeusuario',['InterfazDeUsuario',['../class_interfaz_de_usuario.html',1,'']]]
 ];

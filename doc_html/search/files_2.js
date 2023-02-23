@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gestordearchivos_2ecpp',['gestordearchivos.cpp',['../gestordearchivos_8cpp.html',1,'']]],
-  ['gestordearchivos_2eh',['gestordearchivos.h',['../gestordearchivos_8h.html',1,'']]]
+  ['contraste_2ecpp',['contraste.cpp',['../contraste_8cpp.html',1,'']]],
+  ['contraste_2eh',['contraste.h',['../contraste_8h.html',1,'']]]
 ];

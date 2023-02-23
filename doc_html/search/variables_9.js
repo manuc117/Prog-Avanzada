@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rango',['rango',['../class_imagen.html#ae5b702987b1960f5a3ab6fc20e25cca0',1,'Imagen']]],
-  ['red',['red',['../class_pixel.html#a975b9929cee50eba61195c414b9b8420',1,'Pixel']]]
+  ['matrizanalisis',['matrizAnalisis',['../class_algoritmo_del_pintor.html#aa9de00095cc9bd34d6b72629e2eaa4cf',1,'AlgoritmoDelPintor']]]
 ];

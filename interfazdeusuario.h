@@ -1,6 +1,6 @@
 /*!
  *  \class      InterfazDeUsuario
- *  \brief      Clase capaz de ejecutar el sistema de procesamiento de imagenes digitales.
+ *  \brief      Clase capaz de ejecutar el sistema de procesamiento de imágenes digitales.
  *  \details    Tiene la capacidad de ejecutar todas las acciones que hacen funcionar el software.
  *              Posee un espacio de trabajo, un graficador y un puntero gestor de archivos.
  *  \author     Manuela Calvo

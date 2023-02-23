@@ -1,18 +1,10 @@
 var searchData=
 [
-  ['test_5fcase_5farchivos_5f01',['test_case_archivos_01',['../class_e_i___auto_test.html#a9507369385d0af7571ba285ff5be2877',1,'EI_AutoTest']]],
-  ['test_5fcase_5farchivos_5f02',['test_case_archivos_02',['../class_e_i___auto_test.html#ac9acc2a0534779c91fb9e8a395c34a7d',1,'EI_AutoTest']]],
-  ['test_5fcase_5farchivos_5f03',['test_case_archivos_03',['../class_e_i___auto_test.html#a7c5c1c83f996535ba218558c2394e6a3',1,'EI_AutoTest']]],
-  ['test_5fcase_5fhistograma_5fescala_5fgrises_5f01',['test_case_histograma_escala_grises_01',['../class_e_i___auto_test.html#a99fbc4cc520913d816329d377f252774',1,'EI_AutoTest']]],
-  ['test_5fcase_5fhistograma_5frgb_5f01',['test_case_histograma_rgb_01',['../class_e_i___auto_test.html#a75ebaf2256b2f1785bf06d2ac4b63453',1,'EI_AutoTest']]],
-  ['test_5fcase_5fimagenes_5f01',['test_case_imagenes_01',['../class_e_i___auto_test.html#aa16c72448c73dd04aa39d765764f21cb',1,'EI_AutoTest']]],
-  ['test_5fcase_5fimagenes_5fpixeles_5fgrises_5f01',['test_case_imagenes_pixeles_grises_01',['../class_e_i___auto_test.html#a47f6e25eee7239cb95f80e57ee839743',1,'EI_AutoTest']]],
-  ['test_5fcase_5fimagenes_5fpixeles_5fgrises_5f02',['test_case_imagenes_pixeles_grises_02',['../class_e_i___auto_test.html#a843108e7d68c23fafb01adabd7073672',1,'EI_AutoTest']]],
-  ['test_5fcase_5fimagenes_5fpixeles_5frgb_5f01',['test_case_imagenes_pixeles_rgb_01',['../class_e_i___auto_test.html#a107da66f0cc2c09afa37557f7ca513ce',1,'EI_AutoTest']]],
-  ['test_5fcase_5fimagenes_5fpixeles_5frgb_5f02',['test_case_imagenes_pixeles_rgb_02',['../class_e_i___auto_test.html#a03854a6e6af54c34f9b0d00a2fb08a95',1,'EI_AutoTest']]],
-  ['test_5fcase_5fimagenes_5fpixeles_5frgb_5f03',['test_case_imagenes_pixeles_rgb_03',['../class_e_i___auto_test.html#ab3c66cedabc89c31deca79783a59e349',1,'EI_AutoTest']]],
-  ['test_5fcase_5fsuavizado_5fescala_5fgrises_5f01',['test_case_suavizado_escala_grises_01',['../class_e_i___auto_test.html#a76a6e15a0abe897a49cdde763e1f75a7',1,'EI_AutoTest']]],
-  ['tipodearchivo01',['tipoDeArchivo01',['../class_e_i___auto_test.html#ac52a113beac6e18f8c7a62141b92e66c',1,'EI_AutoTest']]],
-  ['tipodearchivo02',['tipoDeArchivo02',['../class_e_i___auto_test.html#af269a81bcad4b5cfc7358cf64e006e00',1,'EI_AutoTest']]],
-  ['tst_5fei_5fautotest_2ecpp',['tst_ei_autotest.cpp',['../tst__ei__autotest_8cpp.html',1,'']]]
+  ['qobject',['QObject',['../class_q_object.html',1,'']]],
+  ['qopenglfunctions',['QOpenGLFunctions',['../class_q_open_g_l_functions.html',1,'']]],
+  ['qopenglwidget',['QOpenGLWidget',['../class_q_open_g_l_widget.html',1,'']]],
+  ['qt_5fmeta_5fdata_5fventanadegraficacion',['qt_meta_data_VentanaDeGraficacion',['../debug_2moc__ventanadegraficacion_8cpp.html#a1882821ee7f43a22cefa9e7000969da5',1,'qt_meta_data_VentanaDeGraficacion():&#160;moc_ventanadegraficacion.cpp'],['../pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__ventanadegraficacion_8cpp.html#a1882821ee7f43a22cefa9e7000969da5',1,'qt_meta_data_VentanaDeGraficacion():&#160;moc_ventanadegraficacion.cpp']]],
+  ['qt_5fmeta_5fstringdata_5fventanadegraficacion',['qt_meta_stringdata_VentanaDeGraficacion',['../debug_2moc__ventanadegraficacion_8cpp.html#a8cef12f8be8b4dd49949caeae8b29025',1,'qt_meta_stringdata_VentanaDeGraficacion():&#160;moc_ventanadegraficacion.cpp'],['../pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__ventanadegraficacion_8cpp.html#a8cef12f8be8b4dd49949caeae8b29025',1,'qt_meta_stringdata_VentanaDeGraficacion():&#160;moc_ventanadegraficacion.cpp']]],
+  ['qt_5fmeta_5fstringdata_5fventanadegraficacion_5ft',['qt_meta_stringdata_VentanaDeGraficacion_t',['../structqt__meta__stringdata___ventana_de_graficacion__t.html',1,'']]],
+  ['qt_5fmoc_5fliteral',['QT_MOC_LITERAL',['../debug_2moc__ventanadegraficacion_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_ventanadegraficacion.cpp'],['../pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__ventanadegraficacion_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_ventanadegraficacion.cpp']]]
 ];

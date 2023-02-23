@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ei_5fautotest',['EI_AutoTest',['../class_e_i___auto_test.html',1,'']]],
-  ['espaciodetrabajo',['EspacioDeTrabajo',['../class_espacio_de_trabajo.html',1,'']]]
+  ['binarizado',['Binarizado',['../class_binarizado.html',1,'']]],
+  ['brillo',['Brillo',['../class_brillo.html',1,'']]]
 ];

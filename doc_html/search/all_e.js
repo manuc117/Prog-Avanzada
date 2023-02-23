@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['setblue',['setBlue',['../class_pixel.html#a12386f1b90ac85b5582c81f94dc8688d',1,'Pixel']]],
-  ['setcolumnas',['setColumnas',['../class_imagen.html#a2f484fcbef63dfa2fe6c2ee418a7d856',1,'Imagen']]],
-  ['setcomentario',['setComentario',['../class_imagen.html#a2c4a43fbdc20159e6f610ba1d42f5145',1,'Imagen']]],
-  ['setfilas',['setFilas',['../class_imagen.html#a745584efb94c3a60c7d77017b2bfb512',1,'Imagen']]],
-  ['setgreen',['setGreen',['../class_pixel.html#af3f150076299596a617c3a356f48c183',1,'Pixel']]],
-  ['setidentificador',['setIdentificador',['../class_imagen.html#a205a390ce33a1a77b89c6c2f82184311',1,'Imagen']]],
-  ['setpixel',['setPixel',['../class_imagen.html#ad8822995c993d70c93e98d3d67991317',1,'Imagen']]],
-  ['setpixelmono',['setPixelMono',['../class_pixel.html#ab068536c098932c60261d10be4b73f0c',1,'Pixel']]],
-  ['setpixelrgb',['setPixelRGB',['../class_pixel.html#a37fbfd9ef383254eb269c8129e1d7463',1,'Pixel']]],
-  ['setrango',['setRango',['../class_imagen.html#a9c434792ed41c70d6fc9b6bd545aa0e6',1,'Imagen']]],
-  ['setred',['setRed',['../class_pixel.html#a8f89e877a2f076a33c1b03725f8ee1d2',1,'Pixel']]],
-  ['settamanio',['setTamanio',['../class_imagen.html#a310a7ee241a8c546a9d5345937a9f01f',1,'Imagen']]],
-  ['stringdata0',['stringdata0',['../structqt__meta__stringdata___ventana_de_graficacion__t.html#a57507a19251cf28a4c73a537419e1639',1,'qt_meta_stringdata_VentanaDeGraficacion_t']]]
+  ['pei_2d2021_2d2022',['PEI-2021-2022',['../md_pei-2021-2022-entrega_autotest_01__r_e_a_d_m_e.html',1,'']]],
+  ['prog_2davanzada',['Prog-Avanzada',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['pagina_5fprincipal_2eh',['pagina_principal.h',['../pagina__principal_8h.html',1,'']]],
+  ['paintgl',['paintGL',['../class_graficador_histograma.html#a51828df5b84de1556e877cd86590b581',1,'GraficadorHistograma::paintGL()'],['../class_ventana_de_graficacion.html#a3d954ecb38057a5330d1df6ecb77aabd',1,'VentanaDeGraficacion::paintGL()']]],
+  ['pintarvecinos',['pintarVecinos',['../class_algoritmo_del_pintor.html#ad8fa129167c61dd788057722a4087ba8',1,'AlgoritmoDelPintor']]],
+  ['pixel',['Pixel',['../class_pixel.html',1,'Pixel'],['../class_pixel.html#a27ad99a2f705e635c42d242d530d4756',1,'Pixel::Pixel()'],['../class_pixel.html#ae1817814b3be19bd6fb38b44439de539',1,'Pixel::Pixel(int r, int g, int b)']]],
+  ['pixel_2ecpp',['pixel.cpp',['../pixel_8cpp.html',1,'']]],
+  ['pixel_2eh',['pixel.h',['../pixel_8h.html',1,'']]],
+  ['procesador',['procesador',['../class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0',1,'GraficadorHistograma']]],
+  ['procesadorestadistico',['ProcesadorEstadistico',['../class_procesador_estadistico.html',1,'ProcesadorEstadistico'],['../class_procesador_estadistico.html#aa6a9357c623868ceec93f2f32dc33a67',1,'ProcesadorEstadistico::ProcesadorEstadistico()']]],
+  ['procesadorestadistico_2ecpp',['procesadorestadistico.cpp',['../procesadorestadistico_8cpp.html',1,'']]],
+  ['procesadorestadistico_2eh',['procesadorestadistico.h',['../procesadorestadistico_8h.html',1,'']]],
+  ['profundidad',['profundidad',['../class_algoritmo_del_pintor.html#adacb2f3c91fb1ed17711c66542a86efa',1,'AlgoritmoDelPintor']]],
+  ['pseudocolorear',['pseudocolorear',['../class_l_u_t.html#a2158103be1ae6b7371634f0b0d2f0f8f',1,'LUT']]]
 ];

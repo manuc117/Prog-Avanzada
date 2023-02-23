@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gestordearchivos',['GestorDeArchivos',['../class_gestor_de_archivos.html',1,'']]]
+  ['contraste',['Contraste',['../class_contraste.html',1,'']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['ei_5fautotest',['EI_AutoTest',['../class_e_i___auto_test.html#ab8180e7c5b9d5ab4239601ecf067b160',1,'EI_AutoTest']]],
-  ['ejecutar',['ejecutar',['../class_ventana_de_graficacion.html#a49c59f751c196a34e79b2faa8392bb72',1,'VentanaDeGraficacion']]],
-  ['espaciodetrabajo',['EspacioDeTrabajo',['../class_espacio_de_trabajo.html#aabf8692d51b116190f1b0a2292359b46',1,'EspacioDeTrabajo']]],
-  ['estaenlaimagen',['estaEnLaImagen',['../class_imagen.html#af57a49be3b500be7cddc9e98f59888b2',1,'Imagen']]]
+  ['cargarimagen',['cargarImagen',['../class_interfaz_de_usuario.html#a97c5d59dcb2ca5b0460eeda0242507be',1,'InterfazDeUsuario::cargarImagen()'],['../class_ventana_de_graficacion.html#a98cab3ea88696a35561c7257e6b7c790',1,'VentanaDeGraficacion::cargarImagen()']]],
+  ['cargartabla',['cargarTabla',['../class_l_u_t.html#a11ebac19bc13cf973405a1a495477b56',1,'LUT']]],
+  ['contraste',['Contraste',['../class_contraste.html#a66d0fb81a88464d31869f0c230839949',1,'Contraste']]]
 ];

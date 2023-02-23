@@ -3,6 +3,7 @@ var class_imagen =
     [ "Imagen", "class_imagen.html#ab2e649aa7a105155c7bfdb846abf0528", null ],
     [ "estaEnLaImagen", "class_imagen.html#af57a49be3b500be7cddc9e98f59888b2", null ],
     [ "getColumnas", "class_imagen.html#a85f488958dd299a2c751efe5f390bf08", null ],
+    [ "getComentario", "class_imagen.html#a44b07ea036c10bd2cc76387f943b9c39", null ],
     [ "getFilas", "class_imagen.html#af1f4833ddf4987c3ab0ff9c65d224093", null ],
     [ "getIdentificador", "class_imagen.html#ab28b3e13c672139eada95427623a5828", null ],
     [ "getPixel", "class_imagen.html#abb42cdae2a0f78ce15d81a64e952cd69", null ],

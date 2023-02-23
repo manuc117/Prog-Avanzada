@@ -80,22 +80,59 @@ $(document).ready(function(){initNavTree('class_espacio_de_trabajo.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Métodos públicos</a>  </div>
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia de la Clase EspacioDeTrabajo</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Clase capaz de administrar donde se ecuentran almacenados los archivos.  
+ <a href="class_espacio_de_trabajo.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="espaciodetrabajo_8h_source.html">espaciodetrabajo.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:aabf8692d51b116190f1b0a2292359b46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#aabf8692d51b116190f1b0a2292359b46">EspacioDeTrabajo</a> ()</td></tr>
+<tr class="memdesc:aabf8692d51b116190f1b0a2292359b46"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_espacio_de_trabajo.html" title="Clase capaz de administrar donde se ecuentran almacenados los archivos. ">EspacioDeTrabajo</a> Constructor del objeto <a class="el" href="class_espacio_de_trabajo.html" title="Clase capaz de administrar donde se ecuentran almacenados los archivos. ">EspacioDeTrabajo</a>.  <a href="#aabf8692d51b116190f1b0a2292359b46">Más...</a><br /></td></tr>
 <tr class="separator:aabf8692d51b116190f1b0a2292359b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a656de37ac8cad97cd647fdebd779b0ed"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#a656de37ac8cad97cd647fdebd779b0ed">getCarpetas</a> ()</td></tr>
+<tr class="memdesc:a656de37ac8cad97cd647fdebd779b0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">getCarpetas Método que permite obtener la lista de carpetas conocidas por el espacio de trabajo.  <a href="#a656de37ac8cad97cd647fdebd779b0ed">Más...</a><br /></td></tr>
+<tr class="separator:a656de37ac8cad97cd647fdebd779b0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8434631e2b4240e54040525781a434b0"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#a8434631e2b4240e54040525781a434b0">getNombreArchivos</a> (string rutaDir)</td></tr>
+<tr class="memdesc:a8434631e2b4240e54040525781a434b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">getNombreArchivos Método que permite obtener la lista de archivos presentes en una carpeta.  <a href="#a8434631e2b4240e54040525781a434b0">Más...</a><br /></td></tr>
+<tr class="separator:a8434631e2b4240e54040525781a434b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5982810c487972fca9f50f21f33924f2"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#a5982810c487972fca9f50f21f33924f2">getRutaCarpeta</a> (int carpetaSeleccionada)</td></tr>
+<tr class="memdesc:a5982810c487972fca9f50f21f33924f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">getRutaCarpeta Método que permite delvolver la ruta de una carpeta a partir de una opción de carpeta.  <a href="#a5982810c487972fca9f50f21f33924f2">Más...</a><br /></td></tr>
+<tr class="separator:a5982810c487972fca9f50f21f33924f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21771574169b91194803f6f6cc71299"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#aa21771574169b91194803f6f6cc71299">getRutaArchivo</a> (int carpetaSeleccionada, int archivoSeleccionado)</td></tr>
+<tr class="memdesc:aa21771574169b91194803f6f6cc71299"><td class="mdescLeft">&#160;</td><td class="mdescRight">getRutaArchivo Método que permite devolver la ruta de un archivo a partir de una opción de carpeta y una opción de archivo.  <a href="#aa21771574169b91194803f6f6cc71299">Más...</a><br /></td></tr>
+<tr class="separator:aa21771574169b91194803f6f6cc71299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586dc30156fecab75cb51d116d3e4f6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#a586dc30156fecab75cb51d116d3e4f6e">esPNM</a> (string rutaArchi)</td></tr>
+<tr class="memdesc:a586dc30156fecab75cb51d116d3e4f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">esPNM Método que devuelve si un archivo es PNM o no.  <a href="#a586dc30156fecab75cb51d116d3e4f6e">Más...</a><br /></td></tr>
+<tr class="separator:a586dc30156fecab75cb51d116d3e4f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4defbf813c7f1ab4337e394f7fe96cd3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#a4defbf813c7f1ab4337e394f7fe96cd3">esAIC</a> (string rutaArchi)</td></tr>
+<tr class="memdesc:a4defbf813c7f1ab4337e394f7fe96cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">esAIC Método que devuelve si un archivo es AIC o no.  <a href="#a4defbf813c7f1ab4337e394f7fe96cd3">Más...</a><br /></td></tr>
+<tr class="separator:a4defbf813c7f1ab4337e394f7fe96cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cfdd9079dd7c92c2c66c7eb4c47225f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#a7cfdd9079dd7c92c2c66c7eb4c47225f">guardarImagen</a> (<a class="el" href="class_imagen.html">Imagen</a> *img)</td></tr>
+<tr class="memdesc:a7cfdd9079dd7c92c2c66c7eb4c47225f"><td class="mdescLeft">&#160;</td><td class="mdescRight">guardarImagen Método auxiliar en el guardado de una imagen.  <a href="#a7cfdd9079dd7c92c2c66c7eb4c47225f">Más...</a><br /></td></tr>
+<tr class="separator:a7cfdd9079dd7c92c2c66c7eb4c47225f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:af5219974701ec6f9d1fbe41f33bf0226"><td class="memItemLeft" align="right" valign="top">const vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">carpetas</a></td></tr>
+<tr class="separator:af5219974701ec6f9d1fbe41f33bf0226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8h_source.html#l00005">5</a> del archivo <a class="el" href="espaciodetrabajo_8h_source.html">espaciodetrabajo.h</a>.</p>
+<div class="textblock"><p>Clase capaz de administrar donde se ecuentran almacenados los archivos. </p>
+<p>Conoce las carpetas y la raiz de la ruta. Puede obtener el nombre de los archivos presentes en una carpeta y almacenarlos en la memoria. También es capaz de devolver la ruta de un archivo en particular a partir de el nombre del archivo y de la carpeta en la que se encuentra este. Gestiona el guardado de imagenes. </p><dl class="section author"><dt>Autor</dt><dd>Manuela Calvo </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>Fecha de última modificación: 21-02-2022 </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd></dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000007">Bug:</a></b></dt><dd></dd></dl>
+<dl class="section warning"><dt>Atención</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8h_source.html#l00031">31</a> del archivo <a class="el" href="espaciodetrabajo_8h_source.html">espaciodetrabajo.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="aabf8692d51b116190f1b0a2292359b46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabf8692d51b116190f1b0a2292359b46">&#9670;&nbsp;</a></span>EspacioDeTrabajo()</h2>
@@ -112,8 +149,282 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_espacio_de_trabajo.html" title="Clase capaz de administrar donde se ecuentran almacenados los archivos. ">EspacioDeTrabajo</a> Constructor del objeto <a class="el" href="class_espacio_de_trabajo.html" title="Clase capaz de administrar donde se ecuentran almacenados los archivos. ">EspacioDeTrabajo</a>. </p>
+
 <p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00003">3</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a4defbf813c7f1ab4337e394f7fe96cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4defbf813c7f1ab4337e394f7fe96cd3">&#9670;&nbsp;</a></span>esAIC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EspacioDeTrabajo::esAIC </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rutaArchi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>esAIC Método que devuelve si un archivo es AIC o no. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rutaArchi</td><td>Ruta del archivo analizado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Booleano que indica que un archivo es AIC cuando su valor es true y que no lo es cuando su valor es false. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00052">52</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="interfazdeusuario_8cpp_source.html#l00157">InterfazDeUsuario::cargarImagen()</a>, <a class="el" href="ventanadegraficacion_8cpp_source.html#l00138">VentanaDeGraficacion::cargarImagen()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00243">EI_AutoTest::getFilasYColumnas01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00345">EI_AutoTest::getIntensidadesRGB01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00382">EI_AutoTest::getIntensidadesRGB02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00419">EI_AutoTest::getIntensidadesRGB03()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00534">EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuavizado01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00277">EI_AutoTest::getIntensidadNivelDeGris01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00311">EI_AutoTest::getIntensidadNivelDeGris02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00495">EI_AutoTest::getPixelColorMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00456">EI_AutoTest::getPixelGrisMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00178">EI_AutoTest::tipoDeArchivo01()</a> y <a class="el" href="tst__ei__autotest_8cpp_source.html#l00209">EI_AutoTest::tipoDeArchivo02()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> pos = rutaArchi.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">string</span> extension = rutaArchi.substr(pos);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> extension == <span class="stringliteral">&quot;.aic&quot;</span>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a586dc30156fecab75cb51d116d3e4f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a586dc30156fecab75cb51d116d3e4f6e">&#9670;&nbsp;</a></span>esPNM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EspacioDeTrabajo::esPNM </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rutaArchi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>esPNM Método que devuelve si un archivo es PNM o no. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rutaArchi</td><td>Ruta del archivo analizado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Booleano que indica que un archivo es PNM cuando su valor es true y que no lo es cuando su valor es false. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00045">45</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="interfazdeusuario_8cpp_source.html#l00157">InterfazDeUsuario::cargarImagen()</a>, <a class="el" href="ventanadegraficacion_8cpp_source.html#l00138">VentanaDeGraficacion::cargarImagen()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00243">EI_AutoTest::getFilasYColumnas01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00345">EI_AutoTest::getIntensidadesRGB01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00382">EI_AutoTest::getIntensidadesRGB02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00419">EI_AutoTest::getIntensidadesRGB03()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00534">EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuavizado01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00277">EI_AutoTest::getIntensidadNivelDeGris01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00311">EI_AutoTest::getIntensidadNivelDeGris02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00495">EI_AutoTest::getPixelColorMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00456">EI_AutoTest::getPixelGrisMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00178">EI_AutoTest::tipoDeArchivo01()</a> y <a class="el" href="tst__ei__autotest_8cpp_source.html#l00209">EI_AutoTest::tipoDeArchivo02()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> pos = rutaArchi.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">string</span> extension = rutaArchi.substr(pos);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> extension == <span class="stringliteral">&quot;.pbm&quot;</span> or extension == <span class="stringliteral">&quot;.pgm&quot;</span> or extension == <span class="stringliteral">&quot;.pnm&quot;</span> or extension == <span class="stringliteral">&quot;.ppm&quot;</span>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a656de37ac8cad97cd647fdebd779b0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656de37ac8cad97cd647fdebd779b0ed">&#9670;&nbsp;</a></span>getCarpetas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; EspacioDeTrabajo::getCarpetas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getCarpetas Método que permite obtener la lista de carpetas conocidas por el espacio de trabajo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de strings, la lista de carpetas conocidas por el espacio de trabajo. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00008">8</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="espaciodetrabajo_8h_source.html#l00099">carpetas</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="interfazdeusuario_8cpp_source.html#l00008">InterfazDeUsuario::ejecutar()</a>, <a class="el" href="interfazdeusuario_8cpp_source.html#l00124">InterfazDeUsuario::getOpcionArchivo()</a> y <a class="el" href="interfazdeusuario_8cpp_source.html#l00099">InterfazDeUsuario::getOpcionCarpeta()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">carpetas</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div><div class="ttc" id="class_espacio_de_trabajo_html_af5219974701ec6f9d1fbe41f33bf0226"><div class="ttname"><a href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">EspacioDeTrabajo::carpetas</a></div><div class="ttdeci">const vector&lt; string &gt; carpetas</div><div class="ttdef"><b>Definition:</b> <a href="espaciodetrabajo_8h_source.html#l00099">espaciodetrabajo.h:99</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8434631e2b4240e54040525781a434b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8434631e2b4240e54040525781a434b0">&#9670;&nbsp;</a></span>getNombreArchivos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; string &gt; EspacioDeTrabajo::getNombreArchivos </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rutaDir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getNombreArchivos Método que permite obtener la lista de archivos presentes en una carpeta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rutaDir</td><td>Ruta de la carpeta seleccionada por el usuario. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de strings, la lista de archivos presentes en una carpeta. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00013">13</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="interfazdeusuario_8cpp_source.html#l00124">InterfazDeUsuario::getOpcionArchivo()</a>, <a class="el" href="espaciodetrabajo_8cpp_source.html#l00040">getRutaArchivo()</a>, <a class="el" href="ventanadegraficacion_8cpp_source.html#l00154">VentanaDeGraficacion::keyPressEvent()</a> y <a class="el" href="tst__ei__autotest_8cpp_source.html#l00163">EI_AutoTest::listaDeArchivosDeImagen()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    vector&lt;string&gt; lista_de_archivos;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    DIR *dir = opendir(rutaDir.c_str());</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (dir != NULL)</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">string</span> pto(<span class="stringliteral">&quot;.&quot;</span>), ptopto(<span class="stringliteral">&quot;..&quot;</span>);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">struct </span>dirent *entry;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">while</span> ((entry = readdir(dir)) != NULL)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span>( entry-&gt;d_name != pto and entry-&gt;d_name != ptopto )</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                lista_de_archivos.push_back(entry-&gt;d_name);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        closedir(dir);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> lista_de_archivos;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aa21771574169b91194803f6f6cc71299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21771574169b91194803f6f6cc71299">&#9670;&nbsp;</a></span>getRutaArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string EspacioDeTrabajo::getRutaArchivo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>carpetaSeleccionada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>archivoSeleccionado</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getRutaArchivo Método que permite devolver la ruta de un archivo a partir de una opción de carpeta y una opción de archivo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">carpetaSeleccionada</td><td>Opción de la carpeta seleccionada por el usuario. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">archivoSeleccionado</td><td>Opción del archivo seleccionado por el usuario. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ruta correspondiente a un archivo. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00040">40</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="espaciodetrabajo_8h_source.html#l00099">carpetas</a>, <a class="el" href="espaciodetrabajo_8cpp_source.html#l00013">getNombreArchivos()</a> y <a class="el" href="espaciodetrabajo_8cpp_source.html#l00035">getRutaCarpeta()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="ventanadegraficacion_8cpp_source.html#l00138">VentanaDeGraficacion::cargarImagen()</a>, <a class="el" href="interfazdeusuario_8cpp_source.html#l00008">InterfazDeUsuario::ejecutar()</a> y <a class="el" href="ventanadegraficacion_8cpp_source.html#l00154">VentanaDeGraficacion::keyPressEvent()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;./Imagenes/&quot;</span>+<a class="code" href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">carpetas</a>[carpetaSeleccionada]+<span class="stringliteral">&quot;/&quot;</span>+<a class="code" href="class_espacio_de_trabajo.html#a8434631e2b4240e54040525781a434b0">getNombreArchivos</a>(<a class="code" href="class_espacio_de_trabajo.html#a5982810c487972fca9f50f21f33924f2">getRutaCarpeta</a>(carpetaSeleccionada))[archivoSeleccionado];</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="class_espacio_de_trabajo_html_a5982810c487972fca9f50f21f33924f2"><div class="ttname"><a href="class_espacio_de_trabajo.html#a5982810c487972fca9f50f21f33924f2">EspacioDeTrabajo::getRutaCarpeta</a></div><div class="ttdeci">string getRutaCarpeta(int carpetaSeleccionada)</div><div class="ttdoc">getRutaCarpeta Método que permite delvolver la ruta de una carpeta a partir de una opción de carpeta...</div><div class="ttdef"><b>Definition:</b> <a href="espaciodetrabajo_8cpp_source.html#l00035">espaciodetrabajo.cpp:35</a></div></div>
+<div class="ttc" id="class_espacio_de_trabajo_html_af5219974701ec6f9d1fbe41f33bf0226"><div class="ttname"><a href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">EspacioDeTrabajo::carpetas</a></div><div class="ttdeci">const vector&lt; string &gt; carpetas</div><div class="ttdef"><b>Definition:</b> <a href="espaciodetrabajo_8h_source.html#l00099">espaciodetrabajo.h:99</a></div></div>
+<div class="ttc" id="class_espacio_de_trabajo_html_a8434631e2b4240e54040525781a434b0"><div class="ttname"><a href="class_espacio_de_trabajo.html#a8434631e2b4240e54040525781a434b0">EspacioDeTrabajo::getNombreArchivos</a></div><div class="ttdeci">vector&lt; string &gt; getNombreArchivos(string rutaDir)</div><div class="ttdoc">getNombreArchivos Método que permite obtener la lista de archivos presentes en una carpeta...</div><div class="ttdef"><b>Definition:</b> <a href="espaciodetrabajo_8cpp_source.html#l00013">espaciodetrabajo.cpp:13</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5982810c487972fca9f50f21f33924f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5982810c487972fca9f50f21f33924f2">&#9670;&nbsp;</a></span>getRutaCarpeta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string EspacioDeTrabajo::getRutaCarpeta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>carpetaSeleccionada</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getRutaCarpeta Método que permite delvolver la ruta de una carpeta a partir de una opción de carpeta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">carpetaSeleccionada</td><td>Opción de la carpeta seleccionada por el usuario. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Ruta correspondiente a un directorio/carpeta. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00035">35</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="espaciodetrabajo_8h_source.html#l00099">carpetas</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="interfazdeusuario_8cpp_source.html#l00124">InterfazDeUsuario::getOpcionArchivo()</a>, <a class="el" href="espaciodetrabajo_8cpp_source.html#l00040">getRutaArchivo()</a> y <a class="el" href="ventanadegraficacion_8cpp_source.html#l00154">VentanaDeGraficacion::keyPressEvent()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;./Imagenes/&quot;</span>+<a class="code" href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">carpetas</a>[carpetaSeleccionada]+<span class="stringliteral">&quot;/&quot;</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div><div class="ttc" id="class_espacio_de_trabajo_html_af5219974701ec6f9d1fbe41f33bf0226"><div class="ttname"><a href="class_espacio_de_trabajo.html#af5219974701ec6f9d1fbe41f33bf0226">EspacioDeTrabajo::carpetas</a></div><div class="ttdeci">const vector&lt; string &gt; carpetas</div><div class="ttdef"><b>Definition:</b> <a href="espaciodetrabajo_8h_source.html#l00099">espaciodetrabajo.h:99</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7cfdd9079dd7c92c2c66c7eb4c47225f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cfdd9079dd7c92c2c66c7eb4c47225f">&#9670;&nbsp;</a></span>guardarImagen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EspacioDeTrabajo::guardarImagen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_imagen.html">Imagen</a> *&#160;</td>
+          <td class="paramname"><em>img</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>guardarImagen Método auxiliar en el guardado de una imagen. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td><a class="el" href="class_imagen.html" title="Clase capaz de representar una imagen a partir de un arreglo de pixeles. ">Imagen</a> a guardar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8cpp_source.html#l00059">59</a> del archivo <a class="el" href="espaciodetrabajo_8cpp_source.html">espaciodetrabajo.cpp</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="imagen_8cpp_source.html#l00053">Imagen::getIdentificador()</a> y <a class="el" href="class_gestor_de_archivos.html#ad2f950c7c54f9883b7863b9afe076cda">GestorDeArchivos::guardar()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="ventanadegraficacion_8cpp_source.html#l00154">VentanaDeGraficacion::keyPressEvent()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> seGuarda = <span class="keyword">true</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">char</span> formatoGuardado;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Seleccione el formato de guardado de la imagen&quot;</span>&lt;&lt;endl;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;\t-&gt; [p] para pnm&quot;</span>&lt;&lt;endl;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;\t-&gt; [a] para aic&quot;</span>&lt;&lt;endl;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Formato: &quot;</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cin&gt;&gt;formatoGuardado;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    formatoGuardado = tolower(formatoGuardado);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">while</span> (formatoGuardado != <span class="charliteral">&#39;p&#39;</span> and formatoGuardado != <span class="charliteral">&#39;a&#39;</span>)</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        cin.clear();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Seleccione un opcion valida: &quot;</span>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        cin&gt;&gt;formatoGuardado;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        formatoGuardado = tolower(formatoGuardado);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">char</span> cambioFormato;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span>(formatoGuardado == <span class="charliteral">&#39;a&#39;</span> and img-&gt;<a class="code" href="class_imagen.html#ab28b3e13c672139eada95427623a5828">getIdentificador</a>() != <span class="stringliteral">&quot;P2&quot;</span> and img-&gt;<a class="code" href="class_imagen.html#ab28b3e13c672139eada95427623a5828">getIdentificador</a>() != <span class="stringliteral">&quot;P2C&quot;</span> and img-&gt;<a class="code" href="class_imagen.html#ab28b3e13c672139eada95427623a5828">getIdentificador</a>() != <span class="stringliteral">&quot;P5&quot;</span>)</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;\nEsta imagen no puede ser guardada en formato AIC.&quot;</span>&lt;&lt;endl;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;¿Desea almacenarla en fotmato PNM?&quot;</span>&lt;&lt;endl;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;\t-&gt; [s] para SI&quot;</span>&lt;&lt;endl;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;\t-&gt; [n] para NO&quot;</span>&lt;&lt;endl&lt;&lt;endl;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Cambiar formato: &quot;</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        cin&gt;&gt;cambioFormato;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        cambioFormato = tolower(cambioFormato);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">while</span> (cambioFormato != <span class="charliteral">&#39;s&#39;</span> and cambioFormato != <span class="charliteral">&#39;n&#39;</span>)</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            cin.clear();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            cin.ignore(numeric_limits&lt;streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            cout&lt;&lt;<span class="stringliteral">&quot;Seleccione un opcion valida: &quot;</span>;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            cin&gt;&gt;cambioFormato;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            cambioFormato = tolower(cambioFormato);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (cambioFormato == <span class="charliteral">&#39;s&#39;</span>)</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            formatoGuardado = <span class="charliteral">&#39;p&#39;</span>;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            cout&lt;&lt;<span class="stringliteral">&quot;No se pudo guardar el archivo.&quot;</span>;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            seGuarda = <span class="keyword">false</span>;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            cout.flush();</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (seGuarda)</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="class_gestor_de_archivos.html">GestorDeArchivos</a> *archivo;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span> (formatoGuardado == <span class="charliteral">&#39;p&#39;</span>)</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            archivo = <span class="keyword">new</span> <a class="code" href="class_archivo_p_n_m.html">ArchivoPNM</a>;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            archivo-&gt;<a class="code" href="class_gestor_de_archivos.html#ad2f950c7c54f9883b7863b9afe076cda">guardar</a>(img);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            archivo = <span class="keyword">new</span> <a class="code" href="class_archivo_a_i_c.html">ArchivoAIC</a>;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            archivo-&gt;<a class="code" href="class_gestor_de_archivos.html#ad2f950c7c54f9883b7863b9afe076cda">guardar</a>(img);</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div><div class="ttc" id="class_imagen_html_ab28b3e13c672139eada95427623a5828"><div class="ttname"><a href="class_imagen.html#ab28b3e13c672139eada95427623a5828">Imagen::getIdentificador</a></div><div class="ttdeci">string getIdentificador()</div><div class="ttdoc">getIdentificador Método que permite conocer el código de identificación de una Imagen. </div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00053">imagen.cpp:53</a></div></div>
+<div class="ttc" id="class_archivo_p_n_m_html"><div class="ttname"><a href="class_archivo_p_n_m.html">ArchivoPNM</a></div><div class="ttdoc">Clase capaz de gestionar los diferentes tipos de archivos PNM. </div><div class="ttdef"><b>Definition:</b> <a href="archivopnm_8h_source.html#l00024">archivopnm.h:24</a></div></div>
+<div class="ttc" id="class_gestor_de_archivos_html_ad2f950c7c54f9883b7863b9afe076cda"><div class="ttname"><a href="class_gestor_de_archivos.html#ad2f950c7c54f9883b7863b9afe076cda">GestorDeArchivos::guardar</a></div><div class="ttdeci">virtual void guardar(Imagen *img)=0</div><div class="ttdoc">guardar Método virtual que al ser redefinido permite guardar una Imagen. </div></div>
+<div class="ttc" id="class_gestor_de_archivos_html"><div class="ttname"><a href="class_gestor_de_archivos.html">GestorDeArchivos</a></div><div class="ttdoc">Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...</div><div class="ttdef"><b>Definition:</b> <a href="gestordearchivos_8h_source.html#l00020">gestordearchivos.h:20</a></div></div>
+<div class="ttc" id="class_archivo_a_i_c_html"><div class="ttname"><a href="class_archivo_a_i_c.html">ArchivoAIC</a></div><div class="ttdoc">Clase capaz de gestionar los archivos de tipo AIC. </div><div class="ttdef"><b>Definition:</b> <a href="archivoaic_8h_source.html#l00023">archivoaic.h:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de los campos</h2>
+<a id="af5219974701ec6f9d1fbe41f33bf0226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5219974701ec6f9d1fbe41f33bf0226">&#9670;&nbsp;</a></span>carpetas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;string&gt; EspacioDeTrabajo::carpetas</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">=</div><div class="line">    {</div><div class="line">        <span class="stringliteral">&quot;grupo_imagenes_1&quot;</span>,</div><div class="line">        <span class="stringliteral">&quot;grupo_imagenes_2&quot;</span>,</div><div class="line">        <span class="stringliteral">&quot;grupo_imagenes_3_corruptas&quot;</span>,</div><div class="line">        <span class="stringliteral">&quot;ij_image_samples&quot;</span>,</div><div class="line">        <span class="stringliteral">&quot;imagenes_guardadas&quot;</span></div><div class="line">    }</div></div><!-- fragment --><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carpetas</td><td>Lista de carpetas conocidas por el espacio de trabajo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="espaciodetrabajo_8h_source.html#l00099">99</a> del archivo <a class="el" href="espaciodetrabajo_8h_source.html">espaciodetrabajo.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="espaciodetrabajo_8cpp_source.html#l00008">getCarpetas()</a>, <a class="el" href="espaciodetrabajo_8cpp_source.html#l00040">getRutaArchivo()</a> y <a class="el" href="espaciodetrabajo_8cpp_source.html#l00035">getRutaCarpeta()</a>.</p>
+
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
@@ -126,7 +437,7 @@ Métodos públicos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_espacio_de_trabajo.html">EspacioDeTrabajo</a></li>
-    <li class="footer">Generado el Sábado, 21 de Enero de 2023 15:35:44 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
+    <li class="footer">Generado el Miércoles, 22 de Febrero de 2023 16:56:58 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>
