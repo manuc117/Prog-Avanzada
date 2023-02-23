@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...): Fichero Fuente graficadorhistograma.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('graficadorhistograma_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">graficadorhistograma.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graficadorhistograma_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef GRAFICADORHISTOGRAMA_H</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GRAFICADORHISTOGRAMA_H</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="procesadorestadistico_8h.html">procesadorestadistico.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="imagen_8h.html">imagen.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QOpenGLWidget&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QOpenGLFunctions&gt;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graficador_histograma.html">GraficadorHistograma</a>: <span class="keyword">public</span> <a class="code" href="class_q_open_g_l_widget.html">QOpenGLWidget</a>, <span class="keyword">protected</span> <a class="code" href="class_q_open_g_l_functions.html">QOpenGLFunctions</a></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_graficador_histograma.html#a9d8479d16eeda28cea737d95f2777ebc">GraficadorHistograma</a>(<a class="code" href="class_imagen.html">Imagen</a> &amp;img);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador_histograma.html#ac1ecb6cfdcb22eab2a752d756426b253">initializeGL</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador_histograma.html#a51828df5b84de1556e877cd86590b581">paintGL</a>() <span class="keyword">override</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador_histograma.html#a854423860fb43de0ae2fc05780c64baa">resizeGL</a>(<span class="keywordtype">int</span> ancho, <span class="keywordtype">int</span> alto) <span class="keyword">override</span>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graficador_histograma.html#a0fea2467b8ee53bc9ef00cab14eee93f">graficarHistograma</a>();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0">   61</a></span>&#160;    <a class="code" href="class_procesador_estadistico.html">ProcesadorEstadistico</a> <a class="code" href="class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0">procesador</a>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#adf9c26891c32f57c93848417fa39ca38">   66</a></span>&#160;    <a class="code" href="class_imagen.html">Imagen</a> <a class="code" href="class_graficador_histograma.html#adf9c26891c32f57c93848417fa39ca38">imagen</a>;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#ad88178f732bda3acf0dcbd54fac30963">   72</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_graficador_histograma.html#ad88178f732bda3acf0dcbd54fac30963">anchoVentana</a>, <a class="code" href="class_graficador_histograma.html#a6f0e3d70cfcddff2b439229116bcc1fd">altoVentana</a>;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#ab849d0da38d586b876b7c90d1b4c3e4e">   79</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_graficador_histograma.html#ab849d0da38d586b876b7c90d1b4c3e4e">frecuenciaR</a>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#a711b33992b1e18171a19e948405d7338">   86</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_graficador_histograma.html#a711b33992b1e18171a19e948405d7338">frecuenciaG</a>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#a739cde89f10f6c1d8d3188a5ae11ce2a">   93</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_graficador_histograma.html#a739cde89f10f6c1d8d3188a5ae11ce2a">frecuenciaB</a>;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#a109ad0b11b19c55d31cff41da1615805">   99</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_graficador_histograma.html#a109ad0b11b19c55d31cff41da1615805">frecuenciaProm</a>;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#aaaf8c0ae57525e5fb3f551e371b499de">  105</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_graficador_histograma.html#aaaf8c0ae57525e5fb3f551e371b499de">escala</a>;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_graficador_histograma.html#a18e87d851c068bfa6fc6f073071cbee7">  113</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_graficador_histograma.html#abee8871a0b6d725d531d3e11dee7c664">desplx</a>, <a class="code" href="class_graficador_histograma.html#a18e87d851c068bfa6fc6f073071cbee7">desply</a>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif // GRAFICADORHISTOGRAMA_H</span></div><div class="ttc" id="class_graficador_histograma_html_ac1ecb6cfdcb22eab2a752d756426b253"><div class="ttname"><a href="class_graficador_histograma.html#ac1ecb6cfdcb22eab2a752d756426b253">GraficadorHistograma::initializeGL</a></div><div class="ttdeci">void initializeGL() override</div><div class="ttdoc">initializeGL Método que inicializa los recursos necesarios para poder utilizar OpenGL. </div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8cpp_source.html#l00013">graficadorhistograma.cpp:13</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a0fea2467b8ee53bc9ef00cab14eee93f"><div class="ttname"><a href="class_graficador_histograma.html#a0fea2467b8ee53bc9ef00cab14eee93f">GraficadorHistograma::graficarHistograma</a></div><div class="ttdeci">void graficarHistograma()</div><div class="ttdoc">graficarHistograma Método que grafica el histograma de una Imagen utilizando la librería OpenGL...</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8cpp_source.html#l00039">graficadorhistograma.cpp:39</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a109ad0b11b19c55d31cff41da1615805"><div class="ttname"><a href="class_graficador_histograma.html#a109ad0b11b19c55d31cff41da1615805">GraficadorHistograma::frecuenciaProm</a></div><div class="ttdeci">vector&lt; int &gt; frecuenciaProm</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00099">graficadorhistograma.h:99</a></div></div>
+<div class="ttc" id="procesadorestadistico_8h_html"><div class="ttname"><a href="procesadorestadistico_8h.html">procesadorestadistico.h</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_adf9c26891c32f57c93848417fa39ca38"><div class="ttname"><a href="class_graficador_histograma.html#adf9c26891c32f57c93848417fa39ca38">GraficadorHistograma::imagen</a></div><div class="ttdeci">Imagen imagen</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00066">graficadorhistograma.h:66</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_ad88178f732bda3acf0dcbd54fac30963"><div class="ttname"><a href="class_graficador_histograma.html#ad88178f732bda3acf0dcbd54fac30963">GraficadorHistograma::anchoVentana</a></div><div class="ttdeci">int anchoVentana</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00072">graficadorhistograma.h:72</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a7f6e8e65e91382a7d36e44d3205a1ce0"><div class="ttname"><a href="class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0">GraficadorHistograma::procesador</a></div><div class="ttdeci">ProcesadorEstadistico procesador</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00061">graficadorhistograma.h:61</a></div></div>
+<div class="ttc" id="class_q_open_g_l_widget_html"><div class="ttname"><a href="class_q_open_g_l_widget.html">QOpenGLWidget</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_ab849d0da38d586b876b7c90d1b4c3e4e"><div class="ttname"><a href="class_graficador_histograma.html#ab849d0da38d586b876b7c90d1b4c3e4e">GraficadorHistograma::frecuenciaR</a></div><div class="ttdeci">vector&lt; int &gt; frecuenciaR</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00079">graficadorhistograma.h:79</a></div></div>
+<div class="ttc" id="class_procesador_estadistico_html"><div class="ttname"><a href="class_procesador_estadistico.html">ProcesadorEstadistico</a></div><div class="ttdoc">Clase capaz de realizar cálculos estadísticos varios. </div><div class="ttdef"><b>Definition:</b> <a href="procesadorestadistico_8h_source.html#l00025">procesadorestadistico.h:25</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a51828df5b84de1556e877cd86590b581"><div class="ttname"><a href="class_graficador_histograma.html#a51828df5b84de1556e877cd86590b581">GraficadorHistograma::paintGL</a></div><div class="ttdeci">void paintGL() override</div><div class="ttdoc">paintGL Método que permite graficar. </div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8cpp_source.html#l00019">graficadorhistograma.cpp:19</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a18e87d851c068bfa6fc6f073071cbee7"><div class="ttname"><a href="class_graficador_histograma.html#a18e87d851c068bfa6fc6f073071cbee7">GraficadorHistograma::desply</a></div><div class="ttdeci">float desply</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00113">graficadorhistograma.h:113</a></div></div>
+<div class="ttc" id="class_q_open_g_l_functions_html"><div class="ttname"><a href="class_q_open_g_l_functions.html">QOpenGLFunctions</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a854423860fb43de0ae2fc05780c64baa"><div class="ttname"><a href="class_graficador_histograma.html#a854423860fb43de0ae2fc05780c64baa">GraficadorHistograma::resizeGL</a></div><div class="ttdeci">void resizeGL(int ancho, int alto) override</div><div class="ttdoc">resizeGL Método que permite modificar el tamaño del gráfico cuando se modifica el tamaño de la ventan...</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8cpp_source.html#l00026">graficadorhistograma.cpp:26</a></div></div>
+<div class="ttc" id="imagen_8h_html"><div class="ttname"><a href="imagen_8h.html">imagen.h</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a9d8479d16eeda28cea737d95f2777ebc"><div class="ttname"><a href="class_graficador_histograma.html#a9d8479d16eeda28cea737d95f2777ebc">GraficadorHistograma::GraficadorHistograma</a></div><div class="ttdeci">GraficadorHistograma(Imagen &amp;img)</div><div class="ttdoc">GraficadorHistograma Constructor del objeto GraficadorHistograma. </div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8cpp_source.html#l00003">graficadorhistograma.cpp:3</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a739cde89f10f6c1d8d3188a5ae11ce2a"><div class="ttname"><a href="class_graficador_histograma.html#a739cde89f10f6c1d8d3188a5ae11ce2a">GraficadorHistograma::frecuenciaB</a></div><div class="ttdeci">vector&lt; int &gt; frecuenciaB</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00093">graficadorhistograma.h:93</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_abee8871a0b6d725d531d3e11dee7c664"><div class="ttname"><a href="class_graficador_histograma.html#abee8871a0b6d725d531d3e11dee7c664">GraficadorHistograma::desplx</a></div><div class="ttdeci">float desplx</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00113">graficadorhistograma.h:113</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html"><div class="ttname"><a href="class_graficador_histograma.html">GraficadorHistograma</a></div><div class="ttdoc">Clase capaz de mostrar en pantalla el histograma de una Imagen. </div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00022">graficadorhistograma.h:22</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_aaaf8c0ae57525e5fb3f551e371b499de"><div class="ttname"><a href="class_graficador_histograma.html#aaaf8c0ae57525e5fb3f551e371b499de">GraficadorHistograma::escala</a></div><div class="ttdeci">float escala</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00105">graficadorhistograma.h:105</a></div></div>
+<div class="ttc" id="class_imagen_html"><div class="ttname"><a href="class_imagen.html">Imagen</a></div><div class="ttdoc">Clase capaz de representar una imagen a partir de un arreglo de pixeles. </div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00022">imagen.h:22</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a711b33992b1e18171a19e948405d7338"><div class="ttname"><a href="class_graficador_histograma.html#a711b33992b1e18171a19e948405d7338">GraficadorHistograma::frecuenciaG</a></div><div class="ttdeci">vector&lt; int &gt; frecuenciaG</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00086">graficadorhistograma.h:86</a></div></div>
+<div class="ttc" id="class_graficador_histograma_html_a6f0e3d70cfcddff2b439229116bcc1fd"><div class="ttname"><a href="class_graficador_histograma.html#a6f0e3d70cfcddff2b439229116bcc1fd">GraficadorHistograma::altoVentana</a></div><div class="ttdeci">int altoVentana</div><div class="ttdef"><b>Definition:</b> <a href="graficadorhistograma_8h_source.html#l00072">graficadorhistograma.h:72</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="graficadorhistograma_8h.html">graficadorhistograma.h</a></li>
+    <li class="footer">Generado el Jueves, 23 de Febrero de 2023 00:24:43 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1287 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../UML.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\,";
+	mso-displayed-thousand-separator:"\.";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../UML.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link="#0563C1" vlink="#954F72">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1217 style='border-collapse:
+ collapse;table-layout:fixed;width:913pt'>
+ <col width=80 style='width:60pt'>
+ <col width=570 style='mso-width-source:userset;mso-width-alt:20845;width:428pt'>
+ <col width=567 style='mso-width-source:userset;mso-width-alt:20736;width:425pt'>
+ <col width=80 span=2 style='width:60pt'>
+ <col width=83 style='mso-width-source:userset;mso-width-alt:3035;width:62pt'>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 width=80 style='height:15.0pt;width:60pt'></td>
+  <td width=570 style='width:428pt'></td>
+  <td width=567 style='width:425pt'></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl80>GestorDeArchivos</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl65><span style='mso-spacerun:yes'> </span>+ virtual leer(string
+  ruta) = 0: Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl65><span style='mso-spacerun:yes'> </span>+ virtual
+  guardar(Imagen *img) = 0: void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl66><span style='mso-spacerun:yes'> </span>+ virtual
+  almacenarUltimaRuta(string ruta) = 0: void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>ArchivoAIC</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ leer(string ruta):
+  Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ guardar(Imagen *img):
+  void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  almacenarUltimaRuta(string ruta): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- lineaAVector(string
+  linea): vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>ArchivoPNM</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ leer(string ruta):
+  Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ guardar(Imagen *img):
+  void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  almacenarUltimaRuta(string ruta): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- getExtension(string
+  identificador): string</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl81>Filtros</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70 style='border-top:none'>Atributos:<font class="font6"> -----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl66><span style='mso-spacerun:yes'> </span>+ virtual
+  aplicarFiltro(Imagen &amp;img) = 0: Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>FiltrosPasaBajos</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70 style='border-top:none'>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ aplicarFiltro(Imagen
+  &amp;img): Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>FiltroPasaAltos</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70 style='border-top:none'>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ aplicarFiltro(Imagen
+  &amp;img): Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>Contraste</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70 style='border-top:none'>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ aplicarFiltro(Imagen
+  &amp;img): Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>Brillo</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- valor: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- operacion: char</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ aplicarFiltro(Imagen
+  &amp;img): Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ aumentarBrillo(Imagen
+  &amp;img): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ reducirBrillo(Imagen
+  &amp;img): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ getValor(Imagen
+  &amp;img): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>Binarizado</td>
+  <td></td>
+ </tr>
+ <tr class=xl73 height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td class=xl73></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- nivelBinarizacion:
+  int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ aplicarFiltro(Imagen
+  &amp;img): Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  sePuedeBinarizar(Imagen &amp;img): bool</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+
+  getNivelBinarizacion(Imagen &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>Negativo</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70 style='border-top:none'>Atributos:<font class="font6"> -----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ aplicarFiltro(Imagen
+  &amp;img): Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl75 style='border-top:none'>&nbsp;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>EspacioDeTrabajo</td>
+  <td class=xl76 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td class=xl77 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- carpetas: const
+  vector&lt;string&gt;</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos:</td>
+  <td class=xl77 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getCarpetas():
+  vector&lt;string&gt;</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getNombreArchivos():
+  vector&lt;string&gt;</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getRutaCarpeta(int
+  carpetaSeleccionada): string</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getRutaArchivos(int
+  carpetaSeleccionada, int archivoSeleccionado): string</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ esPNM(string
+  rutaArchi): bool</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ esAIC(string
+  rutaArchi): bool</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ guardarImagen(Imagen
+  *img): void</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>Pixel</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- red: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- green: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- blue: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Métodos</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getRed(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getGreen(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getBlue(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setRed(int r): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setGreen(int g): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setBlue(Int b): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setPixelRGB(int r,
+  int g=-1, int b=-1): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setPixelMono(int
+  valor): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ getIntensidad(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- imagen:
+  vector&lt;vector&lt;Pixel&gt;&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- filas: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- columnas: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- rango: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- identificador: string</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- comentario: string</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl72 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getFilas(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getColumnas(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getRango(): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setFilas(int f): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setColumnas(int c):
+  void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setRango(int rang):
+  void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getPixel(int fila,
+  int columna): Pixel</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setPixel(Pixel pix,
+  int fila, int columna): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ estaEnLaImagen(int
+  fila, int columna): bool</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getIdentificador():
+  string</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  setIdentificador(string ci): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setTamanio(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setComentario(string
+  com): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ getComentario():
+  string</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>LUT</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- grupoLuts:
+  vector&lt;string&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- tabla:
+  vector&lt;vector&lt;int&gt;&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl72 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ pseudocolorear(int
+  intensidad): Pixel</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ cargarTabla(int
+  opcion): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl75 style='border-top:none'>&nbsp;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>AlgoritmoDelPintor</td>
+  <td class=xl76 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td class=xl77 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- imagen: Imagen</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- matrizAnalisis:
+  vector&lt;vector&lt;bool&gt;&gt;</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- vecinosF:
+  vector&lt;int&gt;</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- vecinosC:
+  vector&lt;int&gt;</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- profundidad: int</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- contadorPixeles: int</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl72 style='border-top:none'>Métodos:</td>
+  <td class=xl79 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ aplicarAlgoritmo(int
+  fInicial, int cInicial): Imagen</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- inicializarMatriz(int
+  filas, int columnas): void</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- pintarVecinos(int
+  fila, int columna, Pixel pixelReferencia, unsigned int tolerancia): void</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- esVecino(Pixel
+  pixReferencia, Pixel pixAnalisis, unsigned int tolerancia): bool</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>-
+  getRangoDeTolerancia(int maxRango): unsigned int</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>ProcesadorEstadistico</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos: <font class="font6">-----</font></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getMinimoR(Imagen
+  &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getMaximoR(Imagen
+  &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getMinimoG(Imagen
+  &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getMaximoG(Imagen
+  &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getMinimoB(Imagen
+  &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getMaximoB(Imagen
+  &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getFrecuenciaR(Imagen
+  &amp;img): vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getFrecuenciaG(Imagen
+  &amp;img): vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getFrecuenciaB(Imagen
+  &amp;img): vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getFrecuenciaIntensidad(Imagen &amp;img): vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getFrecuenciaPromedio(Imagen &amp;img): vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getRMasFrecuente(Imagen &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getGMasFrecuente(Imagen &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getBMasFrecuente(Imagen &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getIntensidadMasFrecuente(Imagen &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getIntensidadMedia(Imagen &amp;img): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getPromedioRGB(Imagen
+  &amp;img): vector&lt;float&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  getDesviacionEstandar(Imagen &amp;img): vector&lt;float&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+
+  informarDatosEstadisticos(Imagen &amp;img): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>VentanaDeGraficacion</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- imagen: Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- opcionCarpeta: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- opcionArchivo: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- gestorArchi:
+  GestorDeArchivos*</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- anchoVentana: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- altoVentana: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>-
+  seGraficaPseudocoloreada: bool</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- lut: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- escala: float</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- desplx:float</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- desply: float</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- aplicacion:
+  QApplication*</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- espTrabajo:
+  EspacioDeTrabajo</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl74>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setImagen(Imagen
+  img): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  asociarApp(Qapplication* app): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ initializeGL(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'><span style='mso-spacerun:yes'> </span></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ paintGL(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ resizeGL(int ancho,
+  int alto): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ graficarImagen():
+  void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  graficarImagenPseudocoloreada(int lut): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ setOpciones(int
+  opCarpeta, int opArchi): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ cargarImagen(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
+  keyPressEvent(QKeyEvent *event): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+
+  mousePressEvent(QMouseEvent *event): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>GraficadorHistograma</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- procesador:
+  ProcesadorEstadistico</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- imagen: Imagen</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- anchoVentana: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- altoVentana: int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- frecuenciaR:
+  vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- frecuenciaG:
+  vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- frecuenciaB:
+  vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- frecuenciaProm:
+  vector&lt;int&gt;</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- escala: float</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- desplx: float</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- desply: float</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl74>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ initializeGL(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ paintGL(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ resizeGL(int ancho,
+  int alto): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+ graficarHistograma():
+  void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl70>InterfazDeUsuario</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl71 style='border-top:none'>Atributos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- espTrabajo:
+  EspacioDeTrabajo</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>- graficador:
+  VentanaDeGraficacion</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>- gestorArchi:
+  GestorDeArchivos*</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl72 style='border-top:none'>Métodos:</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ ejecutar(Qapplication
+  *app): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getOpcionCarpeta():
+  int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ getOpcionArchivo(int
+  opcion): int</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ cargarImagen(string
+  rutaArchi): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+ mostrarAtajos(): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+
+  recuperarUltimaEjecucion(): string</td>
+  <td></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=80 style='width:60pt'></td>
+  <td width=570 style='width:428pt'></td>
+  <td width=567 style='width:425pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
