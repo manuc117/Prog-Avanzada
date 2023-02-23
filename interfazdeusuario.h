@@ -15,7 +15,6 @@
 #include "espaciodetrabajo.h"
 #include "ventanadegraficacion.h"
 #include "gestordearchivos.h"
-#include "imagen.h"
 #include "archivopnm.h"
 #include "archivoaic.h"
 #include "ExcepcionArchivoNoSoportado.h"
