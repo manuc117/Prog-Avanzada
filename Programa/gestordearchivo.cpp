@@ -1,0 +1,2 @@
+#include "gestordearchivo.h"
+
