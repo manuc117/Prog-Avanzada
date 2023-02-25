@@ -183,10 +183,10 @@ string EI_AutoTest::tipoDeArchivo01()
     */
 
     // Aquí el código de la prueba
-    string ruta = "../grupo_imagenes_1/test_01.pgm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/test_01.pgm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -217,10 +217,10 @@ string EI_AutoTest::tipoDeArchivo02()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/entre_rios_03.ppm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/entre_rios_03.ppm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -250,10 +250,10 @@ tuple<uint, uint> EI_AutoTest::getFilasYColumnas01()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/test_01.pgm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/test_01.pgm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -285,10 +285,10 @@ uint EI_AutoTest::getIntensidadNivelDeGris01()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/test_01.pgm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/test_01.pgm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -319,10 +319,10 @@ uint EI_AutoTest::getIntensidadNivelDeGris02()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/test_01.pgm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/test_01.pgm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -354,10 +354,10 @@ tuple<uint, uint, uint> EI_AutoTest::getIntensidadesRGB01()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/test_02.ppm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/test_02.ppm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -391,10 +391,10 @@ tuple<uint, uint, uint> EI_AutoTest::getIntensidadesRGB02()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/test_02.ppm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/test_02.ppm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -428,10 +428,10 @@ tuple<uint, uint, uint> EI_AutoTest::getIntensidadesRGB03()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/entre_rios_03.ppm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/entre_rios_03.ppm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
 
     Imagen img;
 
@@ -465,10 +465,10 @@ tuple<int, uint> EI_AutoTest::getPixelGrisMasFrecuenteYSuCantidad01()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/tigre_01.pgm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/tigre_01.pgm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
     ProcesadorEstadistico procesador;
 
     Imagen img;
@@ -504,10 +504,10 @@ tuple<int, uint> EI_AutoTest::getPixelColorMasFrecuenteYSuCantidad01()
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_2/predio_fi_uner_01.ppm";
+    string ruta = "../../Imagenes/grupo_imagenes_2/predio_fi_uner_01.ppm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
     ProcesadorEstadistico procesador;
 
     Imagen img;
@@ -547,10 +547,10 @@ tuple<uint, uint, uint, uint> EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuaviz
 
     // Aquí el código de la prueba
 
-    string ruta = "../grupo_imagenes_1/hospital-robot_01.pgm";
+    string ruta = "../../Imagenes/grupo_imagenes_1/hospital-robot_01.pgm";
 
     EspacioDeTrabajo espacio;
-    GestorDeArchivos* gestor;
+    GestorDeArchivo* gestor;
     ProcesadorEstadistico procesador;
 
     Imagen img;
@@ -569,9 +569,9 @@ tuple<uint, uint, uint, uint> EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuaviz
     intensidad_media_inicial = procesador.getIntensidadMedia(img);
     intensidad_local_inicial = img.getPixel(50, 60).getIntensidad();
 
-    Filtros *filtro;
-    filtro = new FiltroPasaBajos;
-    img = filtro->aplicarFiltro(img);
+    ProcesadorDeImagen *proceImg;
+    proceImg = new FiltroPasaBajos;
+    img = proceImg->procesarImagen(img);
 
     intensidad_media_final = procesador.getIntensidadMedia(img);
     intensidad_local_final = img.getPixel(50, 60).getIntensidad();

@@ -20,14 +20,14 @@ SOURCES +=  tst_ei_autotest.cpp \
     ../../filtromediana.cpp \
     ../../filtropasaaltos.cpp \
     ../../filtropasabajos.cpp \
-    ../../filtros.cpp \
-    ../../gestordearchivos.cpp \
+    ../../gestordearchivo.cpp \
     ../../graficadorhistograma.cpp \
     ../../imagen.cpp \
     ../../interfazdeusuario.cpp \
     ../../lut.cpp \
     ../../negativo.cpp \
     ../../pixel.cpp \
+    ../../procesadordeimagen.cpp \
     ../../procesadorestadistico.cpp \
     ../../ventanadegraficacion.cpp
 HEADERS += \
@@ -43,13 +43,13 @@ HEADERS += \
     ../../filtromediana.h \
     ../../filtropasaaltos.h \
     ../../filtropasabajos.h \
-    ../../filtros.h \
-    ../../gestordearchivos.h \
+    ../../gestordearchivo.h \
     ../../graficadorhistograma.h \
     ../../imagen.h \
     ../../interfazdeusuario.h \
     ../../lut.h \
     ../../negativo.h \
     ../../pixel.h \
+    ../../procesadordeimagen.h \
     ../../procesadorestadistico.h \
     ../../ventanadegraficacion.h

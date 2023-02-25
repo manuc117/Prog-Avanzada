@@ -1,1 +1,1 @@
-../grupo_imagenes_1/hospital-robot_01.pgm
+../../Imagenes/grupo_imagenes_1/hospital-robot_01.pgm

@@ -101,7 +101,6 @@ private:
         "grupo_imagenes_1",
         "grupo_imagenes_2",
         "grupo_imagenes_3_corruptas",
-        "ij_image_samples",
         "imagenes_guardadas"
     };
 };

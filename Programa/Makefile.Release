@@ -331,9 +331,10 @@ release/moc_ventanadegraficacion.cpp: ventanadegraficacion.h \
 		algoritmodelpintor.h \
 		lut.h \
 		graficadorhistograma.h \
+		ExcepcionArchivoNoSoportado.h \
 		release/moc_predefs.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_64/bin/moc.exe
-	C:\Qt\Qt5.12.12\5.12.12\mingw73_64\bin\moc.exe $(DEFINES) --include "C:/Users/manuc/OneDrive/Escritorio/PF ProgAvanzada/ExamenIntegrador_Calvo/release/moc_predefs.h" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/mkspecs/win32-g++ -I"C:/Users/manuc/OneDrive/Escritorio/PF ProgAvanzada/ExamenIntegrador_Calvo" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtGui -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtCore -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.12.12/Tools/mingw730_64/x86_64-w64-mingw32/include ventanadegraficacion.h -o release\moc_ventanadegraficacion.cpp
+	C:\Qt\Qt5.12.12\5.12.12\mingw73_64\bin\moc.exe $(DEFINES) --include "C:/Users/manuc/OneDrive/Escritorio/Examen Integrador-Manuela Calvo/ExamenIntegrador_Calvo/Programa/release/moc_predefs.h" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/mkspecs/win32-g++ -I"C:/Users/manuc/OneDrive/Escritorio/Examen Integrador-Manuela Calvo/ExamenIntegrador_Calvo/Programa" -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtGui -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/QtCore -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.12.12/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.12.12/Tools/mingw730_64/x86_64-w64-mingw32/include ventanadegraficacion.h -o release\moc_ventanadegraficacion.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1045,7 +1046,8 @@ release/ventanadegraficacion.o: ventanadegraficacion.cpp ventanadegraficacion.h 
 		binarizado.h \
 		algoritmodelpintor.h \
 		lut.h \
-		graficadorhistograma.h
+		graficadorhistograma.h \
+		ExcepcionArchivoNoSoportado.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ventanadegraficacion.o ventanadegraficacion.cpp
 
 release/moc_ventanadegraficacion.o: release/moc_ventanadegraficacion.cpp 
