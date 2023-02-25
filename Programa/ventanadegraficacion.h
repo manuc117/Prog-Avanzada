@@ -132,11 +132,6 @@ private:
     int opcionCarpeta, opcionArchivo;
 
     /*!
-     * \param gestorArchi Gestor de archivos asociado.
-     */
-    GestorDeArchivo *gestorArchi;
-
-    /*!
      * \param anchoVentana Ancho de la ventana.
      * \param altoVentana Alto de la ventana.
      */
@@ -168,12 +163,12 @@ private:
     float desplx, desply;
 
     /*!
-     * \brief aplicacion QApplication asociada.
+     * \param aplicacion QApplication asociada.
      */
     QApplication* aplicacion;
 
     /*!
-     * \brief espTrabajo Espacio de trabajo asociado.
+     * \param espTrabajo Espacio de trabajo con el que trabaja la VentanaDeGraficacion.
      */
     EspacioDeTrabajo espTrabajo;
 };

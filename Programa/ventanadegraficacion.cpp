@@ -137,6 +137,8 @@ void VentanaDeGraficacion::setOpciones(int opCarpeta, int opArchi)
 
 void VentanaDeGraficacion::cargarImagen(string rutaArchi)
 {
+    GestorDeArchivo* gestorArchi;
+
     if (espTrabajo.esPNM(rutaArchi))
     {
             gestorArchi = new ArchivoPNM;

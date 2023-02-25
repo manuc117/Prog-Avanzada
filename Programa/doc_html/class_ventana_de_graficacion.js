@@ -19,7 +19,6 @@ var class_ventana_de_graficacion =
     [ "desply", "class_ventana_de_graficacion.html#acd503a7003d7a14c00fcae6178b15c0a", null ],
     [ "escala", "class_ventana_de_graficacion.html#a028fb2c186d2f50a7b17dda794eb3f89", null ],
     [ "espTrabajo", "class_ventana_de_graficacion.html#a744d99014cabe342ac19f53b3694cc2f", null ],
-    [ "gestorArchi", "class_ventana_de_graficacion.html#a50422ee8e603c00d767626488912442c", null ],
     [ "imagen", "class_ventana_de_graficacion.html#afcd896ca9a84b65788c73424dc6afdbf", null ],
     [ "lut", "class_ventana_de_graficacion.html#a9a3fa4aeeb11662cb4b64a2ef2cf67b0", null ],
     [ "opcionArchivo", "class_ventana_de_graficacion.html#a24c7ee2a8b3c5177f77899ed329be670", null ],

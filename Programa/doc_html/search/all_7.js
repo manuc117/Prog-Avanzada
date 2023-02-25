@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['gestorarchi',['gestorArchi',['../class_ventana_de_graficacion.html#a50422ee8e603c00d767626488912442c',1,'VentanaDeGraficacion']]],
   ['gestordearchivo',['GestorDeArchivo',['../class_gestor_de_archivo.html',1,'']]],
   ['gestordearchivo_2ecpp',['gestordearchivo.cpp',['../gestordearchivo_8cpp.html',1,'']]],
   ['gestordearchivo_2eh',['gestordearchivo.h',['../gestordearchivo_8h.html',1,'']]],
