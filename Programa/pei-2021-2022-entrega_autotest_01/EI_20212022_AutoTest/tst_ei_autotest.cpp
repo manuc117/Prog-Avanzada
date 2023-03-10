@@ -7,6 +7,7 @@
 #include "../../espaciodetrabajo.h"
 #include "../../procesadorestadistico.h"
 #include "../../filtropasabajos.h"
+#include "../../ExcepcionArchivoNoSoportado.h"
 
 typedef unsigned int uint;
 
@@ -193,15 +194,18 @@ string EI_AutoTest::tipoDeArchivo01()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
 
+    img = gestor->leer(ruta);
     tipo = img.getIdentificador();
+
+    delete gestor;
 
     return tipo;
 }
@@ -227,15 +231,18 @@ string EI_AutoTest::tipoDeArchivo02()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
 
+    img = gestor->leer(ruta);
     tipo = img.getIdentificador();
+
+    delete gestor;
 
     return tipo;
 }
@@ -260,16 +267,19 @@ tuple<uint, uint> EI_AutoTest::getFilasYColumnas01()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
 
+    img = gestor->leer(ruta);
     filas = img.getFilas();
     columnas = img.getColumnas();
+
+    delete gestor;
 
     return make_tuple(filas, columnas);
 }
@@ -295,15 +305,18 @@ uint EI_AutoTest::getIntensidadNivelDeGris01()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
 
+    img = gestor->leer(ruta);
     nivelDeGris = img.getPixel(1, 3).getIntensidad();
+
+    delete gestor;
 
     return nivelDeGris;
 }
@@ -329,15 +342,18 @@ uint EI_AutoTest::getIntensidadNivelDeGris02()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
 
+    img = gestor->leer(ruta);
     nivelDeGris = img.getPixel(1, 2).getIntensidad();
+
+    delete gestor;
 
     return nivelDeGris;
 }
@@ -364,17 +380,21 @@ tuple<uint, uint, uint> EI_AutoTest::getIntensidadesRGB01()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
+
+    img = gestor->leer(ruta);
 
     R = img.getPixel(1, 3).getRed();
     G = img.getPixel(1, 3).getGreen();
     B = img.getPixel(1, 3).getBlue();
+
+    delete gestor;
 
     return make_tuple(R, G, B);
 }
@@ -401,17 +421,21 @@ tuple<uint, uint, uint> EI_AutoTest::getIntensidadesRGB02()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
+
+    img = gestor->leer(ruta);
 
     R = img.getPixel(1, 2).getRed();
     G = img.getPixel(1, 2).getGreen();
     B = img.getPixel(1, 2).getBlue();
+
+    delete gestor;
 
     return make_tuple(R, G, B);
 }
@@ -438,17 +462,21 @@ tuple<uint, uint, uint> EI_AutoTest::getIntensidadesRGB03()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
+
+    img = gestor->leer(ruta);
 
     R = img.getPixel(163, 401).getRed();
     G = img.getPixel(163, 401).getGreen();
     B = img.getPixel(163, 401).getBlue();
+
+    delete gestor;
 
     return make_tuple(R, G, B);
 }
@@ -476,18 +504,22 @@ tuple<int, uint> EI_AutoTest::getPixelGrisMasFrecuenteYSuCantidad01()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
+
+    img = gestor->leer(ruta);
 
     nivel = procesador.getIntensidadMasFrecuente(img);
 
     vector<int> frecuenciasInt = procesador.getFrecuenciaIntensidad(img);
     cantidad = frecuenciasInt[nivel];
+
+    delete gestor;
 
     return make_tuple(nivel, cantidad);
 }
@@ -515,18 +547,22 @@ tuple<int, uint> EI_AutoTest::getPixelColorMasFrecuenteYSuCantidad01()
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
+
+    img = gestor->leer(ruta);
 
     nivelRojo = procesador.getRMasFrecuente(img);
 
     vector<int> frecuenciasR = procesador.getFrecuenciaR(img);
     cantidad = frecuenciasR[nivelRojo];
+
+    delete gestor;
 
     return make_tuple(nivelRojo, cantidad);
 }
@@ -558,13 +594,15 @@ tuple<uint, uint, uint, uint> EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuaviz
     if (espacio.esPNM(ruta))
     {
         gestor = new ArchivoPNM;
-        img = gestor->leer(ruta);
     }
     else if(espacio.esAIC(ruta))
     {
         gestor = new ArchivoAIC;
-        img = gestor->leer(ruta);
     }
+    else
+        throw ExcepcionArchivoNoSoportado();
+
+    img = gestor->leer(ruta);
 
     intensidad_media_inicial = procesador.getIntensidadMedia(img);
     intensidad_local_inicial = img.getPixel(50, 60).getIntensidad();
@@ -575,6 +613,9 @@ tuple<uint, uint, uint, uint> EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuaviz
 
     intensidad_media_final = procesador.getIntensidadMedia(img);
     intensidad_local_final = img.getPixel(50, 60).getIntensidad();
+
+    delete gestor;
+    delete proceImg;
 
     return make_tuple(intensidad_media_inicial, intensidad_media_final, intensidad_local_inicial, intensidad_local_final);
 }

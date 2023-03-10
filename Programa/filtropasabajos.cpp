@@ -7,6 +7,12 @@ FiltroPasaBajos::FiltroPasaBajos()
 
 Imagen FiltroPasaBajos::procesarImagen(Imagen &img)
 {
+    /* Kernel 3x3 utilizado
+     * |1 1 1|
+     * |1 1 1|*1/9
+     * |1 1 1|
+    */
+
     Imagen imagen = img;
     float auxRed, auxGreen, auxBlue;
     Pixel pixAux;

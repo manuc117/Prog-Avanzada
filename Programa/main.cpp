@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "interfazdeusuario.h"
+#include "sistema.h"
 
 using namespace std;
 
@@ -7,9 +7,13 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    InterfazDeUsuario interfaz;
+    QString titulo = QString::fromStdString("Software de Procesamiento Digital de Imágenes");
 
-    interfaz.ejecutar(&a);
+    a.setApplicationName(titulo);
+
+    Sistema sistema;
+
+    sistema.ejecutar(&a);
 
     return 0;
 }

@@ -26,7 +26,7 @@ public:
     /*!
      * \brief procesarImagen Método heredado de la clase ProcesadorDeImagen, redefinido
      *        para ajustar el contraste a una imagen.
-     * \param img Imagen a la que se le ajusta el contraste.
+     * \param[in] img Imagen a la que se le ajusta el contraste.
      * \return Imagen procesada.
      */
     Imagen procesarImagen(Imagen &img) override;

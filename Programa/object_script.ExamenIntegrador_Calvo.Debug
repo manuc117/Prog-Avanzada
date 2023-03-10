@@ -11,12 +11,12 @@ debug/filtropasabajos.o
 debug/gestordearchivo.o
 debug/graficadorhistograma.o
 debug/imagen.o
-debug/interfazdeusuario.o
 debug/lut.o
 debug/main.o
 debug/negativo.o
 debug/pixel.o
 debug/procesadordeimagen.o
 debug/procesadorestadistico.o
+debug/sistema.o
 debug/ventanadegraficacion.o
 debug/moc_ventanadegraficacion.o

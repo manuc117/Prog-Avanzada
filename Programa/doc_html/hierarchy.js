@@ -13,7 +13,6 @@ var hierarchy =
       [ "ArchivoPNM", "class_archivo_p_n_m.html", null ]
     ] ],
     [ "Imagen", "class_imagen.html", null ],
-    [ "InterfazDeUsuario", "class_interfaz_de_usuario.html", null ],
     [ "LUT", "class_l_u_t.html", null ],
     [ "Pixel", "class_pixel.html", null ],
     [ "ProcesadorDeImagen", "class_procesador_de_imagen.html", [
@@ -37,5 +36,6 @@ var hierarchy =
       [ "GraficadorHistograma", "class_graficador_histograma.html", null ],
       [ "VentanaDeGraficacion", "class_ventana_de_graficacion.html", null ]
     ] ],
-    [ "qt_meta_stringdata_VentanaDeGraficacion_t", "structqt__meta__stringdata___ventana_de_graficacion__t.html", null ]
+    [ "qt_meta_stringdata_VentanaDeGraficacion_t", "structqt__meta__stringdata___ventana_de_graficacion__t.html", null ],
+    [ "Sistema", "class_sistema.html", null ]
 ];

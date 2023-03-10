@@ -11,12 +11,12 @@ release/filtropasabajos.o
 release/gestordearchivo.o
 release/graficadorhistograma.o
 release/imagen.o
-release/interfazdeusuario.o
 release/lut.o
 release/main.o
 release/negativo.o
 release/pixel.o
 release/procesadordeimagen.o
 release/procesadorestadistico.o
+release/sistema.o
 release/ventanadegraficacion.o
 release/moc_ventanadegraficacion.o

@@ -49,7 +49,7 @@ void GraficadorHistograma::graficarHistograma()
 
     float maxFrecuencia = *max_element(maximos.begin(), maximos.end());
 
-    glScalef(float(width())/float(frecuenciaR.size()), float(height())/maxFrecuencia, 1.0f);
+    glScalef(float(width())/float(frecuenciaR.size()), float(height())/float(maxFrecuencia), 1.0f);
 
     glBegin(GL_LINE_STRIP);
         for(int nivel=0; nivel<frecuenciaR.size(); nivel++)

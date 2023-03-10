@@ -2,7 +2,7 @@
 
 VentanaDeGraficacion::VentanaDeGraficacion()
 {
-
+    espTrabajo = nullptr;
 }
 
 void VentanaDeGraficacion::setImagen(Imagen img)
@@ -24,7 +24,6 @@ void VentanaDeGraficacion::initializeGL()
 
 void VentanaDeGraficacion::paintGL()
 {
-
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     float relAncho = ((float)width())  / ((float)imagen.getColumnas());
@@ -126,7 +125,6 @@ void VentanaDeGraficacion::graficarImagenPseudocoloreada(int lut)
     glEnd();
 
     glPopMatrix();
-
 }
 
 void VentanaDeGraficacion::setOpciones(int opCarpeta, int opArchi)
@@ -139,18 +137,23 @@ void VentanaDeGraficacion::cargarImagen(string rutaArchi)
 {
     GestorDeArchivo* gestorArchi;
 
-    if (espTrabajo.esPNM(rutaArchi))
+    if(nullptr != espTrabajo)
     {
-            gestorArchi = new ArchivoPNM;
-            setImagen(gestorArchi ->leer(rutaArchi));
+        if (espTrabajo->esPNM(rutaArchi))
+        {
+                gestorArchi = new ArchivoPNM;
+        }
+        else if(espTrabajo->esAIC(rutaArchi))
+        {
+                gestorArchi = new ArchivoAIC;
+        }
+        else
+            throw ExcepcionArchivoNoSoportado();
+
+         setImagen(gestorArchi ->leer(rutaArchi));
+
+         delete gestorArchi;
     }
-    else if(espTrabajo.esAIC(rutaArchi))
-    {
-            gestorArchi = new ArchivoAIC;
-            setImagen(gestorArchi->leer(rutaArchi));
-    }
-    else
-        throw ExcepcionArchivoNoSoportado();
 }
 
 void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
@@ -176,47 +179,56 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
     if (izquierda and ctrl)
     {
-        if (opcionArchivo == 0)
+        if(nullptr != espTrabajo)
         {
-            opcionArchivo = espTrabajo.getNombreArchivos(espTrabajo.getRutaCarpeta(opcionCarpeta)).size()-1;
-        }
-        else
-        {
-             --opcionArchivo;
-        }
+            if (opcionArchivo == 0)
+            {
+                opcionArchivo = espTrabajo->getNombreArchivos(espTrabajo->getRutaCarpeta(opcionCarpeta)).size()-1;
+            }
+            else
+            {
+                 --opcionArchivo;
+            }
 
-        cout<<"Ctrl + flecha izquierda: mostrar imagen anterior.\n";
-        cout.flush();
+            cout<<"Ctrl + flecha izquierda: mostrar imagen anterior.\n";
+            cout.flush();
 
-        cargarImagen(espTrabajo.getRutaArchivo(opcionCarpeta,opcionArchivo));
-        repaint();
+            cargarImagen(espTrabajo->getRutaArchivo(opcionCarpeta,opcionArchivo));
+            repaint();
+        }
     }
 
     if (derecha and ctrl)
     {
-        if (opcionArchivo == espTrabajo.getNombreArchivos(espTrabajo.getRutaCarpeta(opcionCarpeta)).size()-1)
+        if(nullptr != espTrabajo)
         {
-            opcionArchivo = 0;
-        }
-        else
-        {
-            ++opcionArchivo;
-        }
+            if (opcionArchivo == espTrabajo->getNombreArchivos(espTrabajo->getRutaCarpeta(opcionCarpeta)).size()-1)
+            {
+                opcionArchivo = 0;
+            }
+            else
+            {
+                ++opcionArchivo;
+            }
 
-        cout<<"Ctrl + flecha derecha: mostrar imagen siguiente.\n";
-        cout.flush();
+            cout<<"Ctrl + flecha derecha: mostrar imagen siguiente.\n";
+            cout.flush();
 
-        cargarImagen(espTrabajo.getRutaArchivo(opcionCarpeta,opcionArchivo));
-        repaint();
+            cargarImagen(espTrabajo->getRutaArchivo(opcionCarpeta,opcionArchivo));
+            repaint();
+        }
     }
 
     if (guardar and ctrl)
     {
         cout<<"Ctrl + G: guardar imagen.\n";
         cout.flush();
-        string ruta = espTrabajo.getRutaArchivo(opcionCarpeta, opcionArchivo);
+
+        string ruta = espTrabajo->getRutaArchivo(opcionCarpeta, opcionArchivo);
+
         aplicacion->closeAllWindows();
-        espTrabajo.guardarImagen(&imagen);
+        espTrabajo->guardarImagen(&imagen);
+        show();
     }
 
     if (suavizado and ctrl)
@@ -229,6 +241,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
         imagen = proceImg->procesarImagen(imagen);
         repaint();
+
+        delete proceImg;
     }
 
     if (altos and ctrl)
@@ -241,6 +255,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
         imagen = proceImg->procesarImagen(imagen);
         repaint();
+
+        delete proceImg;
     }
 
     if (mediana and ctrl)
@@ -253,6 +269,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
         imagen = proceImg->procesarImagen(imagen);
         repaint();
+
+        delete proceImg;
     }
 
     if (mas and ctrl)
@@ -267,6 +285,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         imagen = proceImg->procesarImagen(imagen);
         show();
         repaint();
+
+        delete proceImg;
     }
 
     if (menos and ctrl)
@@ -281,6 +301,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         imagen = proceImg->procesarImagen(imagen);
         show();
         repaint();
+
+        delete proceImg;
     }
 
     if (negativo and ctrl)
@@ -293,6 +315,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
         imagen = proceImg->procesarImagen(imagen);
         repaint();
+
+        delete proceImg;
     }
 
     if(contraste and ctrl)
@@ -305,6 +329,8 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
 
         imagen = proceImg->procesarImagen(imagen);
         repaint();
+
+        delete proceImg;
     }
 
     if(binarizar and ctrl)
@@ -312,13 +338,15 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         ProcesadorDeImagen *proceImg;
         proceImg = new Binarizado;
 
-        cout<<"Ctrl + C: binarizar imagen.\n";
+        cout<<"Ctrl + B: binarizar imagen.\n";
         cout.flush();
 
         aplicacion->closeAllWindows();
         imagen = proceImg->procesarImagen(imagen);
         show();
         repaint();
+
+        delete proceImg;
     }
 
     if(uno and ctrl)
@@ -353,10 +381,10 @@ void VentanaDeGraficacion::keyPressEvent(QKeyEvent *event)
         cout.flush();
 
         proceEst.informarDatosEstadisticos(imagen);
+        graficador->setWindowTitle("Histograma");
         graficador->graficarHistograma();
         graficador->show();
     }
-
 }
 
 void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
@@ -366,7 +394,7 @@ void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
 
     if(clickIzq and ctrl)
     {
-        AlgoritmoDelPintor Pintor(imagen);
+        AlgoritmoDelPintor Pintor;
 
         cout<<"\nCtrl + click izquierdo: aplicar algortimo del pintor.\n";
         cout.flush();
@@ -382,11 +410,15 @@ void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
         f = imagen.getFilas()-1-f;
 
         aplicacion->closeAllWindows();
-        imagen = Pintor.aplicarAlgoritmo(f, c);
+        imagen = Pintor.aplicarAlgoritmo(f, c, imagen);
         show();
         repaint();
-
     }
+}
+
+void VentanaDeGraficacion::setEspTrabajo(EspacioDeTrabajo *newEspTrabajo)
+{
+    espTrabajo = newEspTrabajo;
 }
 
 

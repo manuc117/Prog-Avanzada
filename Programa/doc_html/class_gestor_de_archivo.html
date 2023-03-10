@@ -103,6 +103,9 @@ Diagrama de herencias de GestorDeArchivo</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
+<tr class="memitem:a761e2a5cddbcbda5e1d45a6583a71512"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor_de_archivo.html#a761e2a5cddbcbda5e1d45a6583a71512">GestorDeArchivo</a> ()</td></tr>
+<tr class="memdesc:a761e2a5cddbcbda5e1d45a6583a71512"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_gestor_de_archivo.html" title="Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...">GestorDeArchivo</a> Constructor del objeto <a class="el" href="class_gestor_de_archivo.html" title="Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...">GestorDeArchivo</a>.  <a href="#a761e2a5cddbcbda5e1d45a6583a71512">Más...</a><br /></td></tr>
+<tr class="separator:a761e2a5cddbcbda5e1d45a6583a71512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5126b1af99b821a33eefdbd8506adbf7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_imagen.html">Imagen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor_de_archivo.html#a5126b1af99b821a33eefdbd8506adbf7">leer</a> (string ruta)=0</td></tr>
 <tr class="memdesc:a5126b1af99b821a33eefdbd8506adbf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">leer Método virtual que al ser redefinido permite leer un archivo de una <a class="el" href="class_imagen.html" title="Clase capaz de representar una imagen a partir de un arreglo de pixeles. ">Imagen</a>.  <a href="#a5126b1af99b821a33eefdbd8506adbf7">Más...</a><br /></td></tr>
 <tr class="separator:a5126b1af99b821a33eefdbd8506adbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,17 +115,71 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:aa16a68281129e7c6cfb77d70cb870eca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor_de_archivo.html#aa16a68281129e7c6cfb77d70cb870eca">almacenarUltimaRuta</a> (string ruta)=0</td></tr>
 <tr class="memdesc:aa16a68281129e7c6cfb77d70cb870eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">almacenarUltimaRuta Método virtual que al ser redefinido permite almacenar la ruta del último archivo leí­do.  <a href="#aa16a68281129e7c6cfb77d70cb870eca">Más...</a><br /></td></tr>
 <tr class="separator:aa16a68281129e7c6cfb77d70cb870eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d192e3cc3fbb081bf025cc91c0c3d7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor_de_archivo.html#a86d192e3cc3fbb081bf025cc91c0c3d7">~GestorDeArchivo</a> ()</td></tr>
+<tr class="memdesc:a86d192e3cc3fbb081bf025cc91c0c3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">~GestorDeArchivo Destructor del objeto <a class="el" href="class_gestor_de_archivo.html" title="Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...">GestorDeArchivo</a>;  <a href="#a86d192e3cc3fbb081bf025cc91c0c3d7">Más...</a><br /></td></tr>
+<tr class="separator:a86d192e3cc3fbb081bf025cc91c0c3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del último archivo leí­do otras clases. </p>
 <p>Virtualiza sus métodos leer archivos, guardar archivos y almacenar la ruta del último archivo leí­do para que luego sean utilizados por sus clases hijas. Sus métodos son virtuales puros. </p><dl class="section author"><dt>Autor</dt><dd>Manuela Calvo </dd></dl>
-<dl class="section date"><dt>Fecha</dt><dd>Fecha de Ãºltima modificación: 15-02-2022 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>Fecha de última modificación: 15-02-2022 </dd></dl>
 <dl class="section pre"><dt>Precondición</dt><dd></dd></dl>
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000011">Bug:</a></b></dt><dd></dd></dl>
 <dl class="section warning"><dt>Atención</dt><dd></dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="gestordearchivo_8h_source.html#l00020">20</a> del archivo <a class="el" href="gestordearchivo_8h_source.html">gestordearchivo.h</a>.</p>
-</div><h2 class="groupheader">Documentación de las funciones miembro</h2>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a id="a761e2a5cddbcbda5e1d45a6583a71512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a761e2a5cddbcbda5e1d45a6583a71512">&#9670;&nbsp;</a></span>GestorDeArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GestorDeArchivo::GestorDeArchivo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_gestor_de_archivo.html" title="Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...">GestorDeArchivo</a> Constructor del objeto <a class="el" href="class_gestor_de_archivo.html" title="Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...">GestorDeArchivo</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gestordearchivo_8cpp_source.html#l00003">3</a> del archivo <a class="el" href="gestordearchivo_8cpp_source.html">gestordearchivo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a86d192e3cc3fbb081bf025cc91c0c3d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d192e3cc3fbb081bf025cc91c0c3d7">&#9670;&nbsp;</a></span>~GestorDeArchivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GestorDeArchivo::~GestorDeArchivo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>~GestorDeArchivo Destructor del objeto <a class="el" href="class_gestor_de_archivo.html" title="Clase abstracta de la cuál heredan los métodos leer y guardar archivos, y almacenar la ruta del últim...">GestorDeArchivo</a>; </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gestordearchivo_8cpp_source.html#l00008">8</a> del archivo <a class="el" href="gestordearchivo_8cpp_source.html">gestordearchivo.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
 <a id="aa16a68281129e7c6cfb77d70cb870eca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa16a68281129e7c6cfb77d70cb870eca">&#9670;&nbsp;</a></span>almacenarUltimaRuta()</h2>
 
@@ -150,7 +207,7 @@ Métodos públicos</h2></td></tr>
 <p>almacenarUltimaRuta Método virtual que al ser redefinido permite almacenar la ruta del último archivo leí­do. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ruta</td><td>Ruta del último archivo leí­do que se quiere almacenar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ruta</td><td>Ruta del último archivo leí­do que se quiere almacenar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -232,12 +289,13 @@ Métodos públicos</h2></td></tr>
 
 <p>Implementado en <a class="el" href="class_archivo_p_n_m.html#a8a4863ddc6876f22c3ada72e15bde943">ArchivoPNM</a> y <a class="el" href="class_archivo_a_i_c.html#aff57efea951d671ab7bd19c38481487a">ArchivoAIC</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="ventanadegraficacion_8cpp_source.html#l00138">VentanaDeGraficacion::cargarImagen()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00243">EI_AutoTest::getFilasYColumnas01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00345">EI_AutoTest::getIntensidadesRGB01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00382">EI_AutoTest::getIntensidadesRGB02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00419">EI_AutoTest::getIntensidadesRGB03()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00534">EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuavizado01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00277">EI_AutoTest::getIntensidadNivelDeGris01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00311">EI_AutoTest::getIntensidadNivelDeGris02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00495">EI_AutoTest::getPixelColorMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00456">EI_AutoTest::getPixelGrisMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00178">EI_AutoTest::tipoDeArchivo01()</a> y <a class="el" href="tst__ei__autotest_8cpp_source.html#l00209">EI_AutoTest::tipoDeArchivo02()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="tst__ei__autotest_8cpp_source.html#l00250">EI_AutoTest::getFilasYColumnas01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00361">EI_AutoTest::getIntensidadesRGB01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00402">EI_AutoTest::getIntensidadesRGB02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00443">EI_AutoTest::getIntensidadesRGB03()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00570">EI_AutoTest::getIntensidadMediaYLocalLuegoDeSuavizado01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00287">EI_AutoTest::getIntensidadNivelDeGris01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00324">EI_AutoTest::getIntensidadNivelDeGris02()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00527">EI_AutoTest::getPixelColorMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00484">EI_AutoTest::getPixelGrisMasFrecuenteYSuCantidad01()</a>, <a class="el" href="tst__ei__autotest_8cpp_source.html#l00179">EI_AutoTest::tipoDeArchivo01()</a> y <a class="el" href="tst__ei__autotest_8cpp_source.html#l00213">EI_AutoTest::tipoDeArchivo02()</a>.</p>
 
 </div>
 </div>
-<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
 <li><a class="el" href="gestordearchivo_8h_source.html">gestordearchivo.h</a></li>
+<li><a class="el" href="gestordearchivo_8cpp_source.html">gestordearchivo.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -245,7 +303,7 @@ Métodos públicos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_gestor_de_archivo.html">GestorDeArchivo</a></li>
-    <li class="footer">Generado el Sábado, 25 de Febrero de 2023 15:48:49 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
+    <li class="footer">Generado el Viernes, 10 de Marzo de 2023 18:46:36 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

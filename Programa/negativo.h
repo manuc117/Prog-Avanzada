@@ -25,7 +25,7 @@ public:
     /*!
      * \brief procesarImagen Método heredado de la clase ProcesadorDeImagen, redefinido para
      *        obtener el negativo de una imagen.
-     * \param img Imagen que se procesa.
+     * \param[in] img Imagen que se procesa.
      * \return Imagen procesada.
      */
     Imagen procesarImagen(Imagen &img) override;

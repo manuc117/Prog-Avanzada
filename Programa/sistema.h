@@ -1,16 +1,16 @@
 /*!
- *  \class      InterfazDeUsuario
- *  \brief      Clase capaz de ejecutar el sistema de procesamiento de imágenes digitales.
+ *  \class      Sistema
+ *  \brief      Clase capaz de ejecutar el software de procesamiento de imágenes digitales e ineractuar con el usuario.
  *  \details    Tiene la capacidad de ejecutar todas las acciones que hacen funcionar el software.
  *              Posee un espacio de trabajo y una ventana de graficación.
  *  \author     Manuela Calvo
- *  \date       Fecha de última modificación: 15-02-2022
+ *  \date       Fecha de última modificación: 10-03-2023
  *  \pre
  *  \bug
  *  \warning
 */
-#ifndef INTERFAZDEUSUARIO_H
-#define INTERFAZDEUSUARIO_H
+#ifndef SISTEMA_H
+#define SISTEMA_H
 
 #include "espaciodetrabajo.h"
 #include "ventanadegraficacion.h"
@@ -20,13 +20,16 @@
 #include "ExcepcionArchivoNoSoportado.h"
 
 
-class InterfazDeUsuario
+class Sistema
 {
 public:
-    InterfazDeUsuario();
+    /*!
+     * \brief Sistema Constructor del objeto Sistema.
+     */
+    Sistema();
 
     /*!
-     * \brief ejecutar Método que permite ejecutar el sistema.
+     * \brief ejecutar Método que permite ejecutar el software.
      * \param[in] app QApplication que se ejecuta.
      * \param[out] app QApplication que muestra información como salida.
      */
@@ -42,7 +45,7 @@ public:
     /*!
      * \brief getOpcionArchivo Método que permite al usuario seleccionar la opción del
      *        archivo que desea procesar.
-     * \param[in] opcion Opcion de la carpeta elegida por el usuario.
+     * \param[in] opcion Opción de la carpeta elegida por el usuario.
      * \return Opción del archivo elegida por el usuario.
      */
     int getOpcionArchivo(int opcion);
@@ -72,4 +75,4 @@ private:
     VentanaDeGraficacion graficador;
 };
 
-#endif // INTERFAZDEUSUARIO_H
+#endif // SISTEMA_H

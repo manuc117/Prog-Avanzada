@@ -5,7 +5,7 @@
  *              en cuenta cierto nivel de tolerancia, especificado por el usuario. Si identifica
  *              un pixel como vecino, lo pinta con un color predeterminado (azul).
  *  \author     Manuela Calvo
- *  \date       Fecha de última modificación: 15-02-2022
+ *  \date       Fecha de última modificación: 10-03-2023
  *  \pre
  *  \bug
  *  \warning
@@ -26,26 +26,21 @@ class AlgoritmoDelPintor
 public:
     /*!
      * \brief AlgoritmoDelPintor Constructor del objeto AlgoritmoDelPintor.
-     * \param[in] img Imagen sobre la que se desea pintar una region.
      */
-    AlgoritmoDelPintor(Imagen &img);
+    AlgoritmoDelPintor();
 
     /*!
      * \brief aplicarAlgoritmo Método que permite aplicar el algoritmo del pintor.
-     * \param fInicial Valor de la fila del Pixel desde el cual se desean pintar
+     * \param[in] fInicial Valor de la fila del Pixel desde el cual se desean pintar
      *        los vecinos.
-     * \param cInicial Valor de la columna del Pixel desde el cual se desean pintar
+     * \param[in] cInicial Valor de la columna del Pixel desde el cual se desean pintar
      *        los vecinos.
+     * \param[in] imagen Imagen sobre la que se aplica el algoritmo.
      * \return Imagen a la cual se le han modificado el Pixel inicial y sus vecinos.
      */
-    Imagen aplicarAlgoritmo (int fInicial, int cInicial);
+    Imagen aplicarAlgoritmo (int fInicial, int cInicial, Imagen &imagen);
 
 private:
-    /*!
-     * \param imagen Imagen sobre la que se aplica el algoritmo.
-     */
-    Imagen imagen;
-
     /*!
      * \brief matrizAnalisis Matriz de booleanos del tamaño de la imagen. Cada elemento
      *        representa un Pixel de la imagen y el booleano almacenado tiene valor true
@@ -67,14 +62,15 @@ private:
      * \param columna Columna del Pixel bajo análisis.
      * \param pixelReferencia Pixel respecto al cual se analiza si otro Pixel es vecino.
      * \param tolerancia Rango de tolerancia según el cuál se determina si es vecino o no.
+     * \param imagen Imagen a la que se le aplica el algoritmo.
      */
-    void pintarVecinos(int fila, int columna, Pixel pixelReferencia, unsigned int tolerancia);
+    void pintarVecinos(int fila, int columna, Pixel pixelReferencia, unsigned int tolerancia, Imagen &imagen);
 
     /*!
      * \brief esVecino Método que devuelve si un Pixel es vecino de otro o no.
-     * \param pixReferencia Pixel respecto al cual se analiza si otro Pixel es vecino.
-     * \param pixAnalisis Pixel bajo análisis.
-     * \param tolerancia Rango de tolerancia según el cuál se determina si es vecino o no.
+     * \param[in] pixReferencia Pixel respecto al cual se analiza si otro Pixel es vecino.
+     * \param[in] pixAnalisis Pixel bajo análisis.
+     * \param[in] tolerancia Rango de tolerancia según el cuál se determina si es vecino o no.
      * \return Devuelve verdadero (true) si es vecino y falso (false) en
      *         caso contrario.
      */

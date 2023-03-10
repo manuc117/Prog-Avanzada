@@ -43,7 +43,7 @@ int Binarizado::getNivelBinarizacion(Imagen &img)
     cout<<"Insertar el nivel a partir del cual se quiere binarizar la imagen entre [0,"<<img.getRango()<<"]: ";
     cin>>nivel;
 
-    while(nivel <= 0 or nivel >= img.getRango() or !cin.good())
+    while(nivel < 0 or nivel > img.getRango() or !cin.good())
     {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');

@@ -17,6 +17,10 @@
 class ProcesadorDeImagen
 {
 public:
+    /*!
+     * \brief ProcesadorDeImagen Constructor del objeto ProcesadorDeImagen.
+     */
+    ProcesadorDeImagen();
 
     /*!
      * \brief procesarImagen Método virtual para procesar una Imagen.
@@ -24,6 +28,11 @@ public:
      * \return Imagen procesada.
      */
     virtual Imagen procesarImagen(Imagen &img) = 0;
+
+    /*!
+     * \brief ~ProcesadorDeImagen Destructor del objeto ProcesadorDeImagen.
+     */
+    virtual ~ProcesadorDeImagen();
 };
 
 #endif // PROCESADORDEIMAGEN_H

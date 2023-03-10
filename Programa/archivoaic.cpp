@@ -17,11 +17,13 @@ Imagen ArchivoAIC::leer(string ruta)
         string linea;
         int nColumnas, nFilas;
 
+        //Lectura del código de identifiación.
         getline(archi, linea);
         img.setIdentificador(linea);
 
         int posicion;
 
+        //Lectura de comentario, filas y columnas.
         while(true)
         {
             getline(archi, linea);
@@ -44,6 +46,7 @@ Imagen ArchivoAIC::leer(string ruta)
         img.setFilas(nFilas);
         img.setTamanio();
 
+        //Lectura del rango.
         int rangoAux;
         archi>>rangoAux;
         img.setRango(rangoAux);
@@ -51,6 +54,7 @@ Imagen ArchivoAIC::leer(string ruta)
         string espacio;
         getline(archi, espacio);
 
+        //Lectura de pixeles.
         int nivelGris, repeticiones, contadorCol;
 
         Pixel pixelAux;
@@ -114,6 +118,7 @@ void ArchivoAIC::guardar(Imagen *img)
 
     if(archi.is_open())
     {
+        //Escritura de identificador, comentario, columnas, filas y rango.
         archi<<"P2C"<<"\n";
         archi<<img->getComentario()<<"\n";
         archi<<img->getColumnas()<<" "<<img->getFilas()<<"\n";
@@ -122,6 +127,7 @@ void ArchivoAIC::guardar(Imagen *img)
         int nColumnas = img->getColumnas(), nFilas = img->getFilas();
         int nivelGris, repeticiones, nivelAnterior;
 
+        //Escritura pixeles.
         for(int f=0; f<nFilas; f++)
         {
             repeticiones = 0;

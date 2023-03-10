@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;QApplication&gt;</code><br />
-<code>#include &quot;<a class="el" href="interfazdeusuario_8h_source.html">interfazdeusuario.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sistema_8h_source.html">sistema.h</a>&quot;</code><br />
 </div>
 <p><a href="main_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
 <table class="memberdecls">
@@ -124,9 +124,9 @@ Funciones</h2></td></tr>
 
 <p class="definition">Definición en la línea <a class="el" href="main_8cpp_source.html#l00006">6</a> del archivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">Hace referencia a <a class="el" href="interfazdeusuario_8cpp_source.html#l00008">InterfazDeUsuario::ejecutar()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    QApplication a(argc, argv);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_interfaz_de_usuario.html">InterfazDeUsuario</a> interfaz;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    interfaz.<a class="code" href="class_interfaz_de_usuario.html#a693c34351c28ecf40c2e308e665ec4f7">ejecutar</a>(&amp;a);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div><div class="ttc" id="class_interfaz_de_usuario_html_a693c34351c28ecf40c2e308e665ec4f7"><div class="ttname"><a href="class_interfaz_de_usuario.html#a693c34351c28ecf40c2e308e665ec4f7">InterfazDeUsuario::ejecutar</a></div><div class="ttdeci">void ejecutar(QApplication *app)</div><div class="ttdoc">ejecutar Método que permite ejecutar el sistema. </div><div class="ttdef"><b>Definition:</b> <a href="interfazdeusuario_8cpp_source.html#l00008">interfazdeusuario.cpp:8</a></div></div>
-<div class="ttc" id="class_interfaz_de_usuario_html"><div class="ttname"><a href="class_interfaz_de_usuario.html">InterfazDeUsuario</a></div><div class="ttdoc">Clase capaz de ejecutar el sistema de procesamiento de imágenes digitales. </div><div class="ttdef"><b>Definition:</b> <a href="interfazdeusuario_8h_source.html#l00023">interfazdeusuario.h:23</a></div></div>
+<p class="reference">Hace referencia a <a class="el" href="sistema_8cpp_source.html#l00008">Sistema::ejecutar()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    QApplication a(argc, argv);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    QString titulo = QString::fromStdString(<span class="stringliteral">&quot;Software de Procesamiento Digital de Imágenes&quot;</span>);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    a.setApplicationName(titulo);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_sistema.html">Sistema</a> sistema;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    sistema.<a class="code" href="class_sistema.html#a227899a01cbea458bbdb3a29d656af70">ejecutar</a>(&amp;a);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div><div class="ttc" id="class_sistema_html"><div class="ttname"><a href="class_sistema.html">Sistema</a></div><div class="ttdoc">Clase capaz de ejecutar el software de procesamiento de imágenes digitales e ineractuar con el usuari...</div><div class="ttdef"><b>Definition:</b> <a href="sistema_8h_source.html#l00023">sistema.h:23</a></div></div>
+<div class="ttc" id="class_sistema_html_a227899a01cbea458bbdb3a29d656af70"><div class="ttname"><a href="class_sistema.html#a227899a01cbea458bbdb3a29d656af70">Sistema::ejecutar</a></div><div class="ttdeci">void ejecutar(QApplication *app)</div><div class="ttdoc">ejecutar Método que permite ejecutar el software. </div><div class="ttdef"><b>Definition:</b> <a href="sistema_8cpp_source.html#l00008">sistema.cpp:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -136,7 +136,7 @@ Funciones</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generado el Sábado, 25 de Febrero de 2023 15:48:48 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
+    <li class="footer">Generado el Viernes, 10 de Marzo de 2023 18:46:36 para Mi Proyecto de Prog. Avanzada (busca esto en el archivo  doxy.config si quieres modificarlo...) por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

@@ -27,7 +27,7 @@ public:
     /*!
      * \brief procesarImagen Método heredado de la clase ProcesadorDeImagen, redefinido
      *        para aplicar el filtro de pasa altos a una imagen.
-     * \param img Imagen a la que se le aplica el filtro de pasa altos.
+     * \param[in] img Imagen a la que se le aplica el filtro de pasa altos.
      * \return Imagen procesada.
      */
     Imagen procesarImagen(Imagen &img) override;

@@ -44,16 +44,16 @@ else
 
 <body link="#0563C1" vlink="#954F72">
 
-<table border=0 cellpadding=0 cellspacing=0 width=1217 style='border-collapse:
- collapse;table-layout:fixed;width:913pt'>
+<table border=0 cellpadding=0 cellspacing=0 width=1332 style='border-collapse:
+ collapse;table-layout:fixed;width:999pt'>
  <col width=80 style='width:60pt'>
- <col width=570 style='mso-width-source:userset;mso-width-alt:20845;width:428pt'>
+ <col width=685 style='mso-width-source:userset;mso-width-alt:25051;width:514pt'>
  <col width=567 style='mso-width-source:userset;mso-width-alt:20736;width:425pt'>
  <col width=80 span=2 style='width:60pt'>
  <col width=83 style='mso-width-source:userset;mso-width-alt:3035;width:62pt'>
  <tr height=20 style='height:15.0pt'>
   <td height=20 width=80 style='height:15.0pt;width:60pt'></td>
-  <td width=570 style='width:428pt'></td>
+  <td width=685 style='width:514pt'></td>
   <td width=567 style='width:425pt'></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -772,11 +772,6 @@ else
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
-  <td class=xl68><span style='mso-spacerun:yes'> </span>- imagen: Imagen</td>
-  <td class=xl78 style='border-left:none'>&nbsp;</td>
- </tr>
- <tr height=20 style='height:15.0pt'>
-  <td height=20 style='height:15.0pt'></td>
   <td class=xl68><span style='mso-spacerun:yes'> </span>- matrizAnalisis:
   vector&lt;vector&lt;bool&gt;&gt;</td>
   <td class=xl78 style='border-left:none'>&nbsp;</td>
@@ -811,7 +806,7 @@ else
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
   <td class=xl68><span style='mso-spacerun:yes'> </span>+ aplicarAlgoritmo(int
-  fInicial, int cInicial): Imagen</td>
+  fInicial, int cInicial, Imagen &amp;imagen): Imagen</td>
   <td class=xl78 style='border-left:none'>&nbsp;</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -823,7 +818,8 @@ else
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
   <td class=xl68><span style='mso-spacerun:yes'> </span>- pintarVecinos(int
-  fila, int columna, Pixel pixelReferencia, unsigned int tolerancia): void</td>
+  fila, int columna, Pixel pixelReferencia, unsigned int tolerancia, Imagen
+  &amp;imagen): void</td>
   <td class=xl78 style='border-left:none'>&nbsp;</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -1047,12 +1043,12 @@ else
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
   <td class=xl69><span style='mso-spacerun:yes'> </span>- espTrabajo:
-  EspacioDeTrabajo</td>
+  EspacioDeTrabajo*</td>
   <td></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
-  <td class=xl74>Métodos:</td>
+  <td class=xl72 style='border-top:none'>Métodos:</td>
   <td></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -1115,8 +1111,14 @@ else
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
-  <td class=xl69><span style='mso-spacerun:yes'> </span>+
+  <td class=xl68><span style='mso-spacerun:yes'> </span>+
   mousePressEvent(QMouseEvent *event): void</td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'></td>
+  <td class=xl69><span style='mso-spacerun:yes'> </span>+
+  setEspTrabajo(EspacioDeTrabajo *newEspTrabajo): void</td>
   <td></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -1223,7 +1225,7 @@ else
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 style='height:15.0pt'></td>
-  <td class=xl70>InterfazDeUsuario</td>
+  <td class=xl70>Sistema</td>
   <td></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -1280,7 +1282,7 @@ else
  <![if supportMisalignedColumns]>
  <tr height=0 style='display:none'>
   <td width=80 style='width:60pt'></td>
-  <td width=570 style='width:428pt'></td>
+  <td width=685 style='width:514pt'></td>
   <td width=567 style='width:425pt'></td>
  </tr>
  <![endif]>

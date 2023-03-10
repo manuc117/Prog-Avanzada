@@ -16,7 +16,6 @@ var annotated_dup =
     [ "GestorDeArchivo", "class_gestor_de_archivo.html", "class_gestor_de_archivo" ],
     [ "GraficadorHistograma", "class_graficador_histograma.html", "class_graficador_histograma" ],
     [ "Imagen", "class_imagen.html", "class_imagen" ],
-    [ "InterfazDeUsuario", "class_interfaz_de_usuario.html", "class_interfaz_de_usuario" ],
     [ "LUT", "class_l_u_t.html", "class_l_u_t" ],
     [ "Negativo", "class_negativo.html", "class_negativo" ],
     [ "Pixel", "class_pixel.html", "class_pixel" ],
@@ -26,5 +25,6 @@ var annotated_dup =
     [ "QOpenGLFunctions", "class_q_open_g_l_functions.html", null ],
     [ "QOpenGLWidget", "class_q_open_g_l_widget.html", null ],
     [ "qt_meta_stringdata_VentanaDeGraficacion_t", "structqt__meta__stringdata___ventana_de_graficacion__t.html", "structqt__meta__stringdata___ventana_de_graficacion__t" ],
+    [ "Sistema", "class_sistema.html", "class_sistema" ],
     [ "VentanaDeGraficacion", "class_ventana_de_graficacion.html", "class_ventana_de_graficacion" ]
 ];

@@ -1,11 +1,11 @@
 #include "algoritmodelpintor.h"
 
-AlgoritmoDelPintor::AlgoritmoDelPintor(Imagen &img)
+AlgoritmoDelPintor::AlgoritmoDelPintor()
 {
-    imagen = img;
+
 }
 
-Imagen AlgoritmoDelPintor::aplicarAlgoritmo(int fInicial, int cInicial)
+Imagen AlgoritmoDelPintor::aplicarAlgoritmo(int fInicial, int cInicial, Imagen &imagen)
 {
     Pixel pixelInicial = imagen.getPixel(fInicial, cInicial);
 
@@ -17,7 +17,7 @@ Imagen AlgoritmoDelPintor::aplicarAlgoritmo(int fInicial, int cInicial)
 
     contadorPixeles = 0;
 
-    pintarVecinos(fInicial, cInicial, pixelInicial, rangoTolerancia);
+    pintarVecinos(fInicial, cInicial, pixelInicial, rangoTolerancia, imagen);
 
     cout<<"\tPixeles pintados: "<<contadorPixeles;
 
@@ -31,7 +31,7 @@ void AlgoritmoDelPintor::inicializarMatriz(int filas, int columnas)
     matrizAnalisis = matriz;
 }
 
-void AlgoritmoDelPintor::pintarVecinos(int fila, int columna, Pixel pixReferencia, unsigned int tolerancia)
+void AlgoritmoDelPintor::pintarVecinos(int fila, int columna, Pixel pixReferencia, unsigned int tolerancia, Imagen &imagen)
 {
     ++profundidad;
 
@@ -45,7 +45,7 @@ void AlgoritmoDelPintor::pintarVecinos(int fila, int columna, Pixel pixReferenci
 
                 for(int vecino=0; vecino<8; vecino++)
                 {
-                   pintarVecinos(fila+vecinosF[vecino], columna+vecinosC[vecino], pixReferencia, tolerancia);
+                   pintarVecinos(fila+vecinosF[vecino], columna+vecinosC[vecino], pixReferencia, tolerancia, imagen);
                 }
 
                 imagen.setPixel(Pixel(0,0,255), fila, columna);
@@ -60,9 +60,9 @@ void AlgoritmoDelPintor::pintarVecinos(int fila, int columna, Pixel pixReferenci
 
 bool AlgoritmoDelPintor::esVecino(Pixel pixReferencia, Pixel pixAnalisis, unsigned int tolerancia)
 {
-    bool rEs = pixAnalisis.getRed() <= pixReferencia.getRed()+(int(tolerancia)/2) and pixAnalisis.getRed() >= pixReferencia.getRed()-(int(tolerancia)/2);
-    bool gEs = pixAnalisis.getGreen() <= pixReferencia.getGreen()+(int(tolerancia)/2) and pixAnalisis.getGreen() >= pixReferencia.getGreen()-(int(tolerancia)/2);
-    bool bEs = pixAnalisis.getBlue() <= pixReferencia.getBlue()+(int(tolerancia)/2) and pixAnalisis.getBlue() >= pixReferencia.getBlue()-(int(tolerancia)/2);
+    bool rEs = pixAnalisis.getRed() <= pixReferencia.getRed()+(int(tolerancia)) and pixAnalisis.getRed() >= pixReferencia.getRed()-(int(tolerancia));
+    bool gEs = pixAnalisis.getGreen() <= pixReferencia.getGreen()+(int(tolerancia)) and pixAnalisis.getGreen() >= pixReferencia.getGreen()-(int(tolerancia));
+    bool bEs = pixAnalisis.getBlue() <= pixReferencia.getBlue()+(int(tolerancia)) and pixAnalisis.getBlue() >= pixReferencia.getBlue()-(int(tolerancia));
 
     return (rEs and gEs and bEs);
 }
@@ -82,6 +82,6 @@ unsigned int AlgoritmoDelPintor::getRangoDeTolerancia(int maxRango)
         cin>>tolerancia;
     }
 
-    return tolerancia;
+    return tolerancia/2;
 }
 

@@ -23,12 +23,12 @@ SOURCES +=  tst_ei_autotest.cpp \
     ../../gestordearchivo.cpp \
     ../../graficadorhistograma.cpp \
     ../../imagen.cpp \
-    ../../interfazdeusuario.cpp \
     ../../lut.cpp \
     ../../negativo.cpp \
     ../../pixel.cpp \
     ../../procesadordeimagen.cpp \
     ../../procesadorestadistico.cpp \
+    ../../sistema.cpp \
     ../../ventanadegraficacion.cpp
 HEADERS += \
     ../../ExcepcionArchivoCorrupto.h \
@@ -46,10 +46,10 @@ HEADERS += \
     ../../gestordearchivo.h \
     ../../graficadorhistograma.h \
     ../../imagen.h \
-    ../../interfazdeusuario.h \
     ../../lut.h \
     ../../negativo.h \
     ../../pixel.h \
     ../../procesadordeimagen.h \
     ../../procesadorestadistico.h \
+    ../../sistema.h \
     ../../ventanadegraficacion.h

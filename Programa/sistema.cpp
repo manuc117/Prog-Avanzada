@@ -1,11 +1,11 @@
-#include "interfazdeusuario.h"
+#include "sistema.h"
 
-InterfazDeUsuario::InterfazDeUsuario()
+Sistema::Sistema()
 {
-
+    graficador.setEspTrabajo(&espTrabajo);
 }
 
-void InterfazDeUsuario::ejecutar(QApplication *app)
+void Sistema::ejecutar(QApplication *app)
 {
     bool seEstaEjecutando = true;
     bool seGraficoImagen = false;
@@ -96,7 +96,7 @@ void InterfazDeUsuario::ejecutar(QApplication *app)
 
 }
 
-int InterfazDeUsuario::getOpcionCarpeta()
+int Sistema::getOpcionCarpeta()
 {
     vector<string> carpetas = espTrabajo.getCarpetas();
     for(int carpeta=0; carpeta<carpetas.size(); carpeta++)
@@ -121,7 +121,7 @@ int InterfazDeUsuario::getOpcionCarpeta()
     return opcion;
 }
 
-int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
+int Sistema::getOpcionArchivo(int opcionCarpeta)
 {
     vector<string> carpetas = espTrabajo.getCarpetas();
     cout<<carpetas[opcionCarpeta-1]<<": "<<endl;
@@ -154,7 +154,7 @@ int InterfazDeUsuario::getOpcionArchivo(int opcionCarpeta)
     return opcion;
 }
 
-void InterfazDeUsuario::mostrarAtajos()
+void Sistema::mostrarAtajos()
 {
     cout<<"\n\t----Lista de atajos----\n";
     cout<<"\t- Mostrar imagen anterior: Ctrl + flecha izquierda\n";
@@ -173,7 +173,7 @@ void InterfazDeUsuario::mostrarAtajos()
     cout<<"\t- Binarizar imagen: Ctrl + B\n\n";
 }
 
-string InterfazDeUsuario::recuperarUltimaEjecucion()
+string Sistema::recuperarUltimaEjecucion()
 {
     string ultimaRuta;
     ifstream archi;

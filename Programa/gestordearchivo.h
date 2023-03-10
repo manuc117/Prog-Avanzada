@@ -6,7 +6,7 @@
  *              archivo leí­do para que luego sean utilizados por sus clases hijas. Sus métodos son virtuales
  *              puros.
  *  \author     Manuela Calvo
- *  \date       Fecha de Ãºltima modificación: 15-02-2022
+ *  \date       Fecha de última modificación: 15-02-2022
  *  \pre
  *  \bug
  *  \warning
@@ -20,6 +20,11 @@
 class GestorDeArchivo //clase abstracta, metodos virtuales puros, no se puede instanciar
 {
 public:
+    /*!
+     * \brief GestorDeArchivo Constructor del objeto GestorDeArchivo.
+     */
+    GestorDeArchivo();
+
     /*!
      * \brief leer Método virtual que al ser redefinido permite leer un archivo de una
      *        Imagen.
@@ -37,9 +42,14 @@ public:
     /*!
      * \brief almacenarUltimaRuta Método virtual que al ser redefinido permite almacenar
      *        la ruta del último archivo leí­do.
-     * \param ruta Ruta del último archivo leí­do que se quiere almacenar.
+     * \param[in] ruta Ruta del último archivo leí­do que se quiere almacenar.
      */
     virtual void almacenarUltimaRuta(string ruta) = 0;
+
+    /*!
+     * \brief ~GestorDeArchivo Destructor del objeto GestorDeArchivo;
+     */
+    virtual ~GestorDeArchivo();
 };
 
 #endif // GESTORDEARCHIVO_H

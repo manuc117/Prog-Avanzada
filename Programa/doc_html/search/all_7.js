@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gestordearchivo',['GestorDeArchivo',['../class_gestor_de_archivo.html',1,'']]],
+  ['gestordearchivo',['GestorDeArchivo',['../class_gestor_de_archivo.html',1,'GestorDeArchivo'],['../class_gestor_de_archivo.html#a761e2a5cddbcbda5e1d45a6583a71512',1,'GestorDeArchivo::GestorDeArchivo()']]],
   ['gestordearchivo_2ecpp',['gestordearchivo.cpp',['../gestordearchivo_8cpp.html',1,'']]],
   ['gestordearchivo_2eh',['gestordearchivo.h',['../gestordearchivo_8h.html',1,'']]],
   ['getblue',['getBlue',['../class_pixel.html#aadf154ed9d83216ef0cf77638d6d33b3',1,'Pixel']]],
@@ -38,8 +38,8 @@ var searchData=
   ['getminimor',['getMinimoR',['../class_procesador_estadistico.html#ab29c027aa821dc1435cd0d03c8e71857',1,'ProcesadorEstadistico']]],
   ['getnivelbinarizacion',['getNivelBinarizacion',['../class_binarizado.html#a00128819595585c0036c4fb68168bbe4',1,'Binarizado']]],
   ['getnombrearchivos',['getNombreArchivos',['../class_espacio_de_trabajo.html#a8434631e2b4240e54040525781a434b0',1,'EspacioDeTrabajo']]],
-  ['getopcionarchivo',['getOpcionArchivo',['../class_interfaz_de_usuario.html#a9d61589b1740d697cf5e5e4f2481dea8',1,'InterfazDeUsuario']]],
-  ['getopcioncarpeta',['getOpcionCarpeta',['../class_interfaz_de_usuario.html#a7d336b00968e2ea777973619bee9a7d7',1,'InterfazDeUsuario']]],
+  ['getopcionarchivo',['getOpcionArchivo',['../class_sistema.html#aaa6e57186264665a1de7b9cf6a4a64ec',1,'Sistema']]],
+  ['getopcioncarpeta',['getOpcionCarpeta',['../class_sistema.html#a56aac58a7c161d93fcd3efa27161f335',1,'Sistema']]],
   ['getpixel',['getPixel',['../class_imagen.html#abb42cdae2a0f78ce15d81a64e952cd69',1,'Imagen']]],
   ['getpixelcolormasfrecuenteysucantidad01',['getPixelColorMasFrecuenteYSuCantidad01',['../class_e_i___auto_test.html#a667b504efbefcf74b116a92881f7c23a',1,'EI_AutoTest']]],
   ['getpixelgrismasfrecuenteysucantidad01',['getPixelGrisMasFrecuenteYSuCantidad01',['../class_e_i___auto_test.html#ae30c56e99bbb16404f3956edb9a9111e',1,'EI_AutoTest']]],
@@ -51,7 +51,7 @@ var searchData=
   ['getrutaarchivo',['getRutaArchivo',['../class_espacio_de_trabajo.html#aa21771574169b91194803f6f6cc71299',1,'EspacioDeTrabajo']]],
   ['getrutacarpeta',['getRutaCarpeta',['../class_espacio_de_trabajo.html#a5982810c487972fca9f50f21f33924f2',1,'EspacioDeTrabajo']]],
   ['getvalor',['getValor',['../class_brillo.html#a22bfc785b3839646e49076747b12946b',1,'Brillo']]],
-  ['graficador',['graficador',['../class_interfaz_de_usuario.html#a6bf8062f3bf9cf373653fdd04efa6c6e',1,'InterfazDeUsuario']]],
+  ['graficador',['graficador',['../class_sistema.html#a91cfe079d17a374c9e7f615dcc194115',1,'Sistema']]],
   ['graficadorhistograma',['GraficadorHistograma',['../class_graficador_histograma.html',1,'GraficadorHistograma'],['../class_graficador_histograma.html#a9d8479d16eeda28cea737d95f2777ebc',1,'GraficadorHistograma::GraficadorHistograma()']]],
   ['graficadorhistograma_2ecpp',['graficadorhistograma.cpp',['../graficadorhistograma_8cpp.html',1,'']]],
   ['graficadorhistograma_2eh',['graficadorhistograma.h',['../graficadorhistograma_8h.html',1,'']]],

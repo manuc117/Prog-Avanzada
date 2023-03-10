@@ -118,13 +118,15 @@ void EspacioDeTrabajo::guardarImagen(Imagen *img)
         if (formatoGuardado == 'p')
         {
             archivo = new ArchivoPNM;
-            archivo->guardar(img);
         }
         else
         {
             archivo = new ArchivoAIC;
-            archivo->guardar(img);
         }
+
+        archivo->guardar(img);
+
+        delete archivo;
     }
 }
 

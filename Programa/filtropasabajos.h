@@ -26,7 +26,7 @@ public:
     /*!
      * \brief procesarImagen Método heredado de la clase ProcesadorDeImagen, redefinido
      *        para aplicar el filtro de suavizado a una imagen.
-     * \param img Imagen a la que se le aplica el filtro de suavizado.
+     * \param[in] img Imagen a la que se le aplica el filtro de suavizado.
      * \return Imagen procesada.
      */
     Imagen procesarImagen(Imagen &img) override;

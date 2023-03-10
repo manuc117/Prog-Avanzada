@@ -25,7 +25,7 @@ class Brillo: public ProcesadorDeImagen
 public:
     /*!
      * \brief Brillo Constructor del objeto Brillo.
-     * \param opcion Opcion que indica si se aumenta (1) o reduce el brillo (2).
+     * \param[in] opcion Opcion que indica si se aumenta (1) o reduce el brillo (2).
      */
     Brillo(int opcion);
 

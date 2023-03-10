@@ -4,9 +4,9 @@
  *  \details    Posee una imagen, que puede cargar. Conoce el ancho y alto de la ventana, y la
  *              escala utilizada para mantener sus proporciones. También es capaz
  *              de responder a eventos de teclado y mouse. Conoce la carpeta y el archivo
- *              seleccionados por el usuario. Posee un puntero gestor de archivos.
+ *              seleccionados por el usuario.
  *  \author     Manuela Calvo
- *  \date       Fecha de última modificación: 15-02-2022
+ *  \date       Fecha de última modificación: 10-03-2023
  *  \pre
  *  \bug
  *  \warning
@@ -119,6 +119,12 @@ public:
      */
     void mousePressEvent(QMouseEvent *event) override;
 
+    /*!
+     * \brief setEspTrabajo Método que permite establecer el espacio de trabajo con el que trabaja la ventana de graficación.
+     * \param[in] newEspTrabajo Puntero al espacio de trabajo que se va a agregar.
+     */
+    void setEspTrabajo(EspacioDeTrabajo *newEspTrabajo);
+
 private:
     /*!
      * \param imagen Imagen que se grafica.
@@ -170,7 +176,7 @@ private:
     /*!
      * \param espTrabajo Espacio de trabajo con el que trabaja la VentanaDeGraficacion.
      */
-    EspacioDeTrabajo espTrabajo;
+    EspacioDeTrabajo* espTrabajo;
 };
 
 #endif // VENTANADEGRAFICACION_H

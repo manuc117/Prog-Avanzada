@@ -60,10 +60,6 @@ var files =
     [ "imagen.h", "imagen_8h.html", [
       [ "Imagen", "class_imagen.html", "class_imagen" ]
     ] ],
-    [ "interfazdeusuario.cpp", "interfazdeusuario_8cpp.html", null ],
-    [ "interfazdeusuario.h", "interfazdeusuario_8h.html", [
-      [ "InterfazDeUsuario", "class_interfaz_de_usuario.html", "class_interfaz_de_usuario" ]
-    ] ],
     [ "lut.cpp", "lut_8cpp.html", null ],
     [ "lut.h", "lut_8h.html", [
       [ "LUT", "class_l_u_t.html", "class_l_u_t" ]
@@ -85,6 +81,10 @@ var files =
     [ "procesadorestadistico.cpp", "procesadorestadistico_8cpp.html", null ],
     [ "procesadorestadistico.h", "procesadorestadistico_8h.html", [
       [ "ProcesadorEstadistico", "class_procesador_estadistico.html", "class_procesador_estadistico" ]
+    ] ],
+    [ "sistema.cpp", "sistema_8cpp.html", null ],
+    [ "sistema.h", "sistema_8h.html", [
+      [ "Sistema", "class_sistema.html", "class_sistema" ]
     ] ],
     [ "ventanadegraficacion.cpp", "ventanadegraficacion_8cpp.html", null ],
     [ "ventanadegraficacion.h", "ventanadegraficacion_8h.html", [

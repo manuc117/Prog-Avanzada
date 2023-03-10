@@ -24,13 +24,13 @@ SOURCES += \
         gestordearchivo.cpp \
         graficadorhistograma.cpp \
         imagen.cpp \
-        interfazdeusuario.cpp \
         lut.cpp \
         main.cpp \
         negativo.cpp \
         pixel.cpp \
         procesadordeimagen.cpp \
         procesadorestadistico.cpp \
+        sistema.cpp \
         ventanadegraficacion.cpp
 
 # Default rules for deployment.
@@ -54,10 +54,10 @@ HEADERS += \
     gestordearchivo.h \
     graficadorhistograma.h \
     imagen.h \
-    interfazdeusuario.h \
     lut.h \
     negativo.h \
     pixel.h \
     procesadordeimagen.h \
     procesadorestadistico.h \
+    sistema.h \
     ventanadegraficacion.h

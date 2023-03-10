@@ -7,6 +7,12 @@ FiltroPasaAltos::FiltroPasaAltos()
 
 Imagen FiltroPasaAltos::procesarImagen(Imagen &img)
 {
+    /* Kernel 3x3 utilizado
+     * |0   -1   0|
+     * |-1   5  -1|
+     * |0   -1   0|
+    */
+
     Imagen imagen = img;
     int auxRed, auxGreen, auxBlue;
     Pixel pixAux;

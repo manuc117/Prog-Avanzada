@@ -24,7 +24,7 @@ class GraficadorHistograma: public QOpenGLWidget, protected QOpenGLFunctions
 public:
     /*!
      * \brief GraficadorHistograma Constructor del objeto GraficadorHistograma.
-     * \param img Imagen de la cual se quiere graficar el histograma.
+     * \param[in] img Imagen de la cual se quiere graficar el histograma.
      */
     GraficadorHistograma(Imagen &img);
 

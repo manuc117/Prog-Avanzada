@@ -21,7 +21,8 @@ Imagen ArchivoPNM::leer(string ruta)
         getline(archi, linea);
         img.setIdentificador(linea);
 
-        //Leer comentarios que empiezan con # y terminan con \n o \n\r
+        //Lectura de comentarios que empiezan con # y terminan con \n o \n\r
+        //Lectura de columnas y filas.
         int posicion;
 
         while(true)
@@ -42,7 +43,6 @@ Imagen ArchivoPNM::leer(string ruta)
         if(nColumnas == 0 or nFilas == 0)
             throw ExcepcionArchivoCorrupto();
 
-        //Lectura columnas y filas
         img.setColumnas(nColumnas);
         img.setFilas(nFilas);
         img.setTamanio();
@@ -62,6 +62,7 @@ Imagen ArchivoPNM::leer(string ruta)
 
         switch(img.getIdentificador()[1])
         {
+            //Imagen monocromática, pixeles en texto.
             case '1':
                 img.setRango(1);
 
@@ -80,6 +81,7 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.close();
                 break;
 
+            //Imagen en escala de grises, pixeles en texto.
             case '2':
                 for (int fila=0; fila<nFilas; fila++)
                 {
@@ -96,6 +98,7 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.close();
                 break;
 
+            //Imagen rgb, pixeles en texto.
             case '3':
                 int R, G, B;
 
@@ -114,6 +117,7 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.close();
                 break;
 
+            //Imagen monocromática, pixeles en binario.
             case '4':
                 img.setRango(1);
                 posicion = archi.tellg();
@@ -138,6 +142,7 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.close();
                 break;
 
+            //Imagen en escala de grises, pixeles en binario.
             case '5':
                 getline(archi, linea, '\n');
                 posicion = archi.tellg();
@@ -162,6 +167,7 @@ Imagen ArchivoPNM::leer(string ruta)
                 archi.close();
                 break;
 
+            //Imagen r,g,b, pixeles en binario.
             case '6':
                 getline(archi, linea, '\n');
                 posicion = archi.tellg();
@@ -194,7 +200,7 @@ Imagen ArchivoPNM::leer(string ruta)
     else
     {
         cout<<"Error al abrir el archivo "<<ruta<<".";
-        cout.flush(); //para que se imprima lo del cout anterior si o si
+        cout.flush(); //para que se imprima lo del cout anterior si o si.
     }
 
         return img;
@@ -214,6 +220,7 @@ void ArchivoPNM::guardar(Imagen *img)
 
     if (archi.is_open())
     {
+        //Escritura del identificador, comentario, columnas, filas y rango.
         archi<<img->getIdentificador()<<"\n";
         archi<<img->getComentario()<<"\n";
         archi<<img->getColumnas()<<" "<<img->getFilas()<<"\n";
@@ -224,6 +231,7 @@ void ArchivoPNM::guardar(Imagen *img)
         int intensidad;
         int nFilas=img->getFilas(), nColumnas=img->getColumnas();
 
+        //Escritura pixeles.
         switch(img->getIdentificador()[1])
         {
             case '1':

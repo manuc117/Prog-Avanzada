@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gestordearchivo',['GestorDeArchivo',['../class_gestor_de_archivo.html#a761e2a5cddbcbda5e1d45a6583a71512',1,'GestorDeArchivo']]],
   ['getblue',['getBlue',['../class_pixel.html#aadf154ed9d83216ef0cf77638d6d33b3',1,'Pixel']]],
   ['getbmasfrecuente',['getBMasFrecuente',['../class_procesador_estadistico.html#a7379b4b049e1fa6729718e2c7939cbe8',1,'ProcesadorEstadistico']]],
   ['getcarpetas',['getCarpetas',['../class_espacio_de_trabajo.html#a656de37ac8cad97cd647fdebd779b0ed',1,'EspacioDeTrabajo']]],
@@ -35,8 +36,8 @@ var searchData=
   ['getminimor',['getMinimoR',['../class_procesador_estadistico.html#ab29c027aa821dc1435cd0d03c8e71857',1,'ProcesadorEstadistico']]],
   ['getnivelbinarizacion',['getNivelBinarizacion',['../class_binarizado.html#a00128819595585c0036c4fb68168bbe4',1,'Binarizado']]],
   ['getnombrearchivos',['getNombreArchivos',['../class_espacio_de_trabajo.html#a8434631e2b4240e54040525781a434b0',1,'EspacioDeTrabajo']]],
-  ['getopcionarchivo',['getOpcionArchivo',['../class_interfaz_de_usuario.html#a9d61589b1740d697cf5e5e4f2481dea8',1,'InterfazDeUsuario']]],
-  ['getopcioncarpeta',['getOpcionCarpeta',['../class_interfaz_de_usuario.html#a7d336b00968e2ea777973619bee9a7d7',1,'InterfazDeUsuario']]],
+  ['getopcionarchivo',['getOpcionArchivo',['../class_sistema.html#aaa6e57186264665a1de7b9cf6a4a64ec',1,'Sistema']]],
+  ['getopcioncarpeta',['getOpcionCarpeta',['../class_sistema.html#a56aac58a7c161d93fcd3efa27161f335',1,'Sistema']]],
   ['getpixel',['getPixel',['../class_imagen.html#abb42cdae2a0f78ce15d81a64e952cd69',1,'Imagen']]],
   ['getpixelcolormasfrecuenteysucantidad01',['getPixelColorMasFrecuenteYSuCantidad01',['../class_e_i___auto_test.html#a667b504efbefcf74b116a92881f7c23a',1,'EI_AutoTest']]],
   ['getpixelgrismasfrecuenteysucantidad01',['getPixelGrisMasFrecuenteYSuCantidad01',['../class_e_i___auto_test.html#ae30c56e99bbb16404f3956edb9a9111e',1,'EI_AutoTest']]],

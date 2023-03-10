@@ -52,35 +52,35 @@ public:
 
     /*!
      * \brief setRed Método que permite establecer el valor de red.
-     * \param r Valor que se le va a asignar a r.
+     * \param[in] r Valor que se le va a asignar a r.
      */
     void setRed(int r);
 
     /*!
      * \brief setGreen Método que permite establecer el valor de green.
-     * \param r Valor que se le va a asignar a g.
+     * \param[in] r Valor que se le va a asignar a g.
      */
     void setGreen(int g);
 
     /*!
      * \brief setBlue Método que permite establecer el valor de blue.
-     * \param r Valor que se le va a asignar a red.
+     * \param[in] r Valor que se le va a asignar a red.
      */
     void setBlue(int b);
 
     /*!
      * \brief setPixelRGB Método que permite modificar los valores de R, G y B de
      *        un Pixel de tipo RGB o de intensidades.
-     * \param r Valor de rojo que se quiere establecer.
-     * \param g Valor de verde que se quiere establecer.
-     * \param b Valor de azul que se quiere establecer.
+     * \param[in] r Valor de rojo que se quiere establecer.
+     * \param[in] g Valor de verde que se quiere establecer.
+     * \param[in] b Valor de azul que se quiere establecer.
      */
     void setPixelRGB(int r, int g=-1, int b=-1);
 
     /*!
      * \brief setPixelMono Método que permite modificar los valores de R, G y B de
      *        un Pixel de tipo monocromático.
-     * \param valor Valor que se va a establecer en los tres parámetros.
+     * \param[in] valor Valor que se va a establecer en los tres parámetros.
      */
     void setPixelMono(int valor);
 
