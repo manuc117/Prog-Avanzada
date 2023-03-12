@@ -6,6 +6,16 @@ GraficadorHistograma::GraficadorHistograma(Imagen &img)
     frecuenciaG = procesador.getFrecuenciaG(img);
     frecuenciaB = procesador.getFrecuenciaB(img);
     frecuenciaProm = procesador.getFrecuenciaPromedio(img);
+
+    vector<int> maximos =
+    {
+        *max_element(frecuenciaR.begin(), frecuenciaR.end()),
+        *max_element(frecuenciaG.begin(), frecuenciaG.end()),
+        *max_element(frecuenciaB.begin(), frecuenciaB.end()),
+        *max_element(frecuenciaProm.begin(), frecuenciaProm.end())
+    };
+
+    maxFrecuencia = *max_element(maximos.begin(), maximos.end());
 }
 
 void GraficadorHistograma::initializeGL()
@@ -37,17 +47,6 @@ void GraficadorHistograma::resizeGL(int ancho, int alto)
 void GraficadorHistograma::graficarHistograma()
 {
     glPushMatrix();
-    glTranslatef(desplx, desply, 0.0f);
-
-    vector<int> maximos =
-    {
-        *max_element(frecuenciaR.begin(), frecuenciaR.end()),
-        *max_element(frecuenciaG.begin(), frecuenciaG.end()),
-        *max_element(frecuenciaB.begin(), frecuenciaB.end()),
-        *max_element(frecuenciaProm.begin(), frecuenciaProm.end())
-    };
-
-    float maxFrecuencia = *max_element(maximos.begin(), maximos.end());
 
     glScalef(float(width())/float(frecuenciaR.size()), float(height())/float(maxFrecuencia), 1.0f);
 

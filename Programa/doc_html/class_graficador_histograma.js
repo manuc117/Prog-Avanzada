@@ -14,5 +14,6 @@ var class_graficador_histograma =
     [ "frecuenciaG", "class_graficador_histograma.html#a711b33992b1e18171a19e948405d7338", null ],
     [ "frecuenciaProm", "class_graficador_histograma.html#a109ad0b11b19c55d31cff41da1615805", null ],
     [ "frecuenciaR", "class_graficador_histograma.html#ab849d0da38d586b876b7c90d1b4c3e4e", null ],
+    [ "maxFrecuencia", "class_graficador_histograma.html#a9389a107ce81fecba40d5d06c70af282", null ],
     [ "procesador", "class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0", null ]
 ];

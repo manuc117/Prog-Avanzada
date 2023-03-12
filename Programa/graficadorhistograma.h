@@ -94,6 +94,13 @@ private:
     vector<int> frecuenciaProm;
 
     /*!
+     * \param maxFrecuencia Valor entero que representa que representa cuantas veces
+     *        aparece el nivel mas frecuente, sin importar si corresponde a R, G o B, o
+     *        a un promedio de RGB.
+     */
+    int maxFrecuencia;
+
+    /*!
      * \param escala Atributo que representa cuanto debe escalarse el gráfico para ser
      *        representado en la ventana, y para que esta mantenga sus proporciones.
      */
@@ -106,7 +113,6 @@ private:
      *        en la ventana.
      */
     float desplx, desply;
-
 };
 
 #endif // GRAFICADORHISTOGRAMA_H

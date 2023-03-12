@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"debug_2moc__predefs_8h.html#a9551a6385b15613410869ea4428243c9":[5,0,0,0,148],
 "debug_2moc__predefs_8h.html#a95b91b7560e936fdc4ce441d38b94b3e":[5,0,0,0,13],
 "debug_2moc__predefs_8h.html#a960cb27a87591af89eddb328647f1534":[5,0,0,0,88],
 "debug_2moc__predefs_8h.html#a967b4ada96d28b97bc07e26e1def8e66":[5,0,0,0,245],
@@ -183,8 +184,8 @@ var NAVTREEINDEX2 =
 "gestordearchivo_8cpp_source.html":[5,0,24],
 "gestordearchivo_8h.html":[5,0,25],
 "gestordearchivo_8h_source.html":[5,0,25],
-"globals.html":[5,1,0],
 "globals.html":[5,1,0,0],
+"globals.html":[5,1,0],
 "globals_defs.html":[5,1,4],
 "globals_defs.html":[5,1,4,0],
 "globals_defs_q.html":[5,1,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a0dc6b3d1554b0fa068323b6e5b614889":[5,0,1,0,0,0,300],
 "pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a0ef74430002f6cdbdcc99344bc4ffc8a":[5,0,1,0,0,0,382],
 "pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a0f22edb92c4da8029783c424962ac30d":[5,0,1,0,0,0,350],
-"pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a10a15ae17c3b791fe9b9721965ebfee4":[5,0,1,0,0,0,269],
-"pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a1304d54dba90274495e0b09c9820927b":[5,0,1,0,0,0,387]
+"pei-2021-2022-entrega__autotest__01_2_e_i__20212022___auto_test_2debug_2moc__predefs_8h.html#a10a15ae17c3b791fe9b9721965ebfee4":[5,0,1,0,0,0,269]
 };

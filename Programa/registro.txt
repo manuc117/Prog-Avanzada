@@ -1,1 +1,1 @@
-./Imagenes/grupo_imagenes_1/entre_rios_03.ppm
+./Imagenes/grupo_imagenes_2/predio_fi_uner_01_0.961mXpixel_con_mucho_ruido.ppm

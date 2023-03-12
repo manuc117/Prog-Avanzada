@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classes.html":[4,1],
 "contraste_8cpp.html":[5,0,12],
 "contraste_8cpp_source.html":[5,0,12],
 "contraste_8h.html":[5,0,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "debug_2moc__predefs_8h.html#a93a5a9d251e5bff3c2a130627f20e782":[5,0,0,0,326],
 "debug_2moc__predefs_8h.html#a942513c472dbe88bf910b8abaad21f64":[5,0,0,0,376],
 "debug_2moc__predefs_8h.html#a94ead674b2441dc29dbd5d6aba467197":[5,0,0,0,282],
-"debug_2moc__predefs_8h.html#a951ed972d2606d55ee009c69fe06672a":[5,0,0,0,392],
-"debug_2moc__predefs_8h.html#a9551a6385b15613410869ea4428243c9":[5,0,0,0,148]
+"debug_2moc__predefs_8h.html#a951ed972d2606d55ee009c69fe06672a":[5,0,0,0,392]
 };

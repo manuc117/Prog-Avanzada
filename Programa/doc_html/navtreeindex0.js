@@ -132,8 +132,9 @@ var NAVTREEINDEX0 =
 "class_graficador_histograma.html#a6f0e3d70cfcddff2b439229116bcc1fd":[4,0,14,5],
 "class_graficador_histograma.html#a711b33992b1e18171a19e948405d7338":[4,0,14,11],
 "class_graficador_histograma.html#a739cde89f10f6c1d8d3188a5ae11ce2a":[4,0,14,10],
-"class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0":[4,0,14,14],
+"class_graficador_histograma.html#a7f6e8e65e91382a7d36e44d3205a1ce0":[4,0,14,15],
 "class_graficador_histograma.html#a854423860fb43de0ae2fc05780c64baa":[4,0,14,4],
+"class_graficador_histograma.html#a9389a107ce81fecba40d5d06c70af282":[4,0,14,14],
 "class_graficador_histograma.html#a9d8479d16eeda28cea737d95f2777ebc":[4,0,14,0],
 "class_graficador_histograma.html#aaaf8c0ae57525e5fb3f551e371b499de":[4,0,14,9],
 "class_graficador_histograma.html#ab849d0da38d586b876b7c90d1b4c3e4e":[4,0,14,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_ventana_de_graficacion.html#ae9b1a810ce699c90997bbcf52d6e6b76":[4,0,26,14],
 "class_ventana_de_graficacion.html#af57dc06f8c175214ff5597e388d46afc":[4,0,26,7],
 "class_ventana_de_graficacion.html#af92839b232d70a97b25112a6dc417ac6":[4,0,26,3],
-"class_ventana_de_graficacion.html#afcd896ca9a84b65788c73424dc6afdbf":[4,0,26,20],
-"classes.html":[4,1]
+"class_ventana_de_graficacion.html#afcd896ca9a84b65788c73424dc6afdbf":[4,0,26,20]
 };
