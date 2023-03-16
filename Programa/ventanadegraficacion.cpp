@@ -55,11 +55,11 @@ void VentanaDeGraficacion::resizeGL(int ancho, int alto)
     anchoVentana = ancho;
     altoVentana = alto;
 
-    glViewport(0, 0, anchoVentana, altoVentana);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho(0, width(), 0, height(), -1, 1);
-    glMatrixMode(GL_MODELVIEW);
+    glViewport(0, 0, anchoVentana, altoVentana); //Especifica en que región de la ventana se dibujarán los objetos.
+    glMatrixMode(GL_PROJECTION); //Especifica que las operaciones posteriores de transformación de matriz se aplicarán a la matriz de proyección.
+    glLoadIdentity(); //Reemplaza la matriz de transformación actual por la matriz identidad. Resetea valores de las matrices anteriores.
+    glOrtho(0, width(), 0, height(), -1, 1); //Define una matriz de proyección ortográfica,
+    glMatrixMode(GL_MODELVIEW); //Especifica que las operaciones posteriores de transformación de matriz se aplicarán a la matriz de modelo-vista
     glLoadIdentity();
 }
 
@@ -99,8 +99,8 @@ void VentanaDeGraficacion::graficarImagenPseudocoloreada(int lut)
     Pixel pixAux;
 
     glPushMatrix();
-    glTranslatef(desplx, desply, 0.0f);
-    glScalef(escala, escala, 1.0f);
+    glTranslatef(desplx, desply, 0.0f); //Mover la imagen al centro de la ventana.
+    glScalef(escala, escala, 1.0f); //Escalar para que mantenga sus proporciones para cualquier tamaño de ventana.
 
     glBegin(GL_QUADS);
 
@@ -399,7 +399,8 @@ void VentanaDeGraficacion::mousePressEvent(QMouseEvent *event)
         cout<<"\nCtrl + click izquierdo: aplicar algortimo del pintor.\n";
         cout.flush();
 
-        int f = altoVentana - (QCursor::pos().y() - this->pos().y());
+        //int f = altoVentana - (QCursor::pos().y() - this->pos().y()); Corrección en la línea 403.
+        int f = altoVentana - (this->mapFromGlobal(QCursor::pos()).y());
         int c = QCursor::pos().x() - this->pos().x();
 
         f -= desply;
